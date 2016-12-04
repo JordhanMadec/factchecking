@@ -1,0 +1,13 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.tweet{
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 5px 20px;
+}

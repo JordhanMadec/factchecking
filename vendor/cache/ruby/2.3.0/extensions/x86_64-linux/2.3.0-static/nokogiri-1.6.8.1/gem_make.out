@@ -1,0 +1,3 @@
+current directory: /mnt/d/Cours/INSA/3A/Projet/FactChecking/factchecking/vendor/cache/ruby/2.3.0/gems/nokogiri-1.6.8.1/ext/nokogiri
+/home/Jordhan/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20161201-3865-r730k8.rb extconf.rb
+Cannot allocate memory - /home/Jordhan/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20161201-3865-r730k8.rb extconf.rb 2>&1
