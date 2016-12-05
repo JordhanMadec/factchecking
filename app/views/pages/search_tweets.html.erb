@@ -1,0 +1,24 @@
+<% content_for :body_class, 'search_tweets_body' %>
+
+<div class="container">
+  <h1>Twitter Fact Checking</h1>
+  <h4>Twitter fact checking app prototype</h4>
+
+  <%= form_tag action: "search_tweets"%>
+    <div class="row">
+      <div class="col-lg-9 col-sm-9"><%= text_field_tag "keywords", "", placeholder:"Mots-clés", class:"form-control" %></div>
+      <div class="col-lg-3 col-sm-3"><%= submit_tag "Rechercher" , class:"btn btn-success form-control"%></div>
+    </div>
+
+  <div>
+      <h2><%= @nbTweets %> tweets trouvés</h2>
+      <p>Mots-clés : <b><%= @keywords %></b></p>
+      <% @tweet_list.each do |tweet| %>
+        <div class="tweet">
+          <h4>@<%= tweet.user.screen_name %></h4>
+          <p><%= tweet.text %></p>
+          <p><b>Favoris : </b><%= tweet.favorite_count %>     <b>Retweets :</b><%= tweet.retweet_count %></p>
+        </div>
+      <%end%>
+  </div>
+</div>
