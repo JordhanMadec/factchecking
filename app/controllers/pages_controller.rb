@@ -11,6 +11,10 @@ class PagesController < ApplicationController
   end
 
   def home
+    
+  end
+
+  def search_tweets
     client = init
     #@twittos = client.user(params[:keywords])
     #@tweet_list = client.user_timeline(params[:keywords],).take(100)

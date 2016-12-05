@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function home_size(){
+  var h = $(window).height();
+  $('.home').height(h);
+  $('.home').css('line-height',h+'px');
+}
+
+
+$(document).ready(function(){
+  home_size();
+});
+
+$(window).resize(function(){
+  home_size();
+});
