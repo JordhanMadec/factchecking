@@ -11,13 +11,13 @@
     </div>
 
   <div>
-      <h2><%= @nbTweets %> tweets trouvés</h2>
-      <p>Mots-clés : <b><%= @keywords %></b></p>
+      <h2><%= @nbTweets %> tweets found</h2>
+      <p>Keywords : <b><%= @keywords %></b></p>
       <% @tweet_list.each do |tweet| %>
         <div class="tweet">
           <h4>@<%= tweet.user.screen_name %></h4>
           <p><%= tweet.text %></p>
-          <p><b>Favoris : </b><%= tweet.favorite_count %>     <b>Retweets :</b><%= tweet.retweet_count %></p>
+          <p><b>Favorites : </b><%= tweet.favorite_count %>     <b>Retweets :</b><%= tweet.retweet_count %></p>
         </div>
       <%end%>
   </div>

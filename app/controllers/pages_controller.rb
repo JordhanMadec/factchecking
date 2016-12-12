@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     #@twittos = client.user(params[:keywords])
     #@tweet_list = client.user_timeline(params[:keywords],).take(100)
     @keywords = params[:keywords] ||= "test"
-    @tweet_list = client.search(@keywords, lang: "fr")
+    @tweet_list = client.search(@keywords, lang: "en")
     @nbTweets = @tweet_list.count
   end
 end
