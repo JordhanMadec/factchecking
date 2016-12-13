@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    
+
   end
 
   def search_tweets
@@ -19,6 +19,8 @@ class PagesController < ApplicationController
     #@twittos = client.user(params[:keywords])
     #@tweet_list = client.user_timeline(params[:keywords],).take(100)
     @keywords = params[:keywords] ||= "test"
+    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
+    if @keywords=="" then @keywords = "test" end
     @tweet_list = client.search(@keywords, lang: "en")
     @nbTweets = @tweet_list.count
   end

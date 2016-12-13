@@ -35,12 +35,9 @@ function highlight_keywords(){
   });
 }
 
-$('.tweet').ready(function(){
-  highlight_keywords();
-})
-
-$(document).ready(function(){
+$('document').ready(function(){
   home_size();
+  highlight_keywords();
 });
 
 $(window).resize(function(){
