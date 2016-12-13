@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min
 //= require turbolinks
 //= require_tree .
 
@@ -22,6 +23,21 @@ function home_size(){
   $('.home').css('line-height',h+'px');
 }
 
+function highlight_keywords(){
+  compt=0;
+  keywords_list = $('#keywords_list b')[0].innerHTML.split(" ");
+  $('.tweet_content').each(function(){
+    keywords_list.forEach(function(keyword){
+      var regEx = new RegExp(keyword, "ig");
+      $('.tweet_content')[compt].innerHTML = $('.tweet_content')[compt].innerHTML.replace(regEx,"<span class=\"keyword\">$&</span>");
+    });
+    compt++;
+  });
+}
+
+$('.tweet').ready(function(){
+  highlight_keywords();
+})
 
 $(document).ready(function(){
   home_size();
