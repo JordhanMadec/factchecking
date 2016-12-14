@@ -1,15 +1,22 @@
 <% content_for :body_class, 'search_tweets_body' %>
 
+<header>
+  <div class="container">
+    <h1>Twitter Fact Checker</h1>
+    <h4>Twitter fact checker app prototype</h4>
+
+    <%= form_tag action: "search_tweets"%>
+      <div class="search-elem search-container row">
+        <div class="search-elem search-input col-lg-10"><%= text_field_tag "keywords", "", placeholder:"Search new tweets", class:"search-elem" , id:"keyword_input" , autocomplete:"off"%></div>
+        <div class="search-elem search-submit col-lg-2">
+          <%= submit_tag "" , class:"search-elem"%>
+          <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+        </div>
+      </div>
+  </div>
+</header>
+
 <div class="container">
-  <h1>Twitter Fact Checking</h1>
-  <h4>Twitter fact checking app prototype</h4>
-
-  <%= form_tag action: "search_tweets"%>
-    <div class="row">
-      <div class="col-lg-9 col-sm-9"><%= text_field_tag "keywords", "", placeholder:"Mots-clés", class:"form-control" %></div>
-      <div class="col-lg-3 col-sm-3"><%= submit_tag "Rechercher" , class:"btn btn-success form-control"%></div>
-    </div>
-
   <div>
       <h2><%= @nbTweets %> tweets found</h2>
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
@@ -17,7 +24,7 @@
         <div class="tweet">
           <h4><a href="<%= tweet.user.url %>" target="_blank">@<%= tweet.user.screen_name %></a></h4>
           <p class="tweet_content"><%= tweet.text %></p>
-          <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet.favorite_count %> 
+          <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet.favorite_count %>
 	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet.retweet_count %></p>
         </div>
       <%end%>
