@@ -46,6 +46,11 @@ a:hover{
       display: inline-block;
       line-height: 1.5;
     }
+
+    .logo_home{
+      height: 250px;
+      width: 250px;
+    }
   }
 }
 
@@ -133,6 +138,21 @@ form{
     box-shadow: 0 0 20px #555;
     color: white;
     padding: 20px 0;
+
+    .header_logo{
+      display: inline-block;
+      vertical-align: middle;
+
+      img{
+        height: 90px;
+        width: auto;
+      }
+    }
+
+    .header_title{
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   .tweet{

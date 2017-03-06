@@ -2,8 +2,13 @@
 
 <header>
   <div class="container">
-    <h1>Twitter Fact Checker</h1>
-    <h4>Twitter fact checker app prototype</h4>
+    <div class="header_logo">
+      <%= image_tag("logo_white.svg")%>
+    </div>
+    <div class="header_title">
+      <h1>Twitter Fact Checker</h1>
+      <h4>Twitter fact checker app prototype</h4>
+    </div>
 
     <%= form_tag action: "search_tweets"%>
       <div class="search-elem search-container row">
@@ -20,12 +25,13 @@
   <div>
       <h2><%= @nbTweets %> tweets found</h2>
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
-      <% @tweet_list.each do |tweet| %>
+      <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
-          <h4><a href="<%= tweet.user.url %>" target="_blank">@<%= tweet.user.screen_name %></a></h4>
-          <p class="tweet_content"><%= tweet.text %></p>
-          <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet.favorite_count %>
-	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet.retweet_count %></p>
+          <h4><a href="<%= tweet["user"].url %>" target="_blank">@<%= tweet["user"].screen_name %></a></h4>
+          <p class="tweet_content"><%= tweet["text"] %></p>
+          <p class="tweet_content"><%= tweet["cleaned_text"] %></p>
+          <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet["favorite_count"] %>
+  	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet["retweet_count"] %></p>
         </div>
       <%end%>
   </div>
