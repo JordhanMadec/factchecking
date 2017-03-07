@@ -16484,3 +16484,425 @@ Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f
 
 
 Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 14:48:03 +0100
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 15:35:12 +0100
+
+Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
+  activerecord (4.2.6) lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
+  activerecord (4.2.6) lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:50:in `establish_connection'
+  activerecord (4.2.6) lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.2.6) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.2.6) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.2.6) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.2.6) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.2.6) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.2.6) lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+  activerecord (4.2.6) lib/active_record/base.rb:26:in `<top (required)>'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:274:in `require'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:274:in `block in require'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:240:in `load_dependency'
+  activesupport (4.2.6) lib/active_support/dependencies.rb:274:in `require'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (92.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (195.8ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:08:08 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (2059.2ms)
+Completed 200 OK in 68276ms (Views: 2279.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2017-03-07 17:11:39 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 132ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:11:40 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:11:46 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Suxkx2GpjlMWtXnoKjZLeuvxIO3/naxCN+BPnKxbTboET5IDZTSluwQDJOsoG1Rn4rtCes8m0RebsYTWB6jpZA==", "keywords"=>"test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (851.8ms)
+Completed 200 OK in 44878ms (Views: 948.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:57:01 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (650.3ms)
+Completed 200 OK in 906ms (Views: 886.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-75a00a50f2093aa87ae661d6fd1f1ee88ede60f904f03dbf146895d019f2eb5c.css?body=1" for 127.0.0.1 at 2017-03-07 17:57:03 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:57:03 +0100
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:57:04 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:59:15 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 185ms (Views: 184.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:59:17 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:01:07 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7XDLhrFB6X4tbNrzKYmPMPSMdjTucmmFNYIOcga23Wuvzi3pRbwdSykX7/vIA5tfE19wKxjq2DGi9DZcy1igA==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 1384ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `stemmer' for #<PagesController:0x007f4ed2a4b730>
+Did you mean?  stemmify):
+  app/controllers/pages_controller.rb:47:in `block in stemmify'
+  app/controllers/pages_controller.rb:46:in `each'
+  app/controllers/pages_controller.rb:46:in `stemmify'
+  app/controllers/pages_controller.rb:39:in `block in clean_tweets'
+  app/controllers/pages_controller.rb:27:in `clean_tweets'
+  app/controllers/pages_controller.rb:21:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (115.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (249.3ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:01:58 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 1275ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `stemmer' for #<PagesController:0x007f4ed12c0d40>
+Did you mean?  stemmify):
+  app/controllers/pages_controller.rb:47:in `block in stemmify'
+  app/controllers/pages_controller.rb:46:in `each'
+  app/controllers/pages_controller.rb:46:in `stemmify'
+  app/controllers/pages_controller.rb:39:in `block in clean_tweets'
+  app/controllers/pages_controller.rb:27:in `clean_tweets'
+  app/controllers/pages_controller.rb:21:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (104.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (233.6ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:04:20 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 1163ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `stemmer' for #<PagesController:0x007fffbe37aa80>
+Did you mean?  stemmify):
+  app/controllers/pages_controller.rb:49:in `block in stemmify'
+  app/controllers/pages_controller.rb:48:in `each'
+  app/controllers/pages_controller.rb:48:in `stemmify'
+  app/controllers/pages_controller.rb:41:in `block in clean_tweets'
+  app/controllers/pages_controller.rb:29:in `clean_tweets'
+  app/controllers/pages_controller.rb:23:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.1ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (190.1ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:05:05 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 1653ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:05:39 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AVrEEj+IfOKY2R4LljavKlLC8vpnoEpIitfVcmreR3JP+TLWOxVXCopvQwiUG7A3W4iQbVcbNx0mhh44wS3jrA==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 3418ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:06:47 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 5394ms (Views: 198.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:16:13 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 1158ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `stem!' for "#how":String
+Did you mean?  stem):
+  app/controllers/pages_controller.rb:48:in `block in stemmify'
+  app/controllers/pages_controller.rb:47:in `each'
+  app/controllers/pages_controller.rb:47:in `stemmify'
+  app/controllers/pages_controller.rb:39:in `block in clean_tweets'
+  app/controllers/pages_controller.rb:27:in `clean_tweets'
+  app/controllers/pages_controller.rb:21:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.9ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (233.3ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:21:41 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (388.4ms)
+Completed 200 OK in 21287ms (Views: 489.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:30:40 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 1304ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `term' for #<PagesController:0x007fffe30e0ea8>):
+  app/controllers/pages_controller.rb:50:in `block in stemmify'
+  app/controllers/pages_controller.rb:48:in `each'
+  app/controllers/pages_controller.rb:48:in `stemmify'
+  app/controllers/pages_controller.rb:40:in `block in clean_tweets'
+  app/controllers/pages_controller.rb:28:in `clean_tweets'
+  app/controllers/pages_controller.rb:22:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (92.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (206.4ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:31:31 +0100
+Processing by PagesController#search_tweets as HTML
+Completed   in 55518ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:32:45 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (2049.2ms)
+Completed 200 OK in 51733ms (Views: 2510.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:33:38 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (213.8ms)
+Completed 200 OK in 11701ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:35:39 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (1024.4ms)
+Completed 200 OK in 55657ms (Views: 1155.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:38:05 +0100
+Processing by PagesController#search_tweets as HTML
+Completed   in 40434ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:39:17 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (1442.5ms)
+Completed 200 OK in 3944ms (Views: 2001.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:39:24 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (1167.3ms)
+Completed 200 OK in 63370ms (Views: 1282.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:40:27 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 14743ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:26:in `clean_tweets'
+  app/controllers/pages_controller.rb:20:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (130.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (361.2ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 18:40:43 +0100
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:20:in `search_tweets'
+
+
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (229.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (260.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (628.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 21:51:43 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 2417ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 22:06:12 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (582.8ms)
+Completed 200 OK in 24152ms (Views: 707.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 22:06:36 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 3883ms (Views: 198.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 22:12:06 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (211.3ms)
+Completed 200 OK in 12471ms (Views: 310.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-75a00a50f2093aa87ae661d6fd1f1ee88ede60f904f03dbf146895d019f2eb5c.css?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 22:12:19 +0100

@@ -1,5 +1,5 @@
 require 'twitter'
-require 'stemmify'
+require 'stemmer'
 
 class PagesController < ApplicationController
   def init
@@ -35,16 +35,32 @@ class PagesController < ApplicationController
         res[tweet.id]["in_reply_to_id"] = tweet.in_reply_to_user_id
         res[tweet.id]["text"] = tweet.text.dup
         #1.Downcase  2.Rootify  3.Delete useless terms
-        res[tweet.id]["cleaned_text"] = rootify tweet.text.dup.downcase
+        res[tweet.id]["cleaned_text"] = stemmify tweet.text.dup.downcase
       end
       res
   end
 
-  def rootify(tweet)
+  def stemmify(tweet)
     token  = tweet.split(" ")
-    token.each do |term|
-      term = term.stem
+    token.map! do |term|
+      term.stem
     end
     token.join(" ")
+  end
+
+  def sentimental_analysis(tweets)
+    #Analyse sentimentale des tweets
+  end
+
+  def pre_classification(tweets)
+    #Preclassification des tweets
+  end
+
+  def weigh(tweets)
+    #Pondération des tweets
+  end
+
+  def score_classes(tweets)
+    #Score les différentes classes
   end
 end
