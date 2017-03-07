@@ -27,6 +27,8 @@ gem 'twitter', '5.16.0'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 gem 'stemmify'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
