@@ -16486,6 +16486,7 @@ Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f
 Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 14:48:03 +0100
 
 
+<<<<<<< HEAD
 Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 15:35:12 +0100
 
 Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
@@ -16906,3 +16907,163 @@ Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f
 
 
 Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 22:12:19 +0100
+=======
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:05:41 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (8463.0ms)
+Completed 200 OK in 8838ms (Views: 8824.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-11d66df39b62b87ec357585b8241591a9f699ccfc359b87aff4bf98fc95766cc.css?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:06:11 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 17:06:14 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:06:14 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:06:32 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aiz2atT8dDAKtOnHwuo0wgXkKbiCYD+4PZhk4FJpTcIzfDjexRy+gMlgi47+IVDuKWKz9JYrkkqTt3xFDnDkJg==", "keywords"=>"trump is president of USA", "commit"=>""}
+Completed 500 Internal Server Error in 1167ms (ActiveRecord: 0.0ms)
+
+Twitter::Error (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/controllers/pages_controller.rb:20:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1119.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1074.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2421.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:13:54 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (455.3ms)
+Completed 200 OK in 787ms (Views: 730.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:14:08 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:14:08 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:14:18 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4xolUx7ogvdR82fDSp789/SNOVG/TpVex/MJ8Li+Wk+6SuvnDwhIR5InBYp2VZjb2AujHasFOKxp3BFV5Kfzqw==", "keywords"=>"chocolate is good for your health", "commit"=>""}
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+Twitter::Error (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/controllers/pages_controller.rb:20:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1225.9ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1193.9ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2861.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:25:27 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (387.3ms)
+Completed 200 OK in 636ms (Views: 622.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:25:39 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:25:39 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:25:45 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Am6c8jzyspeMws6kFJURPWUo6ycotenOyzRfWj4akONWXTH2RMAep3naXOsmTBo2RI54IjpelWVA8nYNOHDpw==", "keywords"=>"trump disconnect", "commit"=>""}
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.0ms)
+
+Twitter::Error (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/controllers/pages_controller.rb:20:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1093.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1049.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2373.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-07 17:26:23 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (365.3ms)
+Completed 200 OK in 606ms (Views: 590.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:26:35 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-07 17:26:35 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 17:26:43 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yAHSLqXtc8EJsDOeDqI+gW7Xyv9CbiPYVgJvI7rS2UeRURyatA25ccpkUdcyaVqtQlFQs1Yljir4LXeG5stwow==", "keywords"=>"trump est grand", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 508ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:26:44 +0100
+>>>>>>> 75450f9994e19fa2548a2ce4a2cf48555e11546b
