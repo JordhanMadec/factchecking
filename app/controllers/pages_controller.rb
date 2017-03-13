@@ -1,6 +1,6 @@
 require 'twitter'
 require 'stemmer'
-require'Sentimental'
+require'sentimental' #à rajouter dans le gemfile
 
 class PagesController < ApplicationController
   def init
@@ -20,6 +20,8 @@ class PagesController < ApplicationController
     #Nettoyage des tweets
     @tweet_list =  clean_tweets client.search(@keywords, lang: "en")
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
+    @tweet_list = sentimental_and_score_analysis @tweet_list
+
   end
 
   def clean_tweets(tweets)
@@ -35,6 +37,8 @@ class PagesController < ApplicationController
         res[tweet.id]["user"] = tweet.user.dup
         res[tweet.id]["in_reply_to_id"] = tweet.in_reply_to_user_id
         res[tweet.id]["text"] = tweet.text.dup
+        res[tweet.id]["sentimental_class"] = "default"
+        res[tweet.id]["sentimental_score"] = 0
         #1.Downcase  2.Rootify  3.Delete useless terms
         res[tweet.id]["cleaned_text"] = stemmify tweet.text.dup.downcase
       end
@@ -49,59 +53,32 @@ class PagesController < ApplicationController
     token.join(" ")
   end
 
-  #@tweet_list = ["I like cat","I hate dog","I love ice cream"]
-  $tweet_list_class =[]
+
   $THRESHOLD = 0.5
 
-  def make_tweet_class
-    @tweet_list.each do |tweet|
-      tweet_class = Tweet.new tweet.text
-      $tweet_list_class.push(tweet_class)
-    end
+  def sentimental_class(text)
+    analyzer = Sentimental.new
+    analyzer.load_defaults
+    analyzer.threshold = $THRESHOLD
+    analyzer.sentiment text
   end
 
-  def make_tweet_sentimental
-    $tweet_list_class.each do |tweet|
-      tweet.sentimental_class
-    end
-  end
-
-  def make_tweet_score
-    $tweet_list_class.each do |tweet|
-      tweet.sentimental_score
-    end
+  def sentimental_score(text)
+    analyzer = Sentimental.new
+    analyzer.load_defaults
+    analyzer.threshold = $THRESHOLD
+    analyzer.score text
   end
 
 
-  class Tweet
 
-    attr_accessor :tweet_class, :tweet_text, :tweet_score
-
-    def initialize(text)
-      @tweet_text = text
-
-    end
-
-
-    def sentimental_class
-
-      analyzer = Sentimental.new
-      analyzer.load_defaults
-      analyzer.threshold = $THRESHOLD
-      #puts analyzer.sentiment tweet_text
-      @tweet_class = analyzer.sentiment tweet_text
-    end
-
-    def sentimental_score
-
-      analyzer = Sentimental.new
-      analyzer.load_defaults
-      analyzer.threshold = $THRESHOLD
-      @tweet_score = analyzer.score tweet_text
-      #puts analyzer.score tweet_text
-
-    end
+def sentimental_and_score_analysis(tweets)
+  tweets.each do |key,tweet|
+    tweet["sentimental_class"] = sentimental_class tweet["text"]
+    tweet["sentimental_score"] = sentimental_score tweet["text"]
   end
+  tweets
+end
 
 
 
