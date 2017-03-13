@@ -1,5 +1,6 @@
 require 'twitter'
 require 'stemmer'
+require'Sentimental'
 
 class PagesController < ApplicationController
   def init
@@ -48,9 +49,63 @@ class PagesController < ApplicationController
     token.join(" ")
   end
 
-  def sentimental_analysis(tweets)
-    #Analyse sentimentale des tweets
+  #@tweet_list = ["I like cat","I hate dog","I love ice cream"]
+  $tweet_list_class =[]
+  $THRESHOLD = 0.5
+
+  def make_tweet_class
+    @tweet_list.each do |tweet|
+      tweet_class = Tweet.new tweet.text
+      $tweet_list_class.push(tweet_class)
+    end
   end
+
+  def make_tweet_sentimental
+    $tweet_list_class.each do |tweet|
+      tweet.sentimental_class
+    end
+  end
+
+  def make_tweet_score
+    $tweet_list_class.each do |tweet|
+      tweet.sentimental_score
+    end
+  end
+
+
+  class Tweet
+
+    attr_accessor :tweet_class, :tweet_text, :tweet_score
+
+    def initialize(text)
+      @tweet_text = text
+
+    end
+
+
+    def sentimental_class
+
+      analyzer = Sentimental.new
+      analyzer.load_defaults
+      analyzer.threshold = $THRESHOLD
+      #puts analyzer.sentiment tweet_text
+      @tweet_class = analyzer.sentiment tweet_text
+    end
+
+    def sentimental_score
+
+      analyzer = Sentimental.new
+      analyzer.load_defaults
+      analyzer.threshold = $THRESHOLD
+      @tweet_score = analyzer.score tweet_text
+      #puts analyzer.score tweet_text
+
+    end
+  end
+
+
+
+
 
   def pre_classification(tweets)
     #Preclassification des tweets
