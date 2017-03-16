@@ -32,6 +32,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'stemmify'
 gem 'uea-stemmer'
 gem 'stemmer'
+gem 'sentimental'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
