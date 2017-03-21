@@ -1,14 +1,21 @@
 require 'twitter'
 require 'stemmer'
 require'sentimental' #à rajouter dans le gemfile
+require 'config_dev'
+
+if ConfigDev.PB_SSL
+  require 'openssl'
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+end
 
 class PagesController < ApplicationController
+
   def init
     client = Twitter::REST::Client.new do |config|
-      config.consumer_key = "xpg49pUpKolcCXWuQe2b0EqYx"
-      config.consumer_secret = "aqMRdUn28HqZrD1IIeXK6Pk0SfliFQGDuplBkZnlVo4cMvyaHo"
-      config.access_token = "720567318443634689-4K5Xns30llMvExfUZG1IaBFrIqUe32q"
-      config.access_token_secret = "hp31Ax4ZzAjaMikgsOwjHidqVhxxeE3kGDnBS6QT2Vo2K"
+      config.consumer_key = ConfigDev.CONSUMER_KEY
+      config.consumer_secret = ConfigDev.CONSUMER_SECRET
+      config.access_token = ConfigDev.ACCESS_TOKEN
+      config.access_token_secret = ConfigDev.ACCESS_TOKEN_SECRET
     end
   end
 
@@ -28,7 +35,7 @@ class PagesController < ApplicationController
       res = Hash.new
       tweets.each do |tweet|
         #Les tweets retournés par l'API sont en mode frozen, ils ne sont pas modifiables
-        #Il faut donc récupérer une copie (.dup) de chaque attribut pour pouboir les modifier
+        #Il faut donc récupérer une copie (.dup) de chaque attribut pour pouvoir les modifier
         res[tweet.id] = Hash.new
         res[tweet.id]["favorite_count"] = tweet.favorite_count.to_s
         res[tweet.id]["retweet_count"] = tweet.retweet_count
@@ -72,13 +79,13 @@ class PagesController < ApplicationController
 
 
 
-def sentimental_and_score_analysis(tweets)
-  tweets.each do |key,tweet|
-    tweet["sentimental_class"] = sentimental_class tweet["text"]
-    tweet["sentimental_score"] = sentimental_score tweet["text"]
+  def sentimental_and_score_analysis(tweets)
+    tweets.each do |key,tweet|
+      tweet["sentimental_class"] = sentimental_class tweet["text"]
+      tweet["sentimental_score"] = sentimental_score tweet["text"]
+    end
+    tweets
   end
-  tweets
-end
 
 
 
