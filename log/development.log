@@ -800,7 +800,7 @@ Completed 500 Internal Server Error in 1762ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined local variable or method `client' for #<#<Class:0x007fb1c6cb6630>:0x007fb1c6edfe70>):
      8: </div>
-     9: 
+     9:
     10: <div>
     11:   <%client.home_timeline.take(5).collect do |tweet|%>
     12:     <p>
@@ -1308,7 +1308,7 @@ Completed 500 Internal Server Error in 2445ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (undefined method `model_name' for #<Twitter::User id=18814998>):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_for @twittos do |t| %>
     5:   <%= t.label :name %>
     6:   <%= f.submit %>
@@ -1371,11 +1371,11 @@ Completed 500 Internal Server Error in 1779ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => 'search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70368595264660'
 
 
@@ -1401,11 +1401,11 @@ Completed 500 Internal Server Error in 1639ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => 'search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70368595264660'
 
 
@@ -1431,11 +1431,11 @@ Completed 500 Internal Server Error in 1683ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104449276680'
 
 
@@ -1461,11 +1461,11 @@ Completed 500 Internal Server Error in 1645ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/pages/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/pages/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104454430060'
 
 
@@ -1491,11 +1491,11 @@ Completed 500 Internal Server Error in 1659ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104457870260'
 
 
@@ -1521,11 +1521,11 @@ Completed 500 Internal Server Error in 1682ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/home", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/home' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104460969200'
 
 
@@ -1550,11 +1550,11 @@ Completed 500 Internal Server Error in 1625ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => 'home' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
     8: <div>
   app/views/pages/home.html.erb:5:in `_app_views_pages_home_html_erb___1782310280204670856_70104464918420'
 
@@ -1581,11 +1581,11 @@ Completed 500 Internal Server Error in 1688ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104201915520'
 
 
@@ -1611,11 +1611,11 @@ Completed 500 Internal Server Error in 1621ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104201915520'
 
 
@@ -1641,11 +1641,11 @@ Completed 500 Internal Server Error in 1738ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"/search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '/search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104201915520'
 
 
@@ -1671,11 +1671,11 @@ Completed 500 Internal Server Error in 1658ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"#search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag :action => '#search_tweets' %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104457272140'
 
 
@@ -1700,11 +1700,11 @@ Completed 500 Internal Server Error in 1631ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag %>
     5:   <%= text_field "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
     8: <div>
   app/views/pages/home.html.erb:5:in `_app_views_pages_home_html_erb___1782310280204670856_70104465661860'
 
@@ -1730,11 +1730,11 @@ Completed 500 Internal Server Error in 1655ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag %>
     5:   <%= text_field "keywords" "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
     8: <div>
   app/views/pages/home.html.erb:5:in `_app_views_pages_home_html_erb___1782310280204670856_70104207473640'
 
@@ -1759,11 +1759,11 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1705ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined local variable or method `end_form_tag' for #<#<Class:0x007f84efdd1ed8>:0x007f84ed4355e8>):
-    3: 
+    3:
     4: <%= form_tag %>
     5:   <%= text_field "keywords", "Keywords" %>
     6: <%= end_form_tag %>
-    7: 
+    7:
     8: <div>
     9:   <p>
   app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb___1782310280204670856_70104446857940'
@@ -1842,11 +1842,11 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1813ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `input_field' for #<#<Class:0x007f84efdd1ed8>:0x007fffeeb72d48>):
-    3: 
+    3:
     4: <%= form_tag %>
     5:   <%= text_field "keywords", "Keywords" %>
     6:   <%= input_field "Rechercher" %>
-    7: 
+    7:
     8: <div>
     9:   <p>
   app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb___1782310280204670856_70368599221940'
@@ -1873,11 +1873,11 @@ Completed 500 Internal Server Error in 1657ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `submit' for #<#<Class:0x007f84efdd1ed8>:0x007f84efe1f638>
 Did you mean?  submit_tag):
-    3: 
+    3:
     4: <%= form_tag %>
     5:   <%= text_field "keywords", "Keywords" %>
     6:   <%= submit "Rechercher" %>
-    7: 
+    7:
     8: <div>
     9:   <p>
   app/views/pages/home.html.erb:6:in `_app_views_pages_home_html_erb___1782310280204670856_70104468484480'
@@ -2003,11 +2003,11 @@ Completed 500 Internal Server Error in 1741ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"search_tweet", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag action: "search_tweet"%>
     5:   <%= text_field_tag "keywords", "Keywords" %>
     6:   <%= submit_tag "Rechercher" %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104206437840'
 
 
@@ -2033,11 +2033,11 @@ Completed 500 Internal Server Error in 1660ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"search_tweets ", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag action: "search_tweets "%>
     5:   <%= text_field_tag "keywords", "Keywords" %>
     6:   <%= submit_tag "Rechercher" %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104205926960'
 
 
@@ -2973,11 +2973,11 @@ Completed 500 Internal Server Error in 1673ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (No route matches {:action=>"search_tweets", :controller=>"pages"}):
     1: <h1>Twitter Fact Checking</h1>
     2: <p>Twitter fact checking app prototype</p>
-    3: 
+    3:
     4: <%= form_tag action: "search_tweets"%>
     5:   <%= text_field_tag "keywords", "", placeholder:"Keywords" %>
     6:   <%= submit_tag "Rechercher" %>
-    7: 
+    7:
   app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb___1782310280204670856_70104468892900'
 
 
@@ -3059,7 +3059,7 @@ Completed 500 Internal Server Error in 2061ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for #<Twitter::Tweet id=805093614095388672>):
     12: </div>
-    13: 
+    13:
     14: <div>
     15:     <% @tweet_list.each do |tweet| %>
     16:       <p>
@@ -3246,13 +3246,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1289ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104458354340'
 
 
@@ -3277,13 +3277,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1270ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <!--<div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>-->
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104356749000'
 
 
@@ -3308,13 +3308,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 692ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <!--<div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>-->
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104356749000'
 
 
@@ -3338,13 +3338,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1260ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <!--<div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>-->
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104356749000'
 
 
@@ -3368,13 +3368,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1247ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <!--<div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>-->
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104356749000'
 
 
@@ -3398,13 +3398,13 @@ Processing by PagesController#home as HTML
 Completed 500 Internal Server Error in 1297ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-     7: 
+     7:
      8: <!--<div>
      9:   <p>
     10:     Nom du twittos : <b><%= @twittos.name%></b>
     11:   </p>
     12: </div>-->
-    13: 
+    13:
   app/views/pages/home.html.erb:10:in `_app_views_pages_home_html_erb___1782310280204670856_70104356749000'
 
 
@@ -6181,7 +6181,7 @@ Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/in
      8:   <%= stylesheet_link_tag 'home' if controller.action_name == 'home' %>
      9: </head>
     10: <body>
-    11: 
+    11:
   app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2603579966064165272_70141079832780'
 
 
@@ -6212,7 +6212,7 @@ Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/in
      8:   <%= stylesheet_link_tag 'home' if controller.action_name == 'home' %>
      9: </head>
     10: <body>
-    11: 
+    11:
   app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2603579966064165272_70141079832780'
 
 
@@ -7216,7 +7216,7 @@ Completed 500 Internal Server Error in 449ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/initializers/assets.rb` and restart your server):
     1: <%= stylesheet_link_tag "home" %>
-    2: 
+    2:
     3: <div class="home">
     4:   <div class="container">
   app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__2958928860949797191_70368546916980'
@@ -7244,7 +7244,7 @@ Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (Asset was not declared to be precompiled in production.
 Add `Rails.application.config.assets.precompile += %w( home.css )` to `config/initializers/assets.rb` and restart your server):
     1: <%= stylesheet_link_tag "home" %>
-    2: 
+    2:
     3: <div class="home">
     4:   <div class="container">
   app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__2958928860949797191_70368546916980'
@@ -14670,7 +14670,7 @@ Completed 500 Internal Server Error in 14060ms (ActiveRecord: 0.0ms)
 ActionView::Template::Error (no implicit conversion of String into Integer):
     28:       <% @tweet_list.each do |tweet| %>
     29:         <div class="tweet">
-    30:           
+    30:
     31:           <p class="tweet_content"><%= tweet["text"] %></p>
     32:           <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet["favorite_count"] %>
     33:   	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet["retweet_count"] %></p>
@@ -16486,7 +16486,6 @@ Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f
 Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-07 14:48:03 +0100
 
 
-<<<<<<< HEAD
 Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-07 15:35:12 +0100
 
 Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
@@ -17066,7 +17065,6 @@ Completed 200 OK in 508ms (Views: 119.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-07 17:26:44 +0100
->>>>>>> 75450f9994e19fa2548a2ce4a2cf48555e11546b
 
 
 Started GET "/" for ::1 at 2017-03-13 13:56:29 +0100
@@ -18040,6 +18038,7 @@ Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f
 Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-13 15:19:23 +0100
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2017-03-14 18:38:13 +0100
 Processing by PagesController#home as HTML
   Rendered pages/home.html.erb within layouts/application (290.6ms)
@@ -21323,3 +21322,468 @@ Twitter::Error::TooManyRequests (Rate limit exceeded):
   Rendered /Users/hugovincent/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/hugovincent/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/hugovincent/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (138.7ms)
+=======
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-16 18:46:11 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (394.9ms)
+Completed 200 OK in 10758ms (Views: 533.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-16 18:47:01 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GzaVOnPbjVj9RMH7GpaoonOkWYjJwN7L7IPLsMsxnXX9MMM5WMwS1Lj7d1TcpGS3BGZIsj9lxxfK9NsMHVCjSA==", "keywords"=>"trump lie", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (1204.3ms)
+Completed 200 OK in 337918ms (Views: 1274.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-03-16 18:52:38 +0100
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (135.2ms)
+Completed 200 OK in 40485ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-75a00a50f2093aa87ae661d6fd1f1ee88ede60f904f03dbf146895d019f2eb5c.css?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-16 18:53:20 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-16 18:53:40 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL1gNecZC9Vazf+tm1/whevcrX/rx3kkURgM1fhE89T2uzY2zA6UWR9ySQJdbTyQnB68RR1iYPh3bxxpLiXN6Q==", "keywords"=>"trump mexico", "commit"=>""}
+Completed   in 421194ms (ActiveRecord: 0.0ms)
+=======
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 22:05:14 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (628.4ms)
+Completed 200 OK in 1152ms (Views: 1134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-11d66df39b62b87ec357585b8241591a9f699ccfc359b87aff4bf98fc95766cc.css?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-17 22:05:29 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-17 22:05:32 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-17 22:05:32 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-17 22:05:38 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Uy9EPwkHJyZNkZ977R9XfuFX7H/ROytaZe2VOu5gV9II5gZiB0IjrZ1xRF4ia3hmsi2AqZFfSnry7BQKFbVDg==", "keywords"=>"trump is stupid", "commit"=>""}
+Completed 500 Internal Server Error in 1178ms (ActiveRecord: 0.0ms)
+
+Twitter::Error (SSL_connect returned=1 errno=0 state=error: certificate verify failed):
+  app/controllers/pages_controller.rb:21:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1241.9ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1363.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2802.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-17 22:07:41 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (440.3ms)
+Completed 200 OK in 692ms (Views: 678.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-17 22:07:55 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-17 22:07:56 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-17 22:08:01 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qt/ORKTU8f8MpJqt5/PYToSGPQ8gjfIgyCrIHYH1knfvsOtN0O3l7SPnGcFwzgjy5cvUvHmMY6RKds4ZQhrGJg==", "keywords"=>"trump is president", "commit"=>""}
+Completed 500 Internal Server Error in 1556ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::InternalServerError (Internal error):
+  app/controllers/pages_controller.rb:23:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1219.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1070.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2605.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:44:42 +0100
+
+LoadError (cannot load such file -- config_dev):
+  app/controllers/pages_controller.rb:4:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1086.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (987.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2239.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:46:20 +0100
+
+LoadError (cannot load such file -- ./config_dev):
+  app/controllers/pages_controller.rb:4:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1011.3ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (952.5ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (15.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2244.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:48:38 +0100
+
+LoadError (cannot load such file -- ./config_dev.rb):
+  app/controllers/pages_controller.rb:4:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1031.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (976.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2241.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:49:35 +0100
+
+LoadError (cannot load such file -- ./config_dev.rb):
+  app/controllers/pages_controller.rb:4:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1037.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1008.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2301.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:51:28 +0100
+
+LoadError (cannot load such file -- ./config_dev.rb):
+  app/controllers/pages_controller.rb:4:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1040.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1080.8ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2461.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 19:56:33 +0100
+
+ActionController::RoutingError (uninitialized constant PB_SSL):
+  app/controllers/pages_controller.rb:6:in `<top (required)>'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1389.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (940.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2174.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 20:01:05 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (510.7ms)
+Completed 200 OK in 696ms (Views: 687.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-11d66df39b62b87ec357585b8241591a9f699ccfc359b87aff4bf98fc95766cc.css?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-19 20:01:16 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-19 20:01:17 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-19 20:01:17 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-19 20:01:27 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n5d1mLiX3XoQCzyyjO+DQYOEjULX/5miqd1UrU6u0G4gTJ1oZRR1s2vsbmxGuCS6OmyM4crhHvlodYw24bWrkQ==", "keywords"=>"trump is president", "commit"=>""}
+Completed 500 Internal Server Error in 122578ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:36:in `clean_tweets'
+  app/controllers/pages_controller.rb:28:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1015.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (954.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2198.6ms)
+
+
+Started POST "/__web_console/repl_sessions/c62a5f25305faf494da9d5cb4e4f54b6/trace" for 127.0.0.1 at 2017-03-19 20:04:05 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 20:08:36 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (288.5ms)
+Completed 200 OK in 481ms (Views: 470.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-19 20:08:47 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-19 20:08:47 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-19 20:08:56 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6EvmsdKPpu79jtx7MlVMFrWOxXVG9DMoqFHPRPmV2nsesdqGsmWUsARaa8mnvLL4z46tsgFV5djCZ+mvP0slg==", "keywords"=>"trump is stupid", "commit"=>""}
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:28:in `search_tweets'
+
+
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1003.7ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (917.4ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2133.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-19 20:16:14 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (290.2ms)
+Completed 200 OK in 500ms (Views: 485.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-19 20:16:25 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-19 20:16:25 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-19 20:16:31 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhMj9PW8v0x+tiLYml8xrdD7oTSS03A7I4GzLrbPFV4FyMsEKD8XhQVRcAZQCJZWaROgl4/N92DiKWu1GdRuoQ==", "keywords"=>"test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (233.2ms)
+Completed 200 OK in 48870ms (Views: 336.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-19 20:17:20 +0100
+>>>>>>> f205b2749141f6b964066d0318bd1e5a8588031b
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2017-03-19 23:55:28 +0100
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (716.7ms)
+Completed 200 OK in 975ms (Views: 952.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/pages.self-75a00a50f2093aa87ae661d6fd1f1ee88ede60f904f03dbf146895d019f2eb5c.css?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:30 +0100
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-19 23:55:31 +0100
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-19 23:55:31 +0100
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-19 23:55:32 +0100
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-03-19 23:55:32 +0100
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-19 23:55:57 +0100
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5eaXufqai8hRjlaFtbzxOjOGVvbljT0vVX0mwOh05kUszz4uKxcWhfjW8W9w2xBYm/DzB98rWWYgEBKmVAmJ/g==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 16806ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+>>>>>>> c73c8f37fce4956077333ee763a9f746e5364fc3

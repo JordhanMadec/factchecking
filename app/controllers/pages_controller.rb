@@ -1,14 +1,32 @@
 require 'twitter'
 require 'stemmer'
+<<<<<<< HEAD
 require'sentimental'
+=======
+require'sentimental' #à rajouter dans le gemfile
+require 'config_dev'
+
+if ConfigDev.PB_SSL
+  require 'openssl'
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+end
+>>>>>>> c73c8f37fce4956077333ee763a9f746e5364fc3
 
 class PagesController < ApplicationController
+
   def init
     client = Twitter::REST::Client.new do |config|
+<<<<<<< HEAD
       config.consumer_key = "52WNnLx6onjqDPOfsQv8YiLh6"
       config.consumer_secret = "GkhtapLJnVQgmpcBaaSiQxsVhrWLejJQROHvMsyp2PBMBuJASM"
       config.access_token = "2312645583-rCmOgQkejUWyAllRlU7x8snqaLfPS3HgR6oHvJz"
       config.access_token_secret = "xTXRqwqHDuN3MJKpPpfW75c5IKrbifFvGdp6OSckNx2r4"
+=======
+      config.consumer_key = ConfigDev.CONSUMER_KEY
+      config.consumer_secret = ConfigDev.CONSUMER_SECRET
+      config.access_token = ConfigDev.ACCESS_TOKEN
+      config.access_token_secret = ConfigDev.ACCESS_TOKEN_SECRET
+>>>>>>> c73c8f37fce4956077333ee763a9f746e5364fc3
     end
   end
 
@@ -30,7 +48,7 @@ class PagesController < ApplicationController
       res = Hash.new
       tweets.each do |tweet|
         #Les tweets retournés par l'API sont en mode frozen, ils ne sont pas modifiables
-        #Il faut donc récupérer une copie (.dup) de chaque attribut pour pouboir les modifier
+        #Il faut donc récupérer une copie (.dup) de chaque attribut pour pouvoir les modifier
         res[tweet.id] = Hash.new
         res[tweet.id]["favorite_count"] = tweet.favorite_count.to_s
         res[tweet.id]["retweet_count"] = tweet.retweet_count
@@ -137,6 +155,7 @@ class PagesController < ApplicationController
     return "positif"
   end
 
+<<<<<<< HEAD
   def make_class(tweets,matrice)
     long = tweets.length
     i = 0
@@ -156,6 +175,12 @@ class PagesController < ApplicationController
           j+=1
         end
         i+=1
+=======
+  def sentimental_and_score_analysis(tweets)
+    tweets.each do |key,tweet|
+      tweet["sentimental_class"] = sentimental_class tweet["text"]
+      tweet["sentimental_score"] = sentimental_score tweet["text"]
+>>>>>>> c73c8f37fce4956077333ee763a9f746e5364fc3
     end
     tweets
   end
