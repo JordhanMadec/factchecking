@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   $THRESHOLD = 0.5
   $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
-    
+
   def init
     client = Twitter::REST::Client.new do |config|
       config.consumer_key = ConfigDev.CONSUMER_KEY
@@ -60,21 +60,21 @@ class PagesController < ApplicationController
       end
       res.to_json
   end
-      
+
   def clean_tweets(tweets)
      tweets.each do |key, tweet|
         #1.Downcase  2.Rootify  (3.Delete useless terms)
         tweet["cleaned_text"] = stemmify tweet["text"].downcase
      end
   end
-      
+
   #Fonction créant un dataset au format json avec le résultat de la requête
   def set_dataset(tweets)
     File.open("dataset.json", "w") do |f|
         f.write(tweets)
-    end 
+    end
   end
- 
+
   #Fonction récupérant un dataset au format json
   def get_dataset()
       file = File.read("dataset.json")
@@ -95,14 +95,14 @@ class PagesController < ApplicationController
   def sentimental_class(text)
     analyzer = Sentimental.new
     analyzer.load_defaults
-    analyzer.threshold = THRESHOLD
+    analyzer.threshold = $THRESHOLD
     analyzer.sentiment text
   end
 
   def sentimental_score(text)
     analyzer = Sentimental.new
     analyzer.load_defaults
-    analyzer.threshold = THRESHOLD
+    analyzer.threshold = $THRESHOLD
     analyzer.score text
   end
 
@@ -183,6 +183,8 @@ class PagesController < ApplicationController
           j+=1
         end
         i+=1
+      end
+  end
 
   def sentimental_and_score_analysis(tweets)
     tweets.each do |key,tweet|
