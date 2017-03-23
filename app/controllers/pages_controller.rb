@@ -30,8 +30,8 @@ class PagesController < ApplicationController
     if @keywords=="" then @keywords = "test" end
     #Nettoyage des tweets
     #@tweet_list =  prepare_tweets client.search(@keywords, lang: "en")
-    #clean_tweets @tweet_list
     @tweet_list = JSON.parse(get_dataset)
+    clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     #Analyse sentimentale des tweets
     @tweet_list = sentimental_and_score_analysis @tweet_list
