@@ -11,7 +11,8 @@ end
 
 class PagesController < ApplicationController
 
-  THRESHOLD = 0.5
+  $THRESHOLD = 0.5
+  $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
     
   def init
     client = Twitter::REST::Client.new do |config|
@@ -36,6 +37,8 @@ class PagesController < ApplicationController
     @tweet_list = sentimental_and_score_analysis @tweet_list
     #Classification des tweets
     #set_dataset(@tweet_list)
+    @matrice_score = initialisation(@nbTweets)
+    make_class(@tweet_list,@matrice_score)
   end
 
   def prepare_tweets(tweets)
@@ -65,13 +68,14 @@ class PagesController < ApplicationController
      end
   end
       
-  #Fonction créant un dataset avec le résultat de la requête
+  #Fonction créant un dataset au format json avec le résultat de la requête
   def set_dataset(tweets)
     File.open("dataset.json", "w") do |f|
         f.write(tweets)
     end 
   end
-      
+ 
+  #Fonction récupérant un dataset au format json
   def get_dataset()
       file = File.read("dataset.json")
   end
@@ -82,6 +86,10 @@ class PagesController < ApplicationController
       term.stem
     end
     token.join(" ")
+  end
+
+  def initialisation(n)
+    res = Array.new(n) {|i| Array.new(n) {|j| -1} } # Create an empty tab (2 lin * 1 col) initialize with 0 (another way)
   end
 
   def sentimental_class(text)
@@ -98,7 +106,83 @@ class PagesController < ApplicationController
     analyzer.score text
   end
 
+  def sentimental_and_score_analysis(tweets)
+    tweets.each do |key,tweet|
+      tweet["sentimental_class"] = sentimental_class tweet["text"]
+      tweet["sentimental_score"] = sentimental_score tweet["text"]
+      #negation tweet
+    end
+    tweets
+  end
 
+  def word__comparaison_score(tweet1_string, tweet2_string)
+
+    var = true
+    tweet1 = tweet1_string.split(/\s/)
+    tweet2 = tweet2_string.split(/\s/)
+
+    cmpt = 0
+    if(tweet1.length < tweet2.length)
+      min = tweet1.length
+      max = tweet2.length
+    else
+      min = tweet2.length
+      max = tweet1.length
+    end
+
+    for i in (0..(min-1))
+      var = true
+      for j in (0..(max-1))
+        if (tweet1[i]==tweet2[j] && var )
+          cmpt+=1
+          var = false
+        end
+      end
+    end
+    score = (((cmpt.to_f/min)+(cmpt.to_f/max))/2.to_f)
+  end
+
+  def result_score(score)
+    score = case
+    when (score<0.25) then "low"
+    when ((0.25<= score) and (score<0.75)) then "neutral"
+    when ((0.75 <= score) and (score<1)) then "high"
+    when 1 then "equals"
+    when 0 then "different"
+    else "errror"
+    end
+    score
+  end
+
+  def negation(tweet_string)
+    array = tweet_string.split(/\s/)
+    for i in (0..(array.length-1))
+      if $negation_word.include?(array[i])
+        return "negatif"
+      end
+    end
+    return "positif"
+  end
+
+  def make_class(tweets,matrice)
+    long = tweets.length
+    i = 0
+    j = 0
+    tweets.each do |key1,tweet1|
+      #for i in (0..long)
+      tweet1["negatif"] = negation(tweet1["cleaned_text"])
+        j = 0
+        tweets.each do |key2,tweet2|
+        #for j in ((i+1)..(long-1))
+          if(j>i)
+            matrice[i][j] = Hash.new
+            tmp = word__comparaison_score(tweet1["cleaned_text"], tweet2["cleaned_text"])
+            matrice[i][j]["score"] = tmp
+            matrice[i][j]["value"] = result_score(tmp)
+          end
+          j+=1
+        end
+        i+=1
 
   def sentimental_and_score_analysis(tweets)
     tweets.each do |key,tweet|
@@ -107,10 +191,6 @@ class PagesController < ApplicationController
     end
     tweets
   end
-
-
-
-
 
   def pre_classification(tweets)
     #Preclassification des tweets

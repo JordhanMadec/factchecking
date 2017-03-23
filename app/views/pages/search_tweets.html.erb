@@ -25,15 +25,23 @@
   <div>
       <h2><%= @nbTweets %> tweets found</h2>
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
+
+      <%= i=0%>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
           <h4><a href="<%= tweet["user"]["url"] %>" target="_blank">@<%= tweet["user"]["screen_name"] %></a></h4>
           <p class="tweet_content"><%= tweet["text"] %></p>
           <p class="tweet_content"><%= tweet["cleaned_text"] %></p>
+          <p class="tweet_content"><b>Negatif/Positif : </b><%= tweet["negatif"] %></p>
+          <% if(i+1<@nbTweets)%>
+          <p class="tweet_content"><b>Score avec le tweet d'après : </b><%= @matrice_score[i][1+i]["score"] %></p>
+          <p class="tweet_content"><b>Class avec le tweet d'après : </b><%= @matrice_score[i][1+i]["value"] %></p>
+          <%end%>
           <p class="tweet_content"><b>Sentimental class : </b><%= tweet["sentimental_class"] %>&emsp;&emsp;<b>Sentimental score : </b><%= tweet["sentimental_score"] %> </p>
           <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet["favorite_count"] %>
   	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet["retweet_count"] %></p>
         </div>
+        <%= i+=1 %>
       <%end%>
   </div>
 </div>
