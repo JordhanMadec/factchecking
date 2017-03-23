@@ -27,7 +27,7 @@
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
-          <h4><a href="<%= tweet["user"].url %>" target="_blank">@<%= tweet["user"].screen_name %></a></h4>
+          <h4><a href="<%= tweet["user"]["url"] %>" target="_blank">@<%= tweet["user"]["screen_name"] %></a></h4>
           <p class="tweet_content"><%= tweet["text"] %></p>
           <p class="tweet_content"><%= tweet["cleaned_text"] %></p>
           <p class="tweet_content"><b>Sentimental class : </b><%= tweet["sentimental_class"] %>&emsp;&emsp;<b>Sentimental score : </b><%= tweet["sentimental_score"] %> </p>
