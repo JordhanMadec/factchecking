@@ -2,14 +2,17 @@ require 'twitter'
 require 'stemmer'
 require'sentimental'
 require 'config_dev'
+require 'json'
 
 if ConfigDev.PB_SSL
   require 'openssl'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 end
 
-
 class PagesController < ApplicationController
+
+  $THRESHOLD = 0.5
+  $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
 
   def init
     client = Twitter::REST::Client.new do |config|
@@ -26,15 +29,19 @@ class PagesController < ApplicationController
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
     #Nettoyage des tweets
-    @tweet_list =  clean_tweets client.search(@keywords, lang: "en")
+    #@tweet_list =  prepare_tweets client.search(@keywords, lang: "en")
+    @tweet_list = JSON.parse(get_dataset)
+    clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
+    #Analyse sentimentale des tweets
     @tweet_list = sentimental_and_score_analysis @tweet_list
+    #Classification des tweets
+    #set_dataset(@tweet_list)
     @matrice_score = initialisation(@nbTweets)
     make_class(@tweet_list,@matrice_score)
-
   end
 
-  def clean_tweets(tweets)
+  def prepare_tweets(tweets)
       res = Hash.new
       tweets.each do |tweet|
         #Les tweets retournés par l'API sont en mode frozen, ils ne sont pas modifiables
@@ -47,27 +54,39 @@ class PagesController < ApplicationController
         res[tweet.id]["user"] = tweet.user.dup
         res[tweet.id]["in_reply_to_id"] = tweet.in_reply_to_user_id
         res[tweet.id]["text"] = tweet.text.dup
-        #res[tweet.id]["sentimental_class"] = "default"
-        #res[tweet.id]["sentimental_score"] = 0
-        #1.Downcase  2.Rootify  3.Delete useless terms
-        res[tweet.id]["cleaned_text"] = stemmify tweet.text.dup.downcase
+        res[tweet.id]["cleaned_text"] = ""
+        res[tweet.id]["sentimental_class"] = "default"
+        res[tweet.id]["sentimental_score"] = 0
       end
-      res
+      res.to_json
+  end
+
+  def clean_tweets(tweets)
+     tweets.each do |key, tweet|
+        #1.Downcase  2.Rootify  (3.Delete useless terms)
+        tweet["cleaned_text"] = stemmify tweet["text"].downcase
+     end
+  end
+
+  #Fonction créant un dataset au format json avec le résultat de la requête
+  def set_dataset(tweets)
+    File.open("dataset.json", "w") do |f|
+        f.write(tweets)
+    end
+  end
+
+  #Fonction récupérant un dataset au format json
+  def get_dataset()
+      file = File.read("dataset.json")
   end
 
   def stemmify(tweet)
-    token  = tweet.split(" ")
+    token = tweet.split(" ")
     token.map! do |term|
       term.stem
     end
     token.join(" ")
   end
-
-#Partie de Hugo
-  $THRESHOLD = 0.5
-  $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
-
-
 
   def initialisation(n)
     res = Array.new(n) {|i| Array.new(n) {|j| -1} } # Create an empty tab (2 lin * 1 col) initialize with 0 (another way)
@@ -145,7 +164,6 @@ class PagesController < ApplicationController
     return "positif"
   end
 
-
   def make_class(tweets,matrice)
     long = tweets.length
     i = 0
@@ -165,6 +183,8 @@ class PagesController < ApplicationController
           j+=1
         end
         i+=1
+      end
+  end
 
   def sentimental_and_score_analysis(tweets)
     tweets.each do |key,tweet|
@@ -173,12 +193,6 @@ class PagesController < ApplicationController
     end
     tweets
   end
-
-
-
-
-#fin de la partie de Hugo
-
 
   def pre_classification(tweets)
     #Preclassification des tweets

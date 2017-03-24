@@ -27,10 +27,10 @@ gem 'twitter', '5.16.0'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 
+gem 'json'
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
-gem 'stemmify'
-gem 'uea-stemmer'
 gem 'stemmer'
 gem 'sentimental'
 # Use ActiveModel has_secure_password
