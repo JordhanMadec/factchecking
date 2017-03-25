@@ -32,6 +32,8 @@ gem 'json'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 gem 'stemmer'
+gem 'ruby-stemmer', '>=0.8.3', :require => 'lingua/stemmer'
+
 gem 'sentimental'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

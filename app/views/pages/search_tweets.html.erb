@@ -26,7 +26,7 @@
       <h2><%= @nbTweets %> tweets found</h2>
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
 
-      <%= i=0%>
+      <%= i=0 %>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
           <h4><a href="<%= tweet["user"]["url"] %>" target="_blank">@<%= tweet["user"]["screen_name"] %></a></h4>

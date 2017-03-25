@@ -1,5 +1,6 @@
 require 'twitter'
 require 'stemmer'
+require 'lingua/stemmer'
 require'sentimental'
 require 'config_dev'
 require 'json'
@@ -11,7 +12,11 @@ end
 
 class PagesController < ApplicationController
 
-  $THRESHOLD = 0.5
+  THRESHOLD = 0.5
+  LANGUAGE = "en"
+  USELESS_WORD = /\s(a|an|the|this|that)\s/
+  USELESS_PONCTUATION = /[,;:."-]/
+  STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
 
   def init
@@ -29,16 +34,16 @@ class PagesController < ApplicationController
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
     #Nettoyage des tweets
-    #@tweet_list =  prepare_tweets client.search(@keywords, lang: "en")
+    #@tweet_list =  prepare_tweets client.search(@keywords, lang: LANGUAGE)
     @tweet_list = JSON.parse(get_dataset)
     clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     #Analyse sentimentale des tweets
-    @tweet_list = sentimental_and_score_analysis @tweet_list
+    sentimental_and_score_analysis @tweet_list
     #Classification des tweets
     #set_dataset(@tweet_list)
     @matrice_score = initialisation(@nbTweets)
-    make_class(@tweet_list,@matrice_score)
+    make_class(@tweet_list, @matrice_score)
   end
 
   def prepare_tweets(tweets)
@@ -58,14 +63,8 @@ class PagesController < ApplicationController
         res[tweet.id]["sentimental_class"] = "default"
         res[tweet.id]["sentimental_score"] = 0
       end
+      #On rend la liste des tweets au format json
       res.to_json
-  end
-
-  def clean_tweets(tweets)
-     tweets.each do |key, tweet|
-        #1.Downcase  2.Rootify  (3.Delete useless terms)
-        tweet["cleaned_text"] = stemmify tweet["text"].downcase
-     end
   end
 
   #Fonction créant un dataset au format json avec le résultat de la requête
@@ -80,13 +79,35 @@ class PagesController < ApplicationController
       file = File.read("dataset.json")
   end
 
-  def stemmify(tweet)
-    token = tweet.split(" ")
-    token.map! do |term|
-      term.stem
-    end
-    token.join(" ")
+
+  #----- Nettoyage des tweets -----
+  def clean_tweets(tweets) #
+     tweets.each do |key, tweet|
+        # 1.Downcase
+        tweet["cleaned_text"] = tweet["text"].downcase
+        # 2.Delete useless terms
+        delete_useless_terms tweet["cleaned_text"]
+        # 3.Stemmify
+        tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
+     end
   end
+
+  def stemmify(tweet) #Garde la racine des mots
+    sample = tweet.split(/\s/)
+    sample.map! do |term|
+      STEMMER.stem(term)
+    end
+    sample.join(" ")
+  end
+
+  def delete_useless_terms(tweet) #Supprime les termes superflus
+    tweet.gsub!(USELESS_WORD, " ") #Suppression des déterminants
+    tweet.gsub!(USELESS_PONCTUATION, "") #Suppresion de la ponctuation
+  end
+
+
+
+  #----- Classification tweets -----
 
   def initialisation(n)
     res = Array.new(n) {|i| Array.new(n) {|j| -1} } # Create an empty tab (2 lin * 1 col) initialize with 0 (another way)
@@ -95,14 +116,14 @@ class PagesController < ApplicationController
   def sentimental_class(text)
     analyzer = Sentimental.new
     analyzer.load_defaults
-    analyzer.threshold = $THRESHOLD
+    analyzer.threshold = THRESHOLD
     analyzer.sentiment text
   end
 
   def sentimental_score(text)
     analyzer = Sentimental.new
     analyzer.load_defaults
-    analyzer.threshold = $THRESHOLD
+    analyzer.threshold = THRESHOLD
     analyzer.score text
   end
 
