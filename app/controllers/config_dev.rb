@@ -5,22 +5,22 @@ class ConfigDev
     @@PB_SSL
   end
 
-  @@CONSUMER_KEY = "xpg49pUpKolcCXWuQe2b0EqYx";
+  @@CONSUMER_KEY = "52WNnLx6onjqDPOfsQv8YiLh6";
   def self.CONSUMER_KEY
     @@CONSUMER_KEY
   end
 
-  @@CONSUMER_SECRET = "aqMRdUn28HqZrD1IIeXK6Pk0SfliFQGDuplBkZnlVo4cMvyaHo"
+  @@CONSUMER_SECRET = "GkhtapLJnVQgmpcBaaSiQxsVhrWLejJQROHvMsyp2PBMBuJASM"
   def self.CONSUMER_SECRET
     @@CONSUMER_SECRET
   end
 
-  @@ACCESS_TOKEN = "720567318443634689-pogzy5zqAaZFyulAmvNdhb4HgrpCvw9"
+  @@ACCESS_TOKEN = "2312645583-rCmOgQkejUWyAllRlU7x8snqaLfPS3HgR6oHvJz"
   def self.ACCESS_TOKEN
     @@ACCESS_TOKEN
   end
 
-  @@ACCESS_TOKEN_SECRET = "2MenMhbURuUcOGCip7gbzUQtfbeLvwhibJFAJgKs4f888"
+  @@ACCESS_TOKEN_SECRET = "xTXRqwqHDuN3MJKpPpfW75c5IKrbifFvGdp6OSckNx2r4"
   def self.ACCESS_TOKEN_SECRET
     @@ACCESS_TOKEN_SECRET
   end
