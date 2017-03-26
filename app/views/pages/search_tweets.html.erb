@@ -40,6 +40,9 @@
           <p class="tweet_content"><b>Sentimental class : </b><%= tweet["sentimental_class"] %>&emsp;&emsp;<b>Sentimental score : </b><%= tweet["sentimental_score"] %> </p>
           <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet["favorite_count"] %>
   	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet["retweet_count"] %></p>
+         <br>
+          WEIGHT : <%= tweet["weight"] %>
+         <br>
         </div>
         <%= i+=1 %>
       <%end%>

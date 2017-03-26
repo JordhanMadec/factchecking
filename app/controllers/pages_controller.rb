@@ -4,6 +4,7 @@ require 'lingua/stemmer'
 require'sentimental'
 require 'config_dev'
 require 'json'
+require 'uri'
 
 if ConfigDev.PB_SSL
   require 'openssl'
@@ -39,6 +40,7 @@ class PagesController < ApplicationController
     clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     #Analyse sentimentale des tweets
+    weigh @tweet_list
     sentimental_and_score_analysis @tweet_list
     #Classification des tweets
     #set_dataset(@tweet_list)
@@ -218,9 +220,82 @@ class PagesController < ApplicationController
   def pre_classification(tweets)
     #Preclassification des tweets
   end
+  
+  # return vrai si l'utilisateur est blackliste
+  def isBlacklisted(id)
+    file = File.read("blacklist.txt")
+    file.gsub!(/\r\n?/, "\n")
+    file.each_line do |line|      
+      if line.to_s == id.to_s
+        return true
+      end
+    end
+    return false
+  end
+
+  # renvoie 1 si good news, -1 si fake news, 0 sinon
+  def statutURLs(urls)
+    urls.each do |url|
+
+      uri_host = URI.parse(url["expanded_url"]).host
+
+      # vérifie si fake news
+      file = File.read("fake_news.txt")
+      file.gsub!(/\r\n?/, "\n")
+      file.each_line do |line|
+        if line == uri_host
+          return (-1)
+        end
+      end
+
+      # vérifie si good news
+      file = File.read("good_news.txt")
+      file.gsub!(/\r\n?/, "\n")
+      file.each_line do |line|
+        if line == uri_host
+          return 1
+        end
+      end
+
+    end
+    return 0
+  end
 
   def weigh(tweets)
-    #Pondération des tweets
+    # Pondération des tweets
+    # Importance de chaque critère :
+=begin
+    0. Auteur blacklisté ou non      - check si user.id est blacklisté, on néglige alors
+    1. Présence d’une URL ou non     - si expanded_url pointe vers un site de fake news, 
+                                       on néglige le tweet, si pointe vers good news, on le met devant
+                                       sinon neutre (on fait rien)
+    2. Popularité                    - (retweet_count + favorite_count) * user.followers_count
+=end
+    
+    tweets.each do |i,t|
+
+      if isBlacklisted(t["user"]["id"])
+        t["weight"] = -1
+      else
+
+        urls_w = statutURLs(t["attrs"]["entities"]["urls"])
+
+        # fake news
+        if urls_w == -1
+          t["weight"] = -1
+
+        # good news
+        elsif urls_w == 1
+          t["weight"] = (2**(0.size * 8 -2) -1) # max integer
+
+        # url non importante
+        else
+          t["weight"] = ( Integer(t["retweet_count"]) + Integer(t["favorite_count"]) ) * Integer(t["user"]["followers_count"])
+        end
+
+      end
+    end
+    tweets
   end
 
   def score_classes(tweets)

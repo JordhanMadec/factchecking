@@ -1,0 +1,15 @@
+nbcnews.com
+news.yahoo.com
+news.google.com
+huffingtonpost.com
+cnn.com
+nytimes.com
+foxnews.com
+dailymail.co.uk
+theguardian.com
+wsj.com
+abcnews.go.com
+news.bbc.co.uk
+usatoday.com
+latimes.com
+go.nasa.gov
