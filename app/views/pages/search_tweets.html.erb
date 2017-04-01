@@ -38,11 +38,9 @@
           <p class="tweet_content"><b>Class avec le tweet d'après : </b><%= @matrice_score[i][1+i]["value"] %></p>
           <%end%>
           <p class="tweet_content"><b>Sentimental class : </b><%= tweet["sentimental_class"] %>&emsp;&emsp;<b>Sentimental score : </b><%= tweet["sentimental_score"] %> </p>
+           <p class="tweet_content"><b>Poids : </b><%= tweet["weight"] %></p>
           <p><b><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Favorites : </b><%= tweet["favorite_count"] %>
   	     <b>&emsp;&emsp;<i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;Retweets : </b><%= tweet["retweet_count"] %></p>
-         <br>
-          WEIGHT : <%= tweet["weight"] %>
-         <br>
         </div>
         <%= i+=1 %>
       <%end%>

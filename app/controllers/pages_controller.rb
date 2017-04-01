@@ -233,7 +233,7 @@ class PagesController < ApplicationController
     return false
   end
 
-  # renvoie 1 si good news, -1 si fake news, 0 sinon
+  # renvoie 1 si good news, -2 si fake news, 0 sinon
   def statutURLs(urls)
     urls.each do |url|
 
@@ -244,7 +244,7 @@ class PagesController < ApplicationController
       file.gsub!(/\r\n?/, "\n")
       file.each_line do |line|
         if line == uri_host
-          return (-1)
+          return (-2)
         end
       end
 
@@ -261,41 +261,88 @@ class PagesController < ApplicationController
     return 0
   end
 
+  def median(array)
+    sorted = array.sort
+    len = sorted.length
+    (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+  end
+
   def weigh(tweets)
     # Pondération des tweets
     # Importance de chaque critère :
 =begin
-    0. Auteur blacklisté ou non      - check si user.id est blacklisté, on néglige alors
-    1. Présence d’une URL ou non     - si expanded_url pointe vers un site de fake news, 
+    1. Auteur blacklisté ou non      - check si user.id est blacklisté, on néglige alors
+    2. Présence d’une URL ou non     - si expanded_url pointe vers un site de fake news, 
                                        on néglige le tweet, si pointe vers good news, on le met devant
                                        sinon neutre (on fait rien)
-    2. Popularité                    - (retweet_count + favorite_count) * user.followers_count
+    3. Popularité                    - on se base sur la médiane&moyenne des rt fav et du nb abo
 =end
-    
+
+
+    # Medianes...
+    abo = Array.new
+    rft = Array.new
+    tweets.each do |i,t|
+      rft.push(Integer(t["retweet_count"]) + Integer(t["favorite_count"]))
+      abo.push(Integer(t["user"]["followers_count"]))
+    end
+    median_abo = median(abo)
+    median_rft = median(rft)
+
+    # Moyennes...
+    avg_abo = abo.inject(:+).to_f / abo.length
+    avg_rft = rft.inject(:+).to_f / rft.length
+
+
+    puts "MEDIANE ABO"
+    puts median_abo
+    puts "AVG ABO"
+    puts avg_abo
+    puts "MEDIANE RFT"
+    puts median_rft
+    puts "AVG RFT"
+    puts avg_rft
+
+    # Pondération...
     tweets.each do |i,t|
 
-      if isBlacklisted(t["user"]["id"])
-        t["weight"] = -1
-      else
+        t_rtf = Integer(t["retweet_count"]) + Integer(t["favorite_count"])
+        t_abo = Integer(t["user"]["followers_count"])
 
-        urls_w = statutURLs(t["attrs"]["entities"]["urls"])
+        # urls
+        t["weight"] = statutURLs(t["attrs"]["entities"]["urls"])
 
-        # fake news
-        if urls_w == -1
-          t["weight"] = -1
-
-        # good news
-        elsif urls_w == 1
-          t["weight"] = (2**(0.size * 8 -2) -1) # max integer
-
-        # url non importante
+        # blacklist
+        if isBlacklisted(t["user"]["id"])
+          t["weight"] -= 2
         else
-          t["weight"] = ( Integer(t["retweet_count"]) + Integer(t["favorite_count"]) ) * Integer(t["user"]["followers_count"])
-        end
+        
+        # médianes : rt&fav + abo
+        if t_rtf>100 && t_rtf > median_rft
 
-      end
+            t["weight"] += 0.1
+
+            if t_abo>300 && t_abo > median_abo
+              t["weight"] += 0.1
+            end
+
+            # moyennes : rt&fav + abo
+            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )  
+
+            # hashtags
+            if !t["attrs"]["entities"]["hashtags"].empty?
+              ht = []
+              t["attrs"]["entities"]["hashtags"].each do |h|
+                ht.push(h["text"])
+              end
+              t["weight"] += (t["cleaned_text"].split(" ") & ht).empty? ? 0.1 : 0
+            end   
+
+        end
+        
+        t["weight"].round(2)
+      end    
     end
-    tweets
   end
 
   def score_classes(tweets)
