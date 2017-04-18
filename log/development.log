@@ -21884,6 +21884,7 @@ SyntaxError (/Users/hugovincent/Documents/Cours INSA/FactChecking/factchecking/a
 Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-22 20:50:36 +0100
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-03-28 16:53:22 +0200
 Processing by PagesController#home as HTML
   Rendered pages/home.html.erb within layouts/application (490.8ms)
@@ -21931,3 +21932,1608 @@ Processing by PagesController#search_tweets as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkLCL22HJr33uEr3WqP2dA17h9I/E7XsmYE5JjvmzNfE54RIKJ1SbL4gZZLqBx86frgk30NGTj0lYlZHuHJgOA==", "keywords"=>"bgvfds", "commit"=>""}
   Rendered pages/search_tweets.html.erb within layouts/application (9.4ms)
 Completed 200 OK in 8910ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for ::1 at 2017-03-26 16:20:09 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (4939.0ms)
+Completed 200 OK in 5155ms (Views: 5132.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-26 16:20:14 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 16:20:15 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-26 16:20:15 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 16:20:15 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 16:20:22 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QQCSiFQfKhP/9P1oX/dHU0GCCp/dJf7Mwg9GNJ6SEVe73FGqJ3tNmVYhyQQpMOiNHliyIX2/5ZtRx9VfqXItVA==", "keywords"=>"test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 9918ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 16:20:32 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 17:58:55 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:301: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/pages_controller.rb:301: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (155.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (209.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-26 17:59:51 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (281.2ms)
+Completed 200 OK in 427ms (Views: 408.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-26 17:59:51 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-26 17:59:51 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-26 17:59:51 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-26 17:59:51 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 17:59:52 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:00:02 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KAIW9bduzWNbIySJRrJ0wrsSOh5kG6UJXadAQLyOk220I8Gm7jqyjg46+XvHZxJ2r3zKq05W25O6YU6uK4wO3g==", "keywords"=>"test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 10201ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:00:12 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:01:33 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:01:34 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 107ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:01:34 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:01:34 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:01:39 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bnQKXkBE1yH62DrPYS3sMpIYY9QvuAGky7bNnOpN+QbyVd0NGRCozK/B5z3g+IqGhnaTYQX1fz4scMNyfU9ktQ==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 10039ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:01:49 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:03:19 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (207.3ms)
+Completed 200 OK in 295ms (Views: 286.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:03:20 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:03:20 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:03:22 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjBEBbchOP/m8EDOUNtrn1kyeW+dD7HSpfw82X6zke22EZNW7nVHErPpnTzRDg0rTVyJ2rdCz0hCOjI36bEMXg==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 9733ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:03:32 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:04:44 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (214.5ms)
+Completed 200 OK in 304ms (Views: 295.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:04:44 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:04:44 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:04:46 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AICrCHTAA8VPalQDXLzoOw41u1dr3h6Hg8rZ/0ZO+o6coXxbLZR8KBpzifHdaY6PGltL4kGTYB1kDNcR0UxnPQ==", "keywords"=>"", "commit"=>""}
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/pages_controller.rb:278:in `[]'
+  app/controllers/pages_controller.rb:278:in `block in weigh'
+  app/controllers/pages_controller.rb:275:in `each'
+  app/controllers/pages_controller.rb:275:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-26 18:05:16 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (213.4ms)
+Completed 200 OK in 345ms (Views: 337.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:05:16 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:05:16 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:05:18 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YNJpTxcz6cOWzq0kYud0Tp5N+RWBBpE41fzLLnWnHfv8874cTmeWLsPXcNbjMhL6iiMJoKtL76IyOsXA4qWASA==", "keywords"=>"", "commit"=>""}
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "0":String):
+  app/controllers/pages_controller.rb:296:in `block in weigh'
+  app/controllers/pages_controller.rb:275:in `each'
+  app/controllers/pages_controller.rb:275:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-26 18:06:48 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (220.1ms)
+Completed 200 OK in 323ms (Views: 315.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:06:48 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:06:48 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:06:50 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cBwS99UK7/zk3yRUa2zcLuCsotPekDGW52sOwvyFLLvsPcWkjF6QEbHG+abqubqa9MJSZvTdTwwArQAsa4exCA==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 10423ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:07:01 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-26 18:07:59 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 12129ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-26 18:12:30 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (216.7ms)
+Completed 200 OK in 311ms (Views: 302.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:12:31 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:12:31 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:12:32 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6QLDohI+QKGlmEmKyLRnbhU+xx5IZ4HFtPpp/Rc6mOx1IxTxS2o/TPCBlHhJYQHaAVA3q2Iq/19TPGcTgDgFXw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 10481ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:12:43 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-26 18:13:32 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 14762ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-26 18:15:40 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (166.5ms)
+Completed 200 OK in 9641ms (Views: 212.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:15:51 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:16:02 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:16:03 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:16:03 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:16:05 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fj7WSYzqDrsvlBYD3Hq8AJxFrVuJHbqqxtJFIqPlJPfiHwEa1b5xVnqNy/Fdr9q0iCtd7qNQxDAhFEvMNOe5RA==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 10845ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:16:16 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:17:52 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (224.2ms)
+Completed 200 OK in 317ms (Views: 308.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:17:52 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:17:52 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:17:54 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jtLXZASSVyGDzFhwen52qHRQmmhYTjUw3RRi4OEAzSUS8wA3XcYozNbVhYL7qxAcYD5q3XIDS6o60mwOdgJQlg==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 10494ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:18:05 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:21:12 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (215.1ms)
+Completed 200 OK in 344ms (Views: 335.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:21:12 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-26 18:21:13 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:21:13 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:21:16 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x1FmDIwKwj46pxFKn3+KcA0f1n4BCXCbvpKKOCGWREYxi7HoiDI1iFWtDYFZqLV+p0r3u1MpqA8XJsMPbpoylQ==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 10578ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:21:27 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:22:20 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (210.1ms)
+Completed 200 OK in 303ms (Views: 295.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:22:21 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:22:21 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:22:23 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N7s9aURTXRMObbyo/GexD0rnq9vw5vgFbsabWKISJm3BYeqNQGuqpWFnoGM6sI4B4LKKHqLGIJHHctJv7R5Qvg==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 10581ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:22:34 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:25:49 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (215.7ms)
+Completed 200 OK in 313ms (Views: 306.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:25:49 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:25:52 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zKvC+zRh3+EwkJagp6fFQFv4Hc0YsOXgkLlF7Np+OmtY9rSxMWb0kvMxC/hAFSEjoWKWa31vRly07I6t/P04YA==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 11421ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:26:03 +0200
+
+
+Started GET "/" for ::1 at 2017-03-26 18:28:28 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (222.7ms)
+Completed 200 OK in 320ms (Views: 313.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-26 18:28:29 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:28:29 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-26 18:28:33 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M4IeIESGelDMgcLeK8jaFLGVJcGfzWeA99iKaoV6GxKn32hqQYFRIw8gX4bMej53Sw+uZ/oSxDzTjUEro/kZGQ==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 10788ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-26 18:28:44 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 15:56:20 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (813.4ms)
+Completed 200 OK in 1369ms (Views: 1359.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-27 15:56:22 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 15:56:23 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-27 15:56:23 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 15:56:24 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 15:56:47 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xOuvxEk0BR/viS1tWt/6sUoutJwA9SmfODX4+HqXWf2c0XCzq0jdWCropz829vvTvnDWSasTVir++NebxOccnA==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 18955ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 15:57:07 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:04:24 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (163.3ms)
+Completed 200 OK in 234ms (Views: 226.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:04:25 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:04:25 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:04:29 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EDnD3Sipx8FXB5njuqvoZIMqeLHcESU2T80xCcw6VhpIAxyqytUfhpJmE7HWgukGd3QaZHf3WoOJAB5qckoTew==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 9757ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:04:39 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:06:56 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (213.6ms)
+Completed 200 OK in 302ms (Views: 294.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:06:57 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:06:57 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:06:59 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5YtZ2p+GyBPVhx4dNQ+FJHTW8Z4qxIcNwnj5pYCaos69sYatffoQVBDmlE9ZJoRGgIiTS4Ei+LgEtdbGPurnrw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 11048ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:07:11 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:10:38 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (248.5ms)
+Completed 200 OK in 340ms (Views: 331.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:10:39 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:10:39 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:10:42 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GHtxC90bTVIYITaBFkrG/JzeN4Yh+rt0W/306/LmSv5AQa58P2eVFd1AvNN6Y8eeaIBVU4ocxMGdMNuITJYPnw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 14788ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:10:57 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:11:39 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:11:40 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:11:41 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 108ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:11:41 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:11:41 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:11:43 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+wptzBqhqzt6vGCugC91XubgQeovfojuMpR5giRHXY31vbA0hZe6yiLe9DWKby3j8Xj0gNbhZZ+B36FtuFYFw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 11225ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:11:55 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:12:22 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (219.5ms)
+Completed 200 OK in 284ms (Views: 275.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:12:23 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:12:23 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:12:27 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"385NfsMdk/iT3YqIzwjd5bmMU14G0GkH+3yXDft+sBiH9JIJIWFLv1a8ANqjIdyHTdIxi602FrI9sbhuRQ71eQ==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 10673ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:12:38 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:18:24 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (275.2ms)
+Completed 200 OK in 380ms (Views: 373.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:18:24 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:18:24 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:18:27 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yFFVIcBAN5NTrt5r60Hr5PqSVu/loiRFbuv6PGRU2q6Qa4pWIjzv1JbPVDmHaOqGDsw0Ok5EW/CoJtVf2iSfzw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 10689ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:18:38 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-27 16:24:40 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (155.5ms)
+Completed 200 OK in 9269ms (Views: 205.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:24:50 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-27 16:26:36 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (157.4ms)
+Completed 200 OK in 9833ms (Views: 206.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:26:47 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 16:40:49 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (209.9ms)
+Completed 200 OK in 302ms (Views: 294.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 16:40:49 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 16:40:49 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 16:40:51 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"At9NyPp0o9DPZmEPd7xXGee6uLQrek1FdaXJcPXHYula5ZK/GAh7lwoH610blVZ7E+TaYYCcMvCzaOYTS7cniA==", "keywords"=>"", "commit"=>""}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms)
+
+ZeroDivisionError (divided by 0):
+  app/controllers/pages_controller.rb:292:in `/'
+  app/controllers/pages_controller.rb:292:in `block in weigh'
+  app/controllers/pages_controller.rb:275:in `each'
+  app/controllers/pages_controller.rb:275:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (55.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-27 17:01:31 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (231.4ms)
+Completed 200 OK in 325ms (Views: 317.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 17:01:32 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 17:01:32 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 17:24:17 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sg15iUqLW6kYswrKRmX8Z+KUcWZPrCFHV3YT75qxMILqN6b+qPeD7t3SgJgqTP0FFsoTs+RKXvKRuzyMJMF14w==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 10056ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 17:24:27 +0200
+
+
+Started GET "/" for ::1 at 2017-03-27 17:27:01 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (213.3ms)
+Completed 200 OK in 304ms (Views: 296.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-27 17:27:02 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 17:27:02 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-27 17:27:04 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S0bpYshBsUC4PBY6jZZwUpt+gHV5hg2/76vm2u3CxYMTfDYVKj1pB31dnGjhv3EwbyDioNJgcgopZsm5U7KA4g==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 10867ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 17:27:15 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-27 18:12:07 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (171.2ms)
+Completed 200 OK in 10125ms (Views: 218.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-27 18:12:17 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-27 18:13:18 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 17593ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-27 18:17:55 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 17187ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-31 16:42:45 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:309: syntax error, unexpected '*', expecting &. or :: or '[' or '.'
+...ers_count"])*1.0) / max_abo ) * 100
+...                               ^):
+  app/controllers/pages_controller.rb:309: syntax error, unexpected '*', expecting &. or :: or '[' or '.'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (3.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-31 16:44:02 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:309: syntax error, unexpected '*', expecting &. or :: or '[' or '.'
+...ers_count"])*1.0) / max_abo ) * 100.0
+...                               ^):
+  app/controllers/pages_controller.rb:309: syntax error, unexpected '*', expecting &. or :: or '[' or '.'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (50.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-31 16:45:24 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (305.9ms)
+Completed 200 OK in 435ms (Views: 425.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 16:45:24 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-31 16:45:25 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-31 16:45:26 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gYuLRiqMrleEO0f6Q1Wgyb4vErvOTJYsL3KXQl26lw4tzXjWrAexFS+1F9vIbgiMFys6XRS8P68pVLOJenM8kw==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 13084ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 16:45:40 +0200
+
+
+Started GET "/" for ::1 at 2017-03-31 17:03:17 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:284: syntax error, unexpected ')', expecting keyword_end
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:309: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+...avorite_count"])>median_rft?0.5:0) + 
+...                               ^
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:310: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+...ollowers_count"]>median_abo?0.5:0)
+...                               ^
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:311: syntax error, unexpected keyword_end, expecting ')'
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:315: syntax error, unexpected keyword_end, expecting ')'
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:320: syntax error, unexpected keyword_end, expecting ')'):
+  app/controllers/pages_controller.rb:284: syntax error, unexpected ')', expecting keyword_end
+  app/controllers/pages_controller.rb:309: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+  app/controllers/pages_controller.rb:310: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+  app/controllers/pages_controller.rb:311: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/pages_controller.rb:315: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/pages_controller.rb:320: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-31 17:04:06 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:309: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+...avorite_count"])>median_rft?0.5:0) + 
+...                               ^
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:310: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+...ollowers_count"]>median_abo?0.5:0)
+...                               ^
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:311: syntax error, unexpected keyword_end, expecting ')'
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:315: syntax error, unexpected keyword_end, expecting ')'
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:320: syntax error, unexpected keyword_end, expecting ')'):
+  app/controllers/pages_controller.rb:309: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+  app/controllers/pages_controller.rb:310: syntax error, unexpected tFLOAT, expecting keyword_do or '{' or '('
+  app/controllers/pages_controller.rb:311: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/pages_controller.rb:315: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/pages_controller.rb:320: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-31 17:04:57 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (300.9ms)
+Completed 200 OK in 426ms (Views: 418.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-31 17:04:58 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-31 17:05:01 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8XIeJGVkwj7Jx4sXy8lTF705Oju3HWi1YhU1dZTNq70nTiW6NpzhtgYGIDyuMAR2dwXnHl+schRN6fNPQbFRQ==", "keywords"=>"", "commit"=>""}
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  app/controllers/pages_controller.rb:284:in `[]='
+  app/controllers/pages_controller.rb:284:in `block in weigh'
+  app/controllers/pages_controller.rb:283:in `each'
+  app/controllers/pages_controller.rb:283:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.9ms)
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-31 17:06:24 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8XIeJGVkwj7Jx4sXy8lTF705Oju3HWi1YhU1dZTNq70nTiW6NpzhtgYGIDyuMAR2dwXnHl+schRN6fNPQbFRQ==", "keywords"=>"", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (210.9ms)
+Completed 200 OK in 13120ms (Views: 280.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 17:06:38 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 17:36:23 +0200
+
+
+Started GET "/" for ::1 at 2017-03-31 17:36:30 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (87.3ms)
+Completed 200 OK in 176ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 17:36:30 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 17:36:30 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 17:36:30 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 17:36:30 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-31 17:36:31 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-03-31 17:36:34 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BaTZQRtA6+mc9wlSSzxFJPCAt52vv5G2grDocIe51KQItEodHZ5sj76hWt5Aarr+1cQOzQTGPh9N7nz9k+vaYQ==", "keywords"=>"", "commit"=>""}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:311:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.5ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 17:37:35 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (195.8ms)
+Completed 200 OK in 12452ms (Views: 280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 17:37:48 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:01:48 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:300: syntax error, unexpected tIDENTIFIER, expecting ')'
+        t_abo = t["user"]["followers_count"]
+             ^):
+  app/controllers/pages_controller.rb:300: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.3ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:02:40 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `inject' for 165:Fixnum
+Did you mean?  inspect):
+  app/controllers/pages_controller.rb:293:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.5ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:04:28 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:320:in `block (2 levels) in weigh'
+  app/controllers/pages_controller.rb:319:in `each'
+  app/controllers/pages_controller.rb:319:in `block in weigh'
+  app/controllers/pages_controller.rb:297:in `each'
+  app/controllers/pages_controller.rb:297:in `weigh'
+  app/controllers/pages_controller.rb:43:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.8ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:04:42 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (210.9ms)
+Completed 200 OK in 13200ms (Views: 290.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:04:56 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:07:27 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (217.6ms)
+Completed 200 OK in 12762ms (Views: 288.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:07:40 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:09:37 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (179.8ms)
+Completed 200 OK in 11743ms (Views: 260.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:09:48 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:11:41 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (221.5ms)
+Completed 200 OK in 13008ms (Views: 290.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 18:11:54 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:13:12 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (219.7ms)
+Completed 200 OK in 12657ms (Views: 278.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:13:25 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:14:39 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (234.7ms)
+Completed 200 OK in 15428ms (Views: 294.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:14:55 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:18:07 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (223.8ms)
+Completed 200 OK in 15019ms (Views: 292.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 18:18:23 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-03-31 18:23:21 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (222.1ms)
+Completed 200 OK in 13209ms (Views: 281.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-03-31 18:23:34 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-03-31 18:23:35 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-04-01 18:37:30 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (245.6ms)
+Completed 200 OK in 15175ms (Views: 314.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-04-01 18:37:46 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-04-01 18:41:08 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (296.6ms)
+Completed 200 OK in 14111ms (Views: 374.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-04-01 18:41:22 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-04-01 18:41:23 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-04-01 18:50:51 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (181.9ms)
+Completed 200 OK in 12438ms (Views: 268.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-04-01 18:51:05 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-04-01 18:52:32 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (230.2ms)
+Completed 200 OK in 12355ms (Views: 328.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-04-01 18:52:44 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-04-01 18:52:45 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-04-01 18:52:45 +0200
+
+
+Started GET "/" for ::1 at 2017-04-01 18:54:20 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (274.2ms)
+Completed 200 OK in 374ms (Views: 363.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-04-01 18:54:20 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-04-01 18:54:20 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-04-01 18:54:44 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NT539NpaoKy6KRBgG+K37sXJav8WeL+PFIS9A2VIoae0o/YgiUwdoTvhk06tkSgX+Z59Ar3LYCh6PdgAXqxACg==", "keywords"=>"trump is a liar", "commit"=>""}
+Completed 500 Internal Server Error in 42639ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `each' for #<String:0x007fded44fe010>):
+  app/controllers/pages_controller.rb:87:in `clean_tweets'
+  app/controllers/pages_controller.rb:40:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (945.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (5.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.4ms)
+>>>>>>> origin/master
