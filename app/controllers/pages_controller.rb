@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   USELESS_WORD = /\s(a|an|the|this|that)\s/
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
-  $negation_word = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
 
   def init
     client = Twitter::REST::Client.new do |config|
@@ -35,7 +35,7 @@ class PagesController < ApplicationController
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
     #Nettoyage des tweets
-    #@tweet_list =  prepare_tweets client.search(@keywords, lang: LANGUAGE)
+    #@tweet_list = prepare_tweets client.search(@keywords, lang: LANGUAGE)
     @tweet_list = JSON.parse(get_dataset)
     clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
@@ -46,6 +46,14 @@ class PagesController < ApplicationController
     #set_dataset(@tweet_list)
     @matrice_score = initialisation(@nbTweets)
     make_class(@tweet_list, @matrice_score)
+    #save(@tweet_list)
+    @false_class = {score: 0,
+                    nb_tweets: 0,
+                    population: Array.new}
+    @true_class = {score: 0,
+                    nb_tweets: 0,
+                    population: Array.new}
+    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
   end
 
   def prepare_tweets(tweets)
@@ -73,6 +81,13 @@ class PagesController < ApplicationController
   def set_dataset(tweets)
     File.open("dataset.json", "w") do |f|
         f.write(tweets)
+    end
+  end
+
+  def save(tweets)
+    File.open("backup.json", "w") do |f|
+        f.write(tweets)
+        f.write("\n")
     end
   end
 
@@ -167,12 +182,12 @@ class PagesController < ApplicationController
 
   def result_score(score)
     score = case
-    when (score<0.25) then "low"
-    when ((0.25<= score) and (score<0.75)) then "neutral"
-    when ((0.75 <= score) and (score<1)) then "high"
-    when 1 then "equals"
-    when 0 then "different"
-    else "errror"
+      when (score<0.25) then "low"
+      when ((0.25<= score) and (score<0.75)) then "neutral"
+      when ((0.75 <= score) and (score<1)) then "high"
+      when 1 then "equals"
+      when 0 then "different"
+      else "errror"
     end
     score
   end
@@ -180,7 +195,7 @@ class PagesController < ApplicationController
   def negation(tweet_string)
     array = tweet_string.split(/\s/)
     for i in (0..(array.length-1))
-      if $negation_word.include?(array[i])
+      if NEGATION_WORD.include?(array[i])
         return "negatif"
       end
     end
@@ -217,15 +232,11 @@ class PagesController < ApplicationController
     tweets
   end
 
-  def pre_classification(tweets)
-    #Preclassification des tweets
-  end
-  
   # return vrai si l'utilisateur est blackliste
   def isBlacklisted(id)
     file = File.read("blacklist.txt")
     file.gsub!(/\r\n?/, "\n")
-    file.each_line do |line|      
+    file.each_line do |line|
       if line.to_s == id.to_s
         return true
       end
@@ -272,7 +283,7 @@ class PagesController < ApplicationController
     # Importance de chaque critère :
 =begin
     1. Auteur blacklisté ou non      - check si user.id est blacklisté, on néglige alors
-    2. Présence d’une URL ou non     - si expanded_url pointe vers un site de fake news, 
+    2. Présence d’une URL ou non     - si expanded_url pointe vers un site de fake news,
                                        on néglige le tweet, si pointe vers good news, on le met devant
                                        sinon neutre (on fait rien)
     3. Popularité                    - on se base sur la médiane&moyenne des rt fav et du nb abo
@@ -316,7 +327,7 @@ class PagesController < ApplicationController
         if isBlacklisted(t["user"]["id"])
           t["weight"] -= 2
         else
-        
+
         # médianes : rt&fav + abo
         if t_rtf>100 && t_rtf > median_rft
 
@@ -327,7 +338,7 @@ class PagesController < ApplicationController
             end
 
             # moyennes : rt&fav + abo
-            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )  
+            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )
 
             # hashtags
             if !t["attrs"]["entities"]["hashtags"].empty?
@@ -336,16 +347,28 @@ class PagesController < ApplicationController
                 ht.push(h["text"])
               end
               t["weight"] += (t["cleaned_text"].split(" ") & ht).empty? ? 0.1 : 0
-            end   
+            end
 
         end
-        
+
         t["weight"].round(2)
-      end    
+      end
     end
   end
 
-  def score_classes(tweets)
+  def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
+    tweets.each do |key, tweet|
+      if (tweet['weight'] > 0 and tweet['sentimental_score'] > 0.5) then
+        true_class[:population].push(tweet)
+        true_class[:nb_tweets]++
+        true_class[:score] += tweet['sentimental_score'] * tweet['weight']
+      end
+      if (tweet['weight'] > 0 and tweet['sentimental_score'] < 0.5) then
+        false_class[:population].push(tweet)
+        false_class[:nb_tweets]++
+        false_class[:score] += tweet['sentimental_score'] * tweet['weight']
+      end
+    end
   end
 end

@@ -26,6 +26,9 @@
       <h2><%= @nbTweets %> tweets found</h2>
       <p id="keywords_list">Keywords : <b><%= @keywords %></b></p>
 
+      <h2>True: <%= @true_class[:score] %></h2>
+      <h2>False: <%= @false_class[:score] %></h2>
+
       <%= i=0 %>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
