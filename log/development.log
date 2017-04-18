@@ -21882,3 +21882,52 @@ SyntaxError (/Users/hugovincent/Documents/Cours INSA/FactChecking/factchecking/a
 
 
 Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-03-22 20:50:36 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-28 16:53:22 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (490.8ms)
+Completed 200 OK in 709ms (Views: 689.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-75a00a50f2093aa87ae661d6fd1f1ee88ede60f904f03dbf146895d019f2eb5c.css?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-03-28 16:53:24 +0200
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-03-28 16:53:30 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lkLCL22HJr33uEr3WqP2dA17h9I/E7XsmYE5JjvmzNfE54RIKJ1SbL4gZZLqBx86frgk30NGTj0lYlZHuHJgOA==", "keywords"=>"bgvfds", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 8910ms (Views: 90.8ms | ActiveRecord: 0.0ms)

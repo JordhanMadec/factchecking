@@ -18,3 +18,9 @@
 
 # Ignore twitter tokens
 /app/controllers/config_dev.rb
+.idea/runConfigurations/Development__factchecking.xml
+.idea/runConfigurations/spec__factchecking.xml
+.idea/runConfigurations/test__factchecking.xml
+.idea/workspace.xml
+log/development.log
+.idea/runConfigurations/Production__factchecking.xml
