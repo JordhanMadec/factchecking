@@ -1,7 +1,7 @@
 require 'twitter'
 require 'stemmer'
 require 'lingua/stemmer'
-require'sentimental'
+require 'sentimental'
 require 'config_dev'
 require 'json'
 require 'uri'
@@ -31,29 +31,57 @@ class PagesController < ApplicationController
 
   def search_tweets
     client = init
+    puts 'Client init'
+
     @keywords = params[:keywords] ||= "test"
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
+
+    puts 'Keywords: '+@keywords
+
     #Nettoyage des tweets
-    #@tweet_list = prepare_tweets client.search(@keywords, lang: LANGUAGE)
-    @tweet_list = JSON.parse(get_dataset)
+    puts 'Reaching tweets...'
+    puts Time.now.inspect
+    @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
+    puts Time.now.inspect
+    puts 'Tweets reached'
+    #@tweet_list = JSON.parse(get_dataset)
     clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
+    puts 'Tweets found: ' + @nb_tweets.to_s
+
     #Analyse sentimentale des tweets
     weigh @tweet_list
+    puts 'Tweets weighted'
     sentimental_and_score_analysis @tweet_list
-    #Classification des tweets
+    puts 'Sentimental analysis made'
+
     #set_dataset(@tweet_list)
+
+    #Classification des tweets
     @matrice_score = initialisation(@nbTweets)
     make_class(@tweet_list, @matrice_score)
+    puts 'Matrice made'
+
     #save(@tweet_list)
-    @false_class = {score: 0,
+
+    @false_class = { score: 0,
+                     nb_tweets: 0,
+                     population: Array.new}
+    @true_class = { score: 0,
                     nb_tweets: 0,
                     population: Array.new}
-    @true_class = {score: 0,
-                    nb_tweets: 0,
-                    population: Array.new}
-    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+
+    @stats = { retweets: 0,
+               favs: 0,
+               trustworthiness: 0,
+               first_tweet_date: nil,
+               touched_number: 0,
+               propagation_time: 0,
+               geo_zones: Array.new}
+
+    score_classes(@true_class, @false_class, @tweet_list, @matrice_score, @stats)
+    puts 'Classes scored'
   end
 
   def prepare_tweets(tweets)
@@ -356,19 +384,21 @@ class PagesController < ApplicationController
     end
   end
 
-  def score_classes(true_class, false_class, tweets, matrice)
+  def score_classes(true_class, false_class, tweets, matrice, stats)
     #Score les différentes classes
     tweets.each do |key, tweet|
-      if (tweet['weight'] > 0 and tweet['sentimental_score'] > 0.5) then
-        true_class[:population].push(tweet)
-        true_class[:nb_tweets]++
-        true_class[:score] += tweet['sentimental_score'] * tweet['weight']
-      end
-      if (tweet['weight'] > 0 and tweet['sentimental_score'] < 0.5) then
-        false_class[:population].push(tweet)
-        false_class[:nb_tweets]++
-        false_class[:score] += tweet['sentimental_score'] * tweet['weight']
-      end
-    end
-  end
+      if (tweet["weight"] > 0) then
+        if (tweet["negatif"] == "positif") then
+          true_class[:population].push(tweet)
+          true_class[:nb_tweets]++
+          true_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+        else
+          false_class[:population].push(tweet)
+          false_class[:nb_tweets]++
+          false_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+        end
+      end #end if
+    end #end each
+  end #end func
+
 end
