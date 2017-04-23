@@ -12,6 +12,7 @@ if ConfigDev.PB_SSL
 end
 
 class PagesController < ApplicationController
+  include ApplicationHelper
 
   THRESHOLD = 0.5
   LANGUAGE = "en"
@@ -35,7 +36,9 @@ class PagesController < ApplicationController
 
     @keywords = params[:keywords] ||= "test"
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
-    if @keywords=="" then @keywords = "test" end
+    if @keywords=="" then
+      @keywords = "test"
+    end
 
     puts 'Keywords: '+@keywords
 
@@ -400,5 +403,19 @@ class PagesController < ApplicationController
       end #end if
     end #end each
   end #end func
+
+  # Actions of PagesController (important for router)
+  def index
+  end
+
+  def result
+  end
+
+  def charts
+  end
+
+  # Old actions
+  def home
+  end
 
 end

@@ -12,34 +12,33 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min
-//= require turbolinks
+//= require bootstrap
 //= require_tree .
+// require_self
 
-
-function home_size(){
-  var h = $(window).height();
-  $('.home').height(h);
-  $('.home').css('line-height',h+'px');
-}
-
-function highlight_keywords(){
-  compt=0;
-  keywords_list = $('#keywords_list b')[0].innerHTML.split(" ");
-  $('.tweet_content').each(function(){
-    keywords_list.forEach(function(keyword){
-      var regEx = new RegExp(keyword, "ig");
-      $('.tweet_content')[compt].innerHTML = $('.tweet_content')[compt].innerHTML.replace(regEx,"<span class=\"keyword\">$&</span>");
-    });
-    compt++;
-  });
-}
-
-$('document').ready(function(){
-  home_size();
-  highlight_keywords();
-});
-
-$(window).resize(function(){
-  home_size();
-});
+// function home_size(){
+//   var h = $(window).height();
+//   $('.home').height(h);
+//   $('.home').css('line-height',h+'px');
+// }
+//
+// function highlight_keywords(){
+//   compt=0;
+//   keywords_list = $('#keywords_list b')[0].innerHTML.split(" ");
+//   $('.tweet_content').each(function(){
+//     keywords_list.forEach(function(keyword){
+//       var regEx = new RegExp(keyword, "ig");
+//       $('.tweet_content')[compt].innerHTML = $('.tweet_content')[compt].innerHTML.replace(regEx,"<span class=\"keyword\">$&</span>");
+//     });
+//     compt++;
+//   });
+// }
+//
+// $('document').ready(function(){
+//   home_size();
+//   highlight_keywords();
+// });
+//
+// $(window).resize(function(){
+//   home_size();
+// });
