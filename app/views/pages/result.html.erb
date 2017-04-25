@@ -10,92 +10,38 @@
 			<div class="title_sec">
 				<h1>YOUR RESEARCH</h1>
 				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
-			</div>		
+			</div>
+
 			<div class="col-lg-8 col-md-8 col-sm-8" style="z-index: 2;">
-				<div class="sngl_blg">						
-					<div class="post_info">
-						<div class="user_name">
-							<h2>username</h2>	
-							<i class="fa fa-user-circle-o"></i>									
-						</div>		
-						<div class="user_id">
-							@user_id
-						</div>					
-					</div>
-					<div class="post_content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
-						<div class="row">
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<span class="pull-left">
-    								<i class="fa fa-heart"></i>&nbsp;Favorites : 15
-    							</span>
-    							<span class="pull-left">
-    								<i class="fa fa-retweet"></i>&nbsp;Retweets : 100
-    							</span>
-    						</div>
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<a href="#" data-toggle="popover"><i class="fa fa-long-arrow-right"></i> See more</a>
-    						</div>
-  						</div>
-					</div>
-				</div>					
-
-				<div class="sngl_blg">						
-					<div class="post_info">
-						<div class="user_name">
-							<h2>username</h2>	
-							<i class="fa fa-user-circle-o"></i>									
-						</div>		
-						<div class="user_id">
-							@user_id
-						</div>					
-					</div>
-					<div class="post_content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales.</p>
-						<div class="row">
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<span class="pull-left">
-    								<i class="fa fa-heart"></i>&nbsp;Favorites : 15
-    							</span>
-    							<span class="pull-left">
-    								<i class="fa fa-retweet"></i>&nbsp;Retweets : 100
-    							</span>
-    						</div>
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<a href="#" data-toggle="popover">
-    							<i class="fa fa-long-arrow-right"></i> See more</a>
-    						</div>
-  						</div>
-					</div>
-				</div>					
-
-				<div class="sngl_blg">						
-					<div class="post_info">
-						<div class="user_name">
-							<h2>username</h2>	
-							<i class="fa fa-user-circle-o"></i>									
-						</div>		
-						<div class="user_id">
-							@user_id
-						</div>					
-					</div>
-					<div class="post_content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<div class="row">
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<span class="pull-left">
-    								<i class="fa fa-heart"></i>&nbsp;Favorites : 15
-    							</span>
-    							<span class="pull-left">
-    								<i class="fa fa-retweet"></i>&nbsp;Retweets : 100
-    							</span>
-    						</div>
-    						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    							<a href="#" data-toggle="popover"><i class="fa fa-long-arrow-right"></i> See more</a>
-    						</div>
-  						</div>
-					</div>
-				</div>						
+        <% @tweet_list.each do |key, tweet| %>
+          <div class="sngl_blg">
+            <div class="post_info">
+              <div class="user_name">
+                <h2><%= tweet["user"]["name"] %></h2>
+                <i class="fa fa-user-circle-o"></i>
+              </div>
+              <div class="user_id">
+                @<%= tweet["user"]["screen_name"] %>
+              </div>
+            </div>
+            <div class="post_content">
+              <p><%= tweet["text"] %></p>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <span class="pull-left">
+                      <i class="fa fa-heart"></i>&nbsp;Favorites : <%= tweet["favorite_count"] %>
+                    </span>
+                    <span class="pull-left">
+                      <i class="fa fa-retweet"></i>&nbsp;Retweets : <%= tweet["retweet_count"] %>
+                    </span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <a href="#" data-toggle="popover"><i class="fa fa-long-arrow-right"></i> See more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        <% end %>
 			</div>				
 			
 			<div class="col-lg-4 col-md-4 col-sm-4" style="z-index: 1;">
@@ -109,7 +55,7 @@
 						<h2>fact information</h2>
 						<div class="title_br"></div>
 						<ul>
-							<li>Matching tweets : 3 </li>
+							<li>Matching tweets : <%= @nb_tweets %></li>
 							<li>Accuracy class : Accurate</li>
 							<li>Sentimental class : Positive</li>
 							<li>Votes : 10</li>
@@ -120,15 +66,14 @@
 						<h2>keywords</h2>
 						<div class="title_br"></div>
 						<ul class="tag">
-							<li><a href="">test</a></li>
-							<li><a href="">test</a></li>
-							<li><a href="">test</a></li>
-							<li><a href="">test</a></li>
+              <% @keywords_tag_array.each do |tag| %>
+							  <li><a href="#"><%= tag %></a></li>
+              <% end %>
 						</ul>
 					</div>						
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
-<!-- start Blog Section -->
+<!-- end Blog Section -->

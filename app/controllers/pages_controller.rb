@@ -409,6 +409,21 @@ class PagesController < ApplicationController
   end
 
   def result
+    client = init
+    @keywords = params[:keywords] ||= 'test'
+    if @keywords==''
+      @keywords = 'test'
+    end
+    puts 'Keywords: '+@keywords
+    puts 'Reaching tweets...'
+    puts Time.now.inspect
+    @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
+    puts Time.now.inspect
+    puts 'Tweets reached'
+    clean_tweets @tweet_list
+    @nb_tweets = @tweet_list.count #Nombre de tweets
+    @keywords_tag_array = @keywords.split("\s")
+    puts 'Tweets found: ' + @nb_tweets.to_s
   end
 
   def charts
