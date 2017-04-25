@@ -323,3 +323,22 @@ Twitter::Error (execution expired):
   Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-26 01:31:14 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1798.8ms)
+Completed 200 OK in 2445ms (Views: 2434.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-04-26 01:31:17 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-04-26 01:31:17 +0200
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-04-26 01:31:38 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5nSdWykkxBdkd69kKfpL3ojbLoOVgPD5LziPfMXFgY69paxZSN4w5QXGZwvX6V6cbEuirmYCwKTijjCYoKlIg==", "keywords"=>"Hello test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 201900ms (Views: 148.6ms | ActiveRecord: 0.0ms)
