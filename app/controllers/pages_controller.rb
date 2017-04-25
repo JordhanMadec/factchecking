@@ -20,6 +20,17 @@ class PagesController < ApplicationController
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
 
+  $stats = { retweets: 0,
+             favs: 0,
+             first_tweet_date: nil,
+             touched_people: 0,
+             propagation_time: 0,
+             negative_count: 0,
+             neutral_count: 0,
+             positive_count: 0,
+             true_count: 0,
+             false_count: 0 }
+
   def init
     client = Twitter::REST::Client.new do |config|
       config.consumer_key = ConfigDev.CONSUMER_KEY
@@ -34,6 +45,9 @@ class PagesController < ApplicationController
     puts 'Client init'
 
     @keywords = params[:keywords] ||= "test"
+
+
+
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
 
@@ -43,9 +57,9 @@ class PagesController < ApplicationController
     puts 'Reaching tweets...'
     puts Time.now.inspect
     @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
+    #@tweet_list = JSON.parse(get_dataset)
     puts Time.now.inspect
     puts 'Tweets reached'
-    #@tweet_list = JSON.parse(get_dataset)
     clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts 'Tweets found: ' + @nb_tweets.to_s
@@ -72,15 +86,7 @@ class PagesController < ApplicationController
                     nb_tweets: 0,
                     population: Array.new}
 
-    @stats = { retweets: 0,
-               favs: 0,
-               trustworthiness: 0,
-               first_tweet_date: nil,
-               touched_number: 0,
-               propagation_time: 0,
-               geo_zones: Array.new}
-
-    score_classes(@true_class, @false_class, @tweet_list, @matrice_score, @stats)
+    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
     puts 'Classes scored'
   end
 
@@ -100,6 +106,11 @@ class PagesController < ApplicationController
         res[tweet.id]["cleaned_text"] = ""
         res[tweet.id]["sentimental_class"] = "default"
         res[tweet.id]["sentimental_score"] = 0
+
+        #Preparing stats
+        $stats[:retweets] += tweet.retweet_count
+        $stats[:favs] += tweet.favorite_count
+        $stats[:touched_people] += tweet.user.followers_count
       end
       #On rend la liste des tweets au format json
       res.to_json
@@ -126,7 +137,7 @@ class PagesController < ApplicationController
 
 
   #----- Nettoyage des tweets -----
-  def clean_tweets(tweets) #
+  def clean_tweets(tweets) #Nettoie les tweets
      tweets.each do |key, tweet|
         # 1.Downcase
         tweet["cleaned_text"] = tweet["text"].downcase
@@ -177,6 +188,16 @@ class PagesController < ApplicationController
       tweet["sentimental_class"] = sentimental_class tweet["text"]
       tweet["sentimental_score"] = sentimental_score tweet["text"]
       #negation tweet
+
+      #Preparing stats
+      if (tweet["sentimental_class"].to_s == "negative") then
+        $stats[:negative_count] += 1
+      elsif (tweet["sentimental_class"].to_s == "neutral") then
+        $stats[:neutral_count] += 1
+      else
+        $stats[:positive_count] += 1
+      end
+
     end
     tweets
   end
@@ -250,14 +271,6 @@ class PagesController < ApplicationController
         end
         i+=1
       end
-  end
-
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
-      tweet["sentimental_class"] = sentimental_class tweet["text"]
-      tweet["sentimental_score"] = sentimental_score tweet["text"]
-    end
-    tweets
   end
 
   # return vrai si l'utilisateur est blackliste
@@ -384,20 +397,24 @@ class PagesController < ApplicationController
     end
   end
 
-  def score_classes(true_class, false_class, tweets, matrice, stats)
+  def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
     tweets.each do |key, tweet|
-      if (tweet["weight"] > 0) then
+
         if (tweet["negatif"] == "positif") then
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
-          true_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+          true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+
+          $stats[:true_count] += 1
         else
           false_class[:population].push(tweet)
           false_class[:nb_tweets]++
-          false_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+          false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+
+          $stats[:false_count] += 1
         end
-      end #end if
+
     end #end each
   end #end func
 
