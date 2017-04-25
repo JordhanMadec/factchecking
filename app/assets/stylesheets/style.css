@@ -473,7 +473,7 @@ background-color : #409BD6 ;
 #stat_sec {
 background : none 0 0 repeat scroll #f0f0f0;
 padding : 90px 0;
-height: 1100px;
+height: 1500px;
 }
 .counting_sl h2 {
 color : #515050;
@@ -487,6 +487,7 @@ font-weight : 300;
 }
 .counting_sl {
 text-align : center;
+margin-bottom: 30px;
 }
 .counting_sl i {
 color : #515050;
@@ -946,7 +947,7 @@ width : 731px !important ;
 
 /* Popover style */
 .popover { 
-position: 'relative';
+position: relative;
 z-index: 10;
 }
 
@@ -956,7 +957,6 @@ margin : auto;
 margin-top: 180px;
 padding : 0 0 50px 0;
 text-align : center;
-/*background: pink;*/
 height: 600px;
 width: 100%;
 overflow-x: auto;

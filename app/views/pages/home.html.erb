@@ -7,12 +7,12 @@
     <h4>Twitter fact checker app prototype</h4>
 
     <%= form_tag action: "search_tweets"%>
-      <div class="search-elem search-container row">
-        <div class="search-elem search-input col-lg-10"><%= text_field_tag "keywords", "", placeholder:"Search new tweets", class:"search-elem" , id:"keyword_input" , autocomplete:"off"%></div>
-        <div class="search-elem search-submit col-lg-2">
-          <%= submit_tag "" , class:"search-elem"%>
-          <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
-        </div>
+    <div class="search-elem search-container row">
+      <div class="search-elem search-input col-lg-10"><%= text_field_tag "keywords", "", placeholder:"Search new tweets", class:"search-elem" , id:"keyword_input" , autocomplete:"off"%></div>
+      <div class="search-elem search-submit col-lg-2">
+        <%= submit_tag "" , class:"search-elem"%>
+        <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
       </div>
+    </div>
   </div>
 </div>

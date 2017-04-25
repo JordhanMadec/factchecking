@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post 'pages/search_tweets'
   get 'pages/index'
   get 'pages/result'
+  post 'pages/result'
   get 'pages/charts'
+  post 'pages/charts'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

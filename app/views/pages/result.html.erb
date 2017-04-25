@@ -6,6 +6,7 @@
 <section id="blg_sec">
 	<div class="container">
 		<div class="row">
+      <br/>
 			<div class="title_sec">
 				<h1>YOUR RESEARCH</h1>
 				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
@@ -100,17 +101,19 @@
 			<div class="col-lg-4 col-md-4 col-sm-4" style="z-index: 1;">
 				<div class="sidebar">						
 					<div class="search_widget">
-						<input id="sr_bx" type="text" placeholder="Check a new fact ..."/>
+            <form method="post" action="<%= get_path_for_search %>">
+              <%= text_field_tag 'keywords', '', id: 'sr_bx', placeholder:'Check a new fact ...', autocomplete: 'off' %>
+            </form>
 					</div>				
 					<div class="widget">
 						<h2>fact information</h2>
 						<div class="title_br"></div>
 						<ul>
-							<li>Matching tweets : <%= @nbTweets %> </li>
+							<li>Matching tweets : 3 </li>
 							<li>Accuracy class : Accurate</li>
 							<li>Sentimental class : Positive</li>
 							<li>Votes : 10</li>
-							<li><a href="<%= pages_charts_path %>"><i class="fa fa-long-arrow-right"></i> See details </a></li>
+							<li><a href="<%= pages_charts_path %>"><strong><i class="fa fa-long-arrow-right"></i> See details</strong></a></li>
 						</ul>
 					</div>							
 					<div class="widget">

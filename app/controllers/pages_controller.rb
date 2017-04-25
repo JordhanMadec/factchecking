@@ -12,7 +12,7 @@ if ConfigDev.PB_SSL
 end
 
 class PagesController < ApplicationController
-  include ApplicationHelper
+  skip_before_action :verify_authenticity_token
 
   THRESHOLD = 0.5
   LANGUAGE = "en"
@@ -36,7 +36,7 @@ class PagesController < ApplicationController
 
     @keywords = params[:keywords] ||= "test"
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
-    if @keywords=="" then
+    if @keywords=='' then
       @keywords = "test"
     end
 
