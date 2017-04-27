@@ -988,3 +988,8 @@ span.keyword {
     margin: 0;
 }
 
+span.keyword:first-child:hover, span.keyword:last-child:hover {
+    color: #0099cc;
+    border: none;
+}
+
