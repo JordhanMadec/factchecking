@@ -19,6 +19,12 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  @@abo = Array.new
+  @@rtf = Array.new
+  @@avg_abo = 0
+  @@avg_rft = 0
+  @@median_abo = 0
+  @@median_rft = 0
 
   def init
     client = Twitter::REST::Client.new do |config|
@@ -50,10 +56,6 @@ class PagesController < ApplicationController
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts 'Tweets found: ' + @nb_tweets.to_s
 
-    #Analyse sentimentale des tweets
-    weigh @tweet_list
-    puts 'Tweets weighted'
-
     #set_dataset(@tweet_list)
 
     #creation de la matrice de score
@@ -63,6 +65,8 @@ class PagesController < ApplicationController
     main_1(@tweet_list)
     puts 'cleaned_text '
     puts'Sentimental class'
+
+    init_weigh()
 
     main_2(@tweet_list, @matrice_score)
     puts 'matrice_score'
@@ -135,6 +139,8 @@ class PagesController < ApplicationController
     tweets_list.each do |key, tweet|
       clean_tweets tweet
       sentimental_and_score_analysis tweet
+      @@rtf.push(Integer(tweet["retweet_count"]) + Integer(tweet["favorite_count"]))
+      @@abo.push(Integer(tweet["user"]["followers_count"]))
     end
   end
 
@@ -143,6 +149,7 @@ class PagesController < ApplicationController
     num_Tweet = 0
     tweets_list.each do |key, tweet|
       make_class(tweet, num_Tweet, matrice_score, tweets_list)
+      weigh tweet
       num_Tweet +=1
     end
   end
@@ -317,7 +324,28 @@ class PagesController < ApplicationController
     (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
   end
 
-  def weigh(tweets)
+  def init_weigh()
+    # Medianes...
+    @@median_abo = median(@@abo)
+    @@median_rft = median(@@rtf)
+
+    # Moyennes...
+    @@avg_abo = @@abo.inject(:+).to_f / @@abo.length
+    @@avg_rft = @@rtf.inject(:+).to_f / @@rtf.length
+
+
+    # Infos pour dev
+    puts "MEDIANE ABO"
+    puts @@median_abo
+    puts "AVG ABO"
+    puts @@avg_abo
+    puts "MEDIANE RFT"
+    puts @@median_rft
+    puts "AVG RFT"
+    puts @@avg_rft
+  end
+
+  def weigh(t)
     # Pondération des tweets
     # Importance de chaque critère :
 =begin
@@ -327,35 +355,7 @@ class PagesController < ApplicationController
                                        sinon neutre (on fait rien)
     3. Popularité                    - on se base sur la médiane&moyenne des rt fav et du nb abo
 =end
-
-
-    # Medianes...
-    abo = Array.new
-    rft = Array.new
-    tweets.each do |i,t|
-      rft.push(Integer(t["retweet_count"]) + Integer(t["favorite_count"]))
-      abo.push(Integer(t["user"]["followers_count"]))
-    end
-    median_abo = median(abo)
-    median_rft = median(rft)
-
-    # Moyennes...
-    avg_abo = abo.inject(:+).to_f / abo.length
-    avg_rft = rft.inject(:+).to_f / rft.length
-
-
-    puts "MEDIANE ABO"
-    puts median_abo
-    puts "AVG ABO"
-    puts avg_abo
-    puts "MEDIANE RFT"
-    puts median_rft
-    puts "AVG RFT"
-    puts avg_rft
-
     # Pondération...
-    tweets.each do |i,t|
-
         t_rtf = Integer(t["retweet_count"]) + Integer(t["favorite_count"])
         t_abo = Integer(t["user"]["followers_count"])
 
@@ -368,16 +368,16 @@ class PagesController < ApplicationController
         else
 
         # médianes : rt&fav + abo
-        if t_rtf>100 && t_rtf > median_rft
+        if t_rtf>100 && t_rtf > @@median_rft
 
             t["weight"] += 0.1
 
-            if t_abo>300 && t_abo > median_abo
+            if t_abo>300 && t_abo > @@median_abo
               t["weight"] += 0.1
             end
 
             # moyennes : rt&fav + abo
-            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )
+            t["weight"] += (t_rtf > @@avg_rft ? 0.2 : 0 ) + (t_abo  > @@avg_abo ? 0.1 : 0 )
 
             # hashtags
             if !t["attrs"]["entities"]["hashtags"].empty?
@@ -387,11 +387,8 @@ class PagesController < ApplicationController
               end
               t["weight"] += (t["cleaned_text"].split(" ") & ht).empty? ? 0.1 : 0
             end
-
         end
-
         t["weight"].round(2)
-      end
     end
   end
 
