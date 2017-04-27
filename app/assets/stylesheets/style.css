@@ -12,7 +12,6 @@ body h1, h2, h3, h4, h5, h6 {
 color : #141414;
 font-family : "Lato", sans-serif;
 font-size : 18px;
-text-transform : capitalize;
 font-weight : 800;
 text-transform : uppercase;
 }
@@ -20,7 +19,7 @@ a:hover {
 text-decoration : none;
 }
 .navbar {
-padding : 10px 0px;
+padding : 10px 0;
 transition : background 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 .top-nav-collapse {
@@ -199,12 +198,6 @@ margin-left : 6px;
 	padding: 8px 20px 8px 0;
 }
 
-#src_sec {
-background-image : url("../img/slide_img.jpg");
-background-position : center center;
-background-size : cover;
-min-height : 500px;
-}
 #abt_sec {
 padding : 70px 0;
 background: #409BD6 ;
@@ -847,7 +840,6 @@ border-bottom : 1px solid #409BD6 ;
 }
 #sr_bx {
 border : #C4C4C4 solid 1px;
-border-radius: 5px;
 padding : 12px;
 width : 100%;
 }
