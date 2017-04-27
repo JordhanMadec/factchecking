@@ -390,8 +390,8 @@ class PagesController < ApplicationController
   def score_classes(true_class, false_class, tweets, matrice, stats)
     #Score les différentes classes
     tweets.each do |key, tweet|
-      if (tweet["weight"] > 0) then
-        if (tweet["negatif"] == "positif") then
+      if tweet["weight"] > 0
+        if tweet["negatif"] == "positif"
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
           true_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
@@ -410,9 +410,9 @@ class PagesController < ApplicationController
 
   def result
     client = init
-    @keywords = params[:keywords] ||= 'test'
+    @keywords = params[:keywords] ||= 'Lorem ipsum dolor sit amet'
     if @keywords==''
-      @keywords = 'test'
+      @keywords = 'Lorem ipsum dolor sit amet' # on évite d'utiliser 'test' comme mot-clé car sinon on cherche de milles tweets pour rien (beaucoup de tweets contiennent ce mot)
     end
     puts 'Keywords: '+@keywords
     puts 'Reaching tweets...'

@@ -9,7 +9,7 @@
             title: 'Popover title',
             trigger: 'hover',
             container: 'body',
-            content: 'We can put here some details'
+            content: 'Put here some details'
         });
     });
 </script>
@@ -92,7 +92,6 @@
             changeText: 1, // if you dont want the button text to change, set this to 0
             showText: 'View',// the button text to show when a div is closed
             hideText: 'Close' // the button text to show when a div is open
-
         });
     });
 </script>
@@ -122,5 +121,17 @@
             boxzoom:true,
             autohidemode:true
         });
+    });
+</script>
+
+<script type="text/javascript">
+  // Highlight keywords in tweet contents
+    $(document).ready(function() {
+       var keywords_list = $(".tag > li > a").map(function() { return $(this).text(); }).get();
+       var options = {
+           element: "span",
+           className: "keyword"
+       };
+       $(".tweet_text").mark(keywords_list, options);
     });
 </script>
