@@ -24,15 +24,15 @@
     function drawVeracityChart() {
         // Define the chart to be drawn.
         var data = google.visualization.arrayToDataTable([
-            ['Veracity Class', 'Votes'],
-            ['Accurate',     100],
-            ['Fake',      65]
+            ['Veracity Class', 'Points'],
+            ['Accurate',     150],
+            ['Fake',      80]
         ]);
 
         var options = {
-            title: 'Veracity class',
+            title: 'VERACITY CLASS',
             pieHole: 0.35,
-            slices: [{color: '#1DA1F2'}, {color: 'red'}],
+            slices: [{color: '#4dd2ff'}, {color: '#ff3333'}],
             fontSize: 18
         };
 
@@ -51,9 +51,9 @@
         ]);
 
         var options = {
-            title: 'Sentiment class',
+            title: 'SENTIMENT CLASS',
             pieHole: 0.35,
-            slices: [{color: '#20B2AA'}, {color: 'red'}, {color: 'orange'}],
+            slices: [{color: '#20B2AA'}, {color: '#ff3333'}, {color: '#ffba66'}],
             fontSize: 18
         };
 
