@@ -45,23 +45,28 @@ class PagesController < ApplicationController
     @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
     puts Time.now.inspect
     puts 'Tweets reached'
+
     #@tweet_list = JSON.parse(get_dataset)
-    clean_tweets @tweet_list
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts 'Tweets found: ' + @nb_tweets.to_s
 
     #Analyse sentimentale des tweets
     weigh @tweet_list
     puts 'Tweets weighted'
-    sentimental_and_score_analysis @tweet_list
-    puts 'Sentimental analysis made'
 
     #set_dataset(@tweet_list)
 
-    #Classification des tweets
+    #creation de la matrice de score
     @matrice_score = initialisation(@nbTweets)
-    make_class(@tweet_list, @matrice_score)
-    puts 'Matrice made'
+
+    #cleaned_text, sentimental_and_score_analysis, make_class
+    main_1(@tweet_list)
+    puts 'cleaned_text '
+    puts'Sentimental class'
+
+    main_2(@tweet_list, @matrice_score)
+    puts 'matrice_score'
+
 
     #save(@tweet_list)
 
@@ -125,16 +130,34 @@ class PagesController < ApplicationController
   end
 
 
+#--------1er tour de boucle -----------------
+  def main_1(tweets_list)
+    tweets_list.each do |key, tweet|
+      clean_tweets tweet
+      sentimental_and_score_analysis tweet
+    end
+  end
+
+  #--------2ème tour de boucle -----------------
+  def main_2(tweets_list, matrice_score)
+    num_Tweet = 0
+    tweets_list.each do |key, tweet|
+      make_class(tweet, num_Tweet, matrice_score, tweets_list)
+      num_Tweet +=1
+    end
+  end
+
+
+
+
   #----- Nettoyage des tweets -----
-  def clean_tweets(tweets) #
-     tweets.each do |key, tweet|
+  def clean_tweets(tweet) #
         # 1.Downcase
         tweet["cleaned_text"] = tweet["text"].downcase
         # 2.Delete useless terms
         delete_useless_terms tweet["cleaned_text"]
         # 3.Stemmify
         tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
-     end
   end
 
   def stemmify(tweet) #Garde la racine des mots
@@ -172,13 +195,11 @@ class PagesController < ApplicationController
     analyzer.score text
   end
 
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
+  def sentimental_and_score_analysis(tweet)
       tweet["sentimental_class"] = sentimental_class tweet["text"]
       tweet["sentimental_score"] = sentimental_score tweet["text"]
       #negation tweet
-    end
-    tweets
+    tweet
   end
 
   def word__comparaison_score(tweet1_string, tweet2_string)
@@ -210,12 +231,14 @@ class PagesController < ApplicationController
 
   def result_score(score)
     score = case
-      when (score<0.25) then "low"
-      when ((0.25<= score) and (score<0.75)) then "neutral"
-      when ((0.75 <= score) and (score<1)) then "high"
-      when 1 then "equals"
-      when 0 then "different"
-      else "errror"
+
+    when ((0<score) and (score<0.25)) then "low"
+    when ((0.25<= score) and (score<0.75)) then "neutral"
+    when ((0.75 <= score) and (score<1)) then "high"
+    when 1 then "equals"
+    when 0 then "different"
+    else "errror"
+
     end
     score
   end
@@ -230,16 +253,13 @@ class PagesController < ApplicationController
     return "positif"
   end
 
-  def make_class(tweets,matrice)
-    long = tweets.length
-    i = 0
+  def make_class(tweet,num_Tweet,matrice, tweets_list)
+    tweet1 = tweet
+    i = num_Tweet
     j = 0
-    tweets.each do |key1,tweet1|
-      #for i in (0..long)
-      tweet1["negatif"] = negation(tweet1["cleaned_text"])
-        j = 0
-        tweets.each do |key2,tweet2|
-        #for j in ((i+1)..(long-1))
+    tweet1["negatif"] = negation(tweet1["cleaned_text"])
+    j = 0
+        tweets_list.each do |key2,tweet2|
           if(j>i)
             matrice[i][j] = Hash.new
             tmp = word__comparaison_score(tweet1["cleaned_text"], tweet2["cleaned_text"])
@@ -248,17 +268,8 @@ class PagesController < ApplicationController
           end
           j+=1
         end
-        i+=1
-      end
   end
 
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
-      tweet["sentimental_class"] = sentimental_class tweet["text"]
-      tweet["sentimental_score"] = sentimental_score tweet["text"]
-    end
-    tweets
-  end
 
   # return vrai si l'utilisateur est blackliste
   def isBlacklisted(id)
