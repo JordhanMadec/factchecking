@@ -19,6 +19,12 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  @@abo = Array.new
+  @@rtf = Array.new
+  @@avg_abo = 0
+  @@avg_rft = 0
+  @@median_abo = 0
+  @@median_rft = 0
 
   $stats = { retweets: 0,
              favs: 0,
@@ -61,21 +67,25 @@ class PagesController < ApplicationController
     puts Time.now.inspect
     puts 'Tweets reached'
     clean_tweets @tweet_list
+    #@tweet_list = JSON.parse(get_dataset)
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts 'Tweets found: ' + @nb_tweets.to_s
 
-    #Analyse sentimentale des tweets
-    weigh @tweet_list
-    puts 'Tweets weighted'
-    sentimental_and_score_analysis @tweet_list
-    puts 'Sentimental analysis made'
-
     #set_dataset(@tweet_list)
 
-    #Classification des tweets
+    #creation de la matrice de score
     @matrice_score = initialisation(@nbTweets)
-    make_class(@tweet_list, @matrice_score)
-    puts 'Matrice made'
+
+    #cleaned_text, sentimental_and_score_analysis, make_class
+    main_1(@tweet_list)
+    puts 'cleaned_text '
+    puts'Sentimental class'
+
+    init_weigh()
+
+    main_2(@tweet_list, @matrice_score)
+    puts 'matrice_score'
+
 
     #save(@tweet_list)
 
@@ -136,16 +146,39 @@ class PagesController < ApplicationController
   end
 
 
+#--------1er tour de boucle -----------------
+  def main_1(tweets_list)
+    tweets_list.each do |key, tweet|
+      clean_tweets tweet
+      sentimental_and_score_analysis tweet
+      @@rtf.push(Integer(tweet["retweet_count"]) + Integer(tweet["favorite_count"]))
+      @@abo.push(Integer(tweet["user"]["followers_count"]))
+    end
+  end
+
+  #--------2ème tour de boucle -----------------
+  def main_2(tweets_list, matrice_score)
+    num_Tweet = 0
+    tweets_list.each do |key, tweet|
+      make_class(tweet, num_Tweet, matrice_score, tweets_list)
+      weigh tweet
+      num_Tweet +=1
+    end
+  end
+
+
+
+
   #----- Nettoyage des tweets -----
   def clean_tweets(tweets) #Nettoie les tweets
-     tweets.each do |key, tweet|
-        # 1.Downcase
-        tweet["cleaned_text"] = tweet["text"].downcase
-        # 2.Delete useless terms
-        delete_useless_terms tweet["cleaned_text"]
-        # 3.Stemmify
-        tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
-     end
+    tweets.each do |key, tweet|
+      # 1.Downcase
+      tweet["cleaned_text"] = tweet["text"].downcase
+      # 2.Delete useless terms
+      delete_useless_terms tweet["cleaned_text"]
+      # 3.Stemmify
+      tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
+    end
   end
 
   def stemmify(tweet) #Garde la racine des mots
@@ -183,11 +216,9 @@ class PagesController < ApplicationController
     analyzer.score text
   end
 
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
+  def sentimental_and_score_analysis(tweet)
       tweet["sentimental_class"] = sentimental_class tweet["text"]
       tweet["sentimental_score"] = sentimental_score tweet["text"]
-      #negation tweet
 
       #Preparing stats
       if (tweet["sentimental_class"].to_s == "negative") then
@@ -199,7 +230,7 @@ class PagesController < ApplicationController
       end
 
     end
-    tweets
+    tweet
   end
 
   def word__comparaison_score(tweet1_string, tweet2_string)
@@ -231,12 +262,14 @@ class PagesController < ApplicationController
 
   def result_score(score)
     score = case
-      when (score<0.25) then "low"
-      when ((0.25<= score) and (score<0.75)) then "neutral"
-      when ((0.75 <= score) and (score<1)) then "high"
-      when 1 then "equals"
-      when 0 then "different"
-      else "errror"
+
+    when ((0<score) and (score<0.25)) then "low"
+    when ((0.25<= score) and (score<0.75)) then "neutral"
+    when ((0.75 <= score) and (score<1)) then "high"
+    when 1 then "equals"
+    when 0 then "different"
+    else "errror"
+
     end
     score
   end
@@ -251,16 +284,13 @@ class PagesController < ApplicationController
     return "positif"
   end
 
-  def make_class(tweets,matrice)
-    long = tweets.length
-    i = 0
+  def make_class(tweet,num_Tweet,matrice, tweets_list)
+    tweet1 = tweet
+    i = num_Tweet
     j = 0
-    tweets.each do |key1,tweet1|
-      #for i in (0..long)
-      tweet1["negatif"] = negation(tweet1["cleaned_text"])
-        j = 0
-        tweets.each do |key2,tweet2|
-        #for j in ((i+1)..(long-1))
+    tweet1["negatif"] = negation(tweet1["cleaned_text"])
+    j = 0
+        tweets_list.each do |key2,tweet2|
           if(j>i)
             matrice[i][j] = Hash.new
             tmp = word__comparaison_score(tweet1["cleaned_text"], tweet2["cleaned_text"])
@@ -269,8 +299,6 @@ class PagesController < ApplicationController
           end
           j+=1
         end
-        i+=1
-      end
   end
 
   # return vrai si l'utilisateur est blackliste
@@ -319,7 +347,28 @@ class PagesController < ApplicationController
     (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
   end
 
-  def weigh(tweets)
+  def init_weigh()
+    # Medianes...
+    @@median_abo = median(@@abo)
+    @@median_rft = median(@@rtf)
+
+    # Moyennes...
+    @@avg_abo = @@abo.inject(:+).to_f / @@abo.length
+    @@avg_rft = @@rtf.inject(:+).to_f / @@rtf.length
+
+
+    # Infos pour dev
+    puts "MEDIANE ABO"
+    puts @@median_abo
+    puts "AVG ABO"
+    puts @@avg_abo
+    puts "MEDIANE RFT"
+    puts @@median_rft
+    puts "AVG RFT"
+    puts @@avg_rft
+  end
+
+  def weigh(t)
     # Pondération des tweets
     # Importance de chaque critère :
 =begin
@@ -329,35 +378,7 @@ class PagesController < ApplicationController
                                        sinon neutre (on fait rien)
     3. Popularité                    - on se base sur la médiane&moyenne des rt fav et du nb abo
 =end
-
-
-    # Medianes...
-    abo = Array.new
-    rft = Array.new
-    tweets.each do |i,t|
-      rft.push(Integer(t["retweet_count"]) + Integer(t["favorite_count"]))
-      abo.push(Integer(t["user"]["followers_count"]))
-    end
-    median_abo = median(abo)
-    median_rft = median(rft)
-
-    # Moyennes...
-    avg_abo = abo.inject(:+).to_f / abo.length
-    avg_rft = rft.inject(:+).to_f / rft.length
-
-
-    puts "MEDIANE ABO"
-    puts median_abo
-    puts "AVG ABO"
-    puts avg_abo
-    puts "MEDIANE RFT"
-    puts median_rft
-    puts "AVG RFT"
-    puts avg_rft
-
     # Pondération...
-    tweets.each do |i,t|
-
         t_rtf = Integer(t["retweet_count"]) + Integer(t["favorite_count"])
         t_abo = Integer(t["user"]["followers_count"])
 
@@ -370,16 +391,16 @@ class PagesController < ApplicationController
         else
 
         # médianes : rt&fav + abo
-        if t_rtf>100 && t_rtf > median_rft
+        if t_rtf>100 && t_rtf > @@median_rft
 
             t["weight"] += 0.1
 
-            if t_abo>300 && t_abo > median_abo
+            if t_abo>300 && t_abo > @@median_abo
               t["weight"] += 0.1
             end
 
             # moyennes : rt&fav + abo
-            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )
+            t["weight"] += (t_rtf > @@avg_rft ? 0.2 : 0 ) + (t_abo  > @@avg_abo ? 0.1 : 0 )
 
             # hashtags
             if !t["attrs"]["entities"]["hashtags"].empty?
@@ -389,11 +410,8 @@ class PagesController < ApplicationController
               end
               t["weight"] += (t["cleaned_text"].split(" ") & ht).empty? ? 0.1 : 0
             end
-
         end
-
         t["weight"].round(2)
-      end
     end
   end
 
