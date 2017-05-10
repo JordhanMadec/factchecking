@@ -1,4 +1,4 @@
-<%= provide(:title, "Research Result") %>
+<%= provide(:title, "Search Results") %>
 
 <%= render "layouts/header_others" %>
 
@@ -8,7 +8,7 @@
 		<div class="row">
       <br/>
 			<div class="title_sec">
-				<h1>YOUR RESEARCH</h1>
+				<h1>SEARCH RESULTS</h1>
 				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
 			</div>
 
@@ -25,7 +25,7 @@
               </div>
             </div>
             <div class="post_content">
-              <p><%= tweet["text"] %></p>
+              <p class='tweet_text'><%= tweet["text"] %></p>
               <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <span class="pull-left">
@@ -59,7 +59,7 @@
 							<li>Accuracy class : Accurate</li>
 							<li>Sentimental class : Positive</li>
 							<li>Votes : 10</li>
-							<li><a href="<%= pages_charts_path %>"><strong><i class="fa fa-long-arrow-right"></i> See details</strong></a></li>
+							<li><a href="<%= pages_charts_path %>"><strong><i class="fa fa-long-arrow-right"></i> See Graphic Charts</strong></a></li>
 						</ul>
 					</div>							
 					<div class="widget">

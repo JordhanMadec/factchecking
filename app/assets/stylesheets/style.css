@@ -1,4 +1,3 @@
-
 body {
 font-family : 'Lato', sans-serif;
 background : #fff;
@@ -13,7 +12,6 @@ body h1, h2, h3, h4, h5, h6 {
 color : #141414;
 font-family : "Lato", sans-serif;
 font-size : 18px;
-text-transform : capitalize;
 font-weight : 800;
 text-transform : uppercase;
 }
@@ -21,7 +19,7 @@ a:hover {
 text-decoration : none;
 }
 .navbar {
-padding : 10px 0px;
+padding : 10px 0;
 transition : background 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 .top-nav-collapse {
@@ -127,7 +125,6 @@ color: #ffffff;
 background : none 0 0 repeat scroll #409BD6 ;
 display : none;
 left : 0;
-padding : 0;
 position : absolute;
 top : 100%;
 z-index : 9999;
@@ -201,12 +198,6 @@ margin-left : 6px;
 	padding: 8px 20px 8px 0;
 }
 
-#src_sec {
-background-image : url("../img/slide_img.jpg");
-background-position : center center;
-background-size : cover;
-min-height : 500px;
-}
 #abt_sec {
 padding : 70px 0;
 background: #409BD6 ;
@@ -849,7 +840,6 @@ border-bottom : 1px solid #409BD6 ;
 }
 #sr_bx {
 border : #C4C4C4 solid 1px;
-border-radius: 5px;
 padding : 12px;
 width : 100%;
 }
@@ -982,5 +972,16 @@ table.rows td {
 	border: 0.5px solid #ccc;
 	height: 100%;
 	width: 100% !important;
+}
+
+span.keyword {
+    font-weight: bold;
+    color: #0099cc;
+    margin: 0;
+}
+
+span.keyword:first-child:hover, span.keyword:last-child:hover {
+    color: #0099cc;
+    border: none;
 }
 
