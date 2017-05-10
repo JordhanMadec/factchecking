@@ -215,7 +215,7 @@ class PagesController < ApplicationController
     score = case
       when (score<0.25) then "low"
       when ((0.25<= score) and (score<0.75)) then "neutral"
-      when ((0.75 <= score) and (score<1)) then "high"
+      when ((0.75 <= score) and (score<1)) then "high" #impossible
       when 1 then "equals"
       when 0 then "different"
       else "errror"
