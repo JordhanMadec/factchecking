@@ -19,3 +19,5 @@
 
 # Ignore twitter tokens
 /app/controllers/config_dev.rb
+tmp/cache/assets/sprockets/v3.0/Hu/HuaQoqsZQsKcp5FC0erAQOMKvoqV5nINZAqzw-WXcMs.cache
+*.cache

@@ -20,6 +20,23 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  @@abo = Array.new
+  @@rtf = Array.new
+  @@avg_abo = 0
+  @@avg_rft = 0
+  @@median_abo = 0
+  @@median_rft = 0
+
+  $stats = { retweets: 0,
+             favs: 0,
+             first_tweet_date: nil,
+             touched_people: 0,
+             propagation_time: 0,
+             negative_count: 0,
+             neutral_count: 0,
+             positive_count: 0,
+             true_count: 0,
+             false_count: 0 }
 
   def init
     client = Twitter::REST::Client.new do |config|
@@ -35,38 +52,37 @@ class PagesController < ApplicationController
     puts 'Client init'
 
     @keywords = params[:keywords] ||= "test"
-    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
-    if @keywords=='' then
-      @keywords = "test"
-    end
 
-    puts 'Keywords: '+@keywords
+    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
+    if @keywords=="" then @keywords = "test" end
+    @keywords_tag_array = @keywords.split(' ');
+
+    puts 'Keywords: ' + @keywords
 
     #Nettoyage des tweets
-    puts 'Reaching tweets...'
-    puts Time.now.inspect
+    puts Time.now.strftime("%H:%M:%S") + ' Reaching tweets...'
     @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
-    puts Time.now.inspect
-    puts 'Tweets reached'
     #@tweet_list = JSON.parse(get_dataset)
-    clean_tweets @tweet_list
+    puts Time.now.strftime("%H:%M:%S") + ' Tweets reached'
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
-    puts 'Tweets found: ' + @nb_tweets.to_s
+    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nb_tweets}"
 
-    #Analyse sentimentale des tweets
-    weigh @tweet_list
-    puts 'Tweets weighted'
-    sentimental_and_score_analysis @tweet_list
-    puts 'Sentimental analysis made'
+    puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
+    set_dataset(@tweet_list)
 
-    #set_dataset(@tweet_list)
-
-    #Classification des tweets
+    #creation de la matrice de score
+    puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
     @matrice_score = initialisation(@nbTweets)
-    make_class(@tweet_list, @matrice_score)
-    puts 'Matrice made'
 
-    #save(@tweet_list)
+    #cleaned_text, sentimental_and_score_analysis, make_class
+    puts Time.now.strftime("%H:%M:%S") + ' First loop'
+    main_1(@tweet_list)
+
+    puts Time.now.strftime("%H:%M:%S") + ' Init weight'
+    init_weigh()
+
+    puts Time.now.strftime("%H:%M:%S") + ' Second loop'
+    main_2(@tweet_list, @matrice_score)
 
     @false_class = { score: 0,
                      nb_tweets: 0,
@@ -75,16 +91,9 @@ class PagesController < ApplicationController
                     nb_tweets: 0,
                     population: Array.new}
 
-    @stats = { retweets: 0,
-               favs: 0,
-               trustworthiness: 0,
-               first_tweet_date: nil,
-               touched_number: 0,
-               propagation_time: 0,
-               geo_zones: Array.new}
-
-    score_classes(@true_class, @false_class, @tweet_list, @matrice_score, @stats)
-    puts 'Classes scored'
+    puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
+    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
   end
 
   def prepare_tweets(tweets)
@@ -103,22 +112,20 @@ class PagesController < ApplicationController
         res[tweet.id]["cleaned_text"] = ""
         res[tweet.id]["sentimental_class"] = "default"
         res[tweet.id]["sentimental_score"] = 0
+
+        #Preparing stats
+        $stats[:retweets] += tweet.retweet_count
+        $stats[:favs] += tweet.favorite_count
+        $stats[:touched_people] += tweet.user.followers_count
       end
       #On rend la liste des tweets au format json
       res.to_json
   end
 
-  #Fonction créant un dataset au format json avec le résultat de la requête
+  #Fonction créant un dataset au format json à partir d'une liste de tweets
   def set_dataset(tweets)
     File.open("dataset.json", "w") do |f|
         f.write(tweets)
-    end
-  end
-
-  def save(tweets)
-    File.open("backup.json", "w") do |f|
-        f.write(tweets)
-        f.write("\n")
     end
   end
 
@@ -127,17 +134,14 @@ class PagesController < ApplicationController
       file = File.read("dataset.json")
   end
 
-
   #----- Nettoyage des tweets -----
-  def clean_tweets(tweets) #
-     tweets.each do |key, tweet|
-        # 1.Downcase
-        tweet["cleaned_text"] = tweet["text"].downcase
-        # 2.Delete useless terms
-        delete_useless_terms tweet["cleaned_text"]
-        # 3.Stemmify
-        tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
-     end
+  def clean_tweet(tweet) #Nettoie les tweets
+    # 1.Downcase
+    tweet["cleaned_text"] = tweet["text"].downcase
+    # 2.Delete useless terms
+    delete_useless_terms tweet["cleaned_text"]
+    # 3.Stemmify
+    tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
   end
 
   def stemmify(tweet) #Garde la racine des mots
@@ -175,13 +179,20 @@ class PagesController < ApplicationController
     analyzer.score text
   end
 
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
-      tweet["sentimental_class"] = sentimental_class tweet["text"]
-      tweet["sentimental_score"] = sentimental_score tweet["text"]
-      #negation tweet
+  def sentimental_and_score_analysis(tweet)
+    tweet["sentimental_class"] = sentimental_class tweet["text"]
+    tweet["sentimental_score"] = sentimental_score tweet["text"]
+
+    #Preparing stats
+    if (tweet["sentimental_class"].to_s == "negative") then
+      $stats[:negative_count] += 1
+    elsif (tweet["sentimental_class"].to_s == "neutral") then
+      $stats[:neutral_count] += 1
+    else
+      $stats[:positive_count] += 1
     end
-    tweets
+
+    tweet
   end
 
   def word__comparaison_score(tweet1_string, tweet2_string)
@@ -213,12 +224,14 @@ class PagesController < ApplicationController
 
   def result_score(score)
     score = case
-      when (score<0.25) then "low"
-      when ((0.25<= score) and (score<0.75)) then "neutral"
-      when ((0.75 <= score) and (score<1)) then "high"
-      when 1 then "equals"
-      when 0 then "different"
-      else "errror"
+
+    when ((0<score) and (score<0.25)) then "low"
+    when ((0.25<= score) and (score<0.75)) then "neutral"
+    when ((0.75 <= score) and (score<1)) then "high"
+    when 1 then "equals"
+    when 0 then "different"
+    else "errror"
+
     end
     score
   end
@@ -233,16 +246,13 @@ class PagesController < ApplicationController
     return "positif"
   end
 
-  def make_class(tweets,matrice)
-    long = tweets.length
-    i = 0
+  def make_class(tweet,num_Tweet,matrice, tweets_list)
+    tweet1 = tweet
+    i = num_Tweet
     j = 0
-    tweets.each do |key1,tweet1|
-      #for i in (0..long)
-      tweet1["negatif"] = negation(tweet1["cleaned_text"])
-        j = 0
-        tweets.each do |key2,tweet2|
-        #for j in ((i+1)..(long-1))
+    tweet1["negatif"] = negation(tweet1["cleaned_text"])
+    j = 0
+        tweets_list.each do |key2,tweet2|
           if(j>i)
             matrice[i][j] = Hash.new
             tmp = word__comparaison_score(tweet1["cleaned_text"], tweet2["cleaned_text"])
@@ -251,16 +261,6 @@ class PagesController < ApplicationController
           end
           j+=1
         end
-        i+=1
-      end
-  end
-
-  def sentimental_and_score_analysis(tweets)
-    tweets.each do |key,tweet|
-      tweet["sentimental_class"] = sentimental_class tweet["text"]
-      tweet["sentimental_score"] = sentimental_score tweet["text"]
-    end
-    tweets
   end
 
   # return vrai si l'utilisateur est blackliste
@@ -309,7 +309,24 @@ class PagesController < ApplicationController
     (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
   end
 
-  def weigh(tweets)
+  def init_weigh()
+    # Medianes...
+    @@median_abo = median(@@abo)
+    @@median_rft = median(@@rtf)
+
+    # Moyennes...
+    @@avg_abo = @@abo.inject(:+).to_f / @@abo.length
+    @@avg_rft = @@rtf.inject(:+).to_f / @@rtf.length
+
+
+    # Infos pour dev
+    puts "MEDIANE ABO: #{@@median_abo}"
+    puts "AVG ABO: #{@@avg_abo}"
+    puts "MEDIANE RFT: #{@@median_rft}"
+    puts "AVG RFT: #{@@avg_rft}"
+  end
+
+  def weigh(t)
     # Pondération des tweets
     # Importance de chaque critère :
 =begin
@@ -319,35 +336,7 @@ class PagesController < ApplicationController
                                        sinon neutre (on fait rien)
     3. Popularité                    - on se base sur la médiane&moyenne des rt fav et du nb abo
 =end
-
-
-    # Medianes...
-    abo = Array.new
-    rft = Array.new
-    tweets.each do |i,t|
-      rft.push(Integer(t["retweet_count"]) + Integer(t["favorite_count"]))
-      abo.push(Integer(t["user"]["followers_count"]))
-    end
-    median_abo = median(abo)
-    median_rft = median(rft)
-
-    # Moyennes...
-    avg_abo = abo.inject(:+).to_f / abo.length
-    avg_rft = rft.inject(:+).to_f / rft.length
-
-
-    puts "MEDIANE ABO"
-    puts median_abo
-    puts "AVG ABO"
-    puts avg_abo
-    puts "MEDIANE RFT"
-    puts median_rft
-    puts "AVG RFT"
-    puts avg_rft
-
     # Pondération...
-    tweets.each do |i,t|
-
         t_rtf = Integer(t["retweet_count"]) + Integer(t["favorite_count"])
         t_abo = Integer(t["user"]["followers_count"])
 
@@ -360,16 +349,16 @@ class PagesController < ApplicationController
         else
 
         # médianes : rt&fav + abo
-        if t_rtf>100 && t_rtf > median_rft
+        if t_rtf>100 && t_rtf > @@median_rft
 
             t["weight"] += 0.1
 
-            if t_abo>300 && t_abo > median_abo
+            if t_abo>300 && t_abo > @@median_abo
               t["weight"] += 0.1
             end
 
             # moyennes : rt&fav + abo
-            t["weight"] += (t_rtf > avg_rft ? 0.2 : 0 ) + (t_abo  > avg_abo ? 0.1 : 0 )
+            t["weight"] += (t_rtf > @@avg_rft ? 0.2 : 0 ) + (t_abo  > @@avg_abo ? 0.1 : 0 )
 
             # hashtags
             if !t["attrs"]["entities"]["hashtags"].empty?
@@ -379,58 +368,63 @@ class PagesController < ApplicationController
               end
               t["weight"] += (t["cleaned_text"].split(" ") & ht).empty? ? 0.1 : 0
             end
-
         end
-
         t["weight"].round(2)
-      end
     end
   end
 
-  def score_classes(true_class, false_class, tweets, matrice, stats)
+
+  #--------1er tour de boucle -----------------
+  def main_1(tweets_list)
+    tweets_list.each do |key, tweet|
+      clean_tweet tweet
+      sentimental_and_score_analysis tweet
+      @@rtf.push(Integer(tweet["retweet_count"]) + Integer(tweet["favorite_count"]))
+      @@abo.push(Integer(tweet["user"]["followers_count"]))
+    end
+  end
+
+  #--------2ème tour de boucle -----------------
+  def main_2(tweets_list, matrice_score)
+    num_Tweet = 0
+    tweets_list.each do |key, tweet|
+      make_class(tweet, num_Tweet, matrice_score, tweets_list)
+      weigh tweet
+      num_Tweet +=1
+    end
+  end
+
+  #---------- Scoring classes ----------
+  def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
     tweets.each do |key, tweet|
-      if tweet["weight"] > 0
-        if tweet["negatif"] == "positif"
+
+        if (tweet["negatif"] == "positif") then
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
-          true_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+          true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+
+          $stats[:true_count] += 1
         else
           false_class[:population].push(tweet)
           false_class[:nb_tweets]++
-          false_class[:score] += tweet['sentimental_score'].abs * tweet['weight']
+          false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+
+          $stats[:false_count] += 1
         end
-      end #end if
+
     end #end each
   end #end func
+
 
   # Actions of PagesController (important for router)
   def index
   end
 
   def result
-    client = init
-    @keywords = params[:keywords] ||= 'Lorem ipsum dolor sit amet'
-    if @keywords==''
-      @keywords = 'Lorem ipsum dolor sit amet' # on évite d'utiliser 'test' comme mot-clé car sinon on cherche de milles tweets pour rien (beaucoup de tweets contiennent ce mot)
-    end
-    puts 'Keywords: '+@keywords
-    puts 'Reaching tweets...'
-    puts Time.now.inspect
-    @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
-    puts Time.now.inspect
-    puts 'Tweets reached'
-    clean_tweets @tweet_list
-    @nb_tweets = @tweet_list.count #Nombre de tweets
-    @keywords_tag_array = @keywords.split("\s")
-    puts 'Tweets found: ' + @nb_tweets.to_s
+    search_tweets
   end
 
   def charts
   end
-
-  # Old actions
-  def home
-  end
-
 end
