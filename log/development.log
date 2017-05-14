@@ -25147,3 +25147,946 @@ Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-05-09 19:02:52 +0200
 Processing by PagesController#search_tweets as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Q2QDFmLCDx2xHRFazC4fkRXWdUR+0heaz9N9bwe7y83Z3fho9V/UKEN62E9V0hY/GPa/MbVlttjqKfvxW1sJQ==", "keywords"=>"macron new president", "commit"=>""}
 Completed   in 56991ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 21:37:05 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (191.3ms)
+Completed 200 OK in 258ms (Views: 249.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 21:37:06 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 21:37:13 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cFFb0Kyf0PJUCOX2ywcaGNiHIh9kEQloYT5hR4G87rd3PRFGE5OjRi3eNDAeOZ/XoLNEGrP/eM+oFp3QCggZaw==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 930ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `dates' for #<PagesController:0x007f9f4d9d2c38>
+Did you mean?  @@dates):
+  app/controllers/pages_controller.rb:129:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (99.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (150.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 21:37:59 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (369.4ms)
+Completed 200 OK in 509ms (Views: 499.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 21:38:00 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 21:38:00 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 21:38:02 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xhu4pd/FNyx4KdHADw/BA22rYMxlaowV0kxTwxHUnZpZd/IzYMlEmAH/AAbaMUTMFZ8GybKE/bIbZK9UmmBqRg==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 714ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/pages_controller.rb:129:in `parse'
+  app/controllers/pages_controller.rb:129:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 21:38:35 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (249.7ms)
+Completed 200 OK in 415ms (Views: 403.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 21:38:35 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 21:38:35 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 21:38:38 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxut95kho/ehQ4lyswcV/dPw/unVMNtUF8SMsTOLH0LMd+dhJi3QQ9iVWLRmOZAyq8SY7ALeqvPe7HAmuD/ong==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 678ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/pages_controller.rb:129:in `parse'
+  app/controllers/pages_controller.rb:129:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (6.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.4ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:40:34 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 666ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/pages_controller.rb:130:in `parse'
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.3ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:42:17 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 695ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `created_at' for #<Hash:0x007fb999d1a010>):
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (56.4ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:43:20 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 644ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.7ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:43:52 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 597ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:46:01 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 597ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/pages_controller.rb:130:in `parse'
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.3ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:46:44 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 807ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/pages_controller.rb:130:in `parse'
+  app/controllers/pages_controller.rb:130:in `block in prepare_tweets'
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (68.2ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:49:04 +0200
+Processing by PagesController#search_tweets as HTML
+Completed   in 21323ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 21:49:31 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 157693ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of Fixnum into String):
+  app/controllers/pages_controller.rb:97:in `strptime'
+  app/controllers/pages_controller.rb:97:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (60.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 21:56:05 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (253.1ms)
+Completed 200 OK in 364ms (Views: 355.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 21:56:06 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 21:56:14 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dmil4oG/jA8EGGBf5CDMpeC03m+XTQ4iYfyZsgqDJnaWCJ5DsGVsOb4QMR7/lF7CsE5Wczzmzv5A5AsqQtWapA==", "keywords"=>"macron is president of france", "commit"=>""}
+Completed 500 Internal Server Error in 126515ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:113:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (53.2ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 22:04:20 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (57.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 22:04:38 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (242.8ms)
+Completed 200 OK in 350ms (Views: 339.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 22:04:39 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 22:04:39 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 22:04:44 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lar5jTqM+mpj+mCFUc3mkKaGKBa7Umif2Ma+6HVG0UnNysIsC1YaXNnyMcRKeXT39nygChD5qEP53ixwPRBtmw==", "keywords"=>"macron is president", "commit"=>""}
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (51.8ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 22:13:29 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (416.5ms)
+Completed 200 OK in 102548ms (Views: 492.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 22:15:12 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 22:17:16 +0200
+
+SyntaxError (/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:97: syntax error, unexpected ')', expecting ']'
+...Time.at(@@dates[@@borne_gauche)]) / 1.hour).round
+...                               ^
+/home/pieceofpaper/INSA/EP/factchecking/factchecking/app/controllers/pages_controller.rb:98: syntax error, unexpected '\n', expecting ')'):
+  app/controllers/pages_controller.rb:97: syntax error, unexpected ')', expecting ']'
+  app/controllers/pages_controller.rb:98: syntax error, unexpected '\n', expecting ')'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 22:18:02 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (305.2ms)
+Completed 200 OK in 432ms (Views: 416.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 22:18:03 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 22:18:03 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 22:18:27 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Km0pkWn4QxbXt9Q+9BPStzasNg94TffGofEg62iJjvDKDRIwWCKjIG2/hX/vp0DQZla+E9PmNxqA6bJzIN8yIg==", "keywords"=>"MACRON IS THE NEW FRENCH PRESIDENT", "commit"=>""}
+Completed 500 Internal Server Error in 746273ms (ActiveRecord: 0.0ms)
+
+URI::InvalidURIError (bad URI(is not URI?): https://www.theguardian.com/world/video/2017/may/08/who-emmanuel-macron-video-explainer?CMP=share_btn_tw##):
+  app/controllers/pages_controller.rb:297:in `block in statutURLs'
+  app/controllers/pages_controller.rb:295:in `each'
+  app/controllers/pages_controller.rb:295:in `statutURLs'
+  app/controllers/pages_controller.rb:359:in `weigh'
+  app/controllers/pages_controller.rb:433:in `block in main_2'
+  app/controllers/pages_controller.rb:431:in `each'
+  app/controllers/pages_controller.rb:431:in `main_2'
+  app/controllers/pages_controller.rb:93:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.3ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 22:46:56 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (382.5ms)
+Completed 200 OK in 118997ms (Views: 481.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 22:48:56 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 22:52:41 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 216596ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:99:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (55.5ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 22:57:35 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (853.7ms)
+Completed 200 OK in 321141ms (Views: 918.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:02:57 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:08:38 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (230.4ms)
+Completed 200 OK in 18997ms (Views: 314.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-05-14 23:08:57 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:15:37 +0200
+Processing by PagesController#search_tweets as HTML
+Completed   in 120516ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:17:46 +0200
+Processing by PagesController#search_tweets as HTML
+Completed   in 74763ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:19:10 +0200
+Processing by PagesController#search_tweets as HTML
+Completed   in 51866ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 23:22:32 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (280.4ms)
+Completed 200 OK in 393ms (Views: 375.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.self-bbdf60777de2d5adf48f89e48f5d281108d9e3315f92bf5983a5ca9120a66aa7.css?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/angular-mocks.self-47ad5e9f1e89623c062b5be18a21ef144c975051f50b149d93139a2f909e11a6.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/angular.self-cdfe10db265380c82ec938d307fce2720dc9fb9d8cfa21c78928031af124e282.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/application.self-59f51f9ae5d38b41e665a3e6570af02abccba9991f658f3736d43f99b4145528.js?body=1" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:22:33 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:22:44 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pqSn+vVjVo3AkuWPDgOG2jsergDm+KFIOTwu8P/p0rDnEeyxiuss7xrNnaOIGYDV4LGEsXpyLQrB5jY86f3xFw==", "keywords"=>"Michael Jackson is dead", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 12731ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:22:58 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 23:23:48 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (255.3ms)
+Completed 200 OK in 379ms (Views: 356.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:23:49 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:23:49 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:23:52 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XqwZPpwFiRa0kFeyBNv8gwKplngUHEx2jwUUIMrGKRMfGVJ1443zdG7PL56CwfqM2Qa8yYiWwDR33wzs3NIKtA==", "keywords"=>"Michael Jackson is dead", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 13178ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:24:06 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 23:34:18 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (274.8ms)
+Completed 200 OK in 410ms (Views: 402.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:34:19 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:34:19 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:34:25 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1X2/2NAVuvyllkswD6X4uqoIe2J5XClOKsy8KcKPg4KUyPSTr53Ann/JMxyJv/61cadR0+XWpQzSFqTl1JugJQ==", "keywords"=>"Michael Jackson is dead", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 15790ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:34:41 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:35:21 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 23:35:22 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 158ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:35:23 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:35:23 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:35:25 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7lCmRcQjYL/GsolzFbZJFnvBOt90UmsDKIw5IOInGPWv5e0Ou6sa3Rzt8V+TrE8ZoG4QbujY50HQViHs9DM7Ug==", "keywords"=>"Michael Jackson is dead", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 14599ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:35:40 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 23:37:22 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (305.8ms)
+Completed 200 OK in 445ms (Views: 435.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:37:23 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:37:23 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:37:53 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ASchxzHULkMP64SwVp3Eq2squeUeXiEWNwkuvBBtgKdsdfMY08q29Zg1j5HQHEddgOAVgjz9MagBjx25lWVpQ==", "keywords"=>"MACRON IS THE PRESIDENT OF THE USA", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 18089ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:38:12 +0200
+
+
+Started GET "/" for ::1 at 2017-05-14 23:40:31 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (320.8ms)
+Completed 200 OK in 425ms (Views: 416.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:40:32 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:40:32 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:40:35 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tqZwDQOwDzyn2KtVr65Oqlti9LroJ/xkvcGt+cDU2nb3EztGfDh1Xn2H03kptEilgM3eC3StcCZFG7U11sD50Q==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 129963ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:124:in `prepare_tweets'
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (51.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 23:42:59 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:43:00 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:43:00 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:43:21 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yn/E7bj1ddSOnMaJn6hzp9Sg4v8LwStA5BNgRfhNpW2Lyo+mx30PtlTDvqUZsnWoDw/ITpdLpwIcyXiJ7lmGyg==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (72.5ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:46:04 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.7ms)
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:47:16 +0200
+Processing by PagesController#search_tweets as HTML
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 23:47:23 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (425.4ms)
+Completed 200 OK in 604ms (Views: 596.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:47:24 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:47:24 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:47:29 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z5pUpCDZPESmVeCyGLSv+YCeegM+uQUJ/cSTt3Zhh02OLx/vX1FGJnwKmJ6erqn2WzFQsqIziUsFHot7YHWk6g==", "keywords"=>"test", "commit"=>""}
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.0ms)
+
+Twitter::Error::TooManyRequests (Rate limit exceeded):
+  app/controllers/pages_controller.rb:68:in `search_tweets'
+
+
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.5ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/pieceofpaper/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 23:48:24 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (295.6ms)
+Completed 200 OK in 434ms (Views: 425.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background_twitter_blur.jpg" for ::1 at 2017-05-14 23:48:25 +0200
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:48:25 +0200
+
+
+Started POST "/pages/search_tweets" for ::1 at 2017-05-14 23:48:27 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLakvV3QCGCRrNnAwyASp7TnZoY8s8OLVTeFj8FdebBdA+/2IlhyAkvzoexFOhSob0hMN6A5T8mt7Z1D10laFw==", "keywords"=>"test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 148879ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for ::1 at 2017-05-14 23:50:57 +0200
+
+
+Started GET "/pages/search_tweets" for ::1 at 2017-05-14 23:54:10 +0200
+Processing by PagesController#search_tweets as HTML
+Completed   in 1770929ms (ActiveRecord: 0.0ms)
