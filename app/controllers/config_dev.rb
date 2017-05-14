@@ -5,7 +5,7 @@ class ConfigDev
     @@PB_SSL
   end
 
-  @@CONSUMER_KEY = "52WNnLx6onjqDPOfsQv8YiLh6";
+  @@CONSUMER_KEY = "52WNnLx6onjqDPOfsQv8YiLh6"
   def self.CONSUMER_KEY
     @@CONSUMER_KEY
   end
