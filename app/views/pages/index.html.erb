@@ -42,6 +42,7 @@
 
   <div id='search-box'>
     <form method='post' action='<%= get_path_for_search %>' id='search-form2' target='_top'>
+      <%= text_field_tag 'keywords', '', id: 'search-text', placeholder:'Wanna check a fact ?', autocomplete: 'off', required: 'true' %>
       <button id='search-button' type='submit'>
         <span>Check</span>
       </button>
