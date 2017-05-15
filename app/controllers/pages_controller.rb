@@ -20,14 +20,14 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
-<<<<<<< HEAD
+
   NB_CLASSES = 10
   BONUS = 1.2
   MALUS = 0.8
 
-=======
+
   # Pour la pondération
->>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
+
   @@abo = Array.new
   @@rtf = Array.new
   @@avg_abo = 0
@@ -117,10 +117,10 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Second loop'
     main_2(@tweet_list, @matrice_score)
 
-<<<<<<< HEAD
+
     puts Time.now.strftime("%H:%M:%S") + ' Third loop'
     main_3(@tweet_list, @matrice_score)
-=======
+
 
     puts Time.now.strftime("%H:%M:%S") + ' Propagation time'
     date_diff = ( Time.at(@@dates[@@borne_droite]) - Time.at(@@dates[@@borne_gauche])).to_f
@@ -135,7 +135,7 @@ class PagesController < ApplicationController
     end
     $stats[:propagation_time] = (date_diff.round(2).to_s + date_diff_unite)
     puts $stats[:propagation_time]
->>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
+
 
     @false_class = { score: 0,
                      nb_tweets: 0,
@@ -508,10 +508,6 @@ class PagesController < ApplicationController
 
 
   #--------1er tour de boucle -----------------
-<<<<<<< HEAD
-  def main_1(tweets_list, matrice_score)
-    i = 0
-=======
   def main_1(tweets_list)
 
     # Pour date
@@ -520,10 +516,9 @@ class PagesController < ApplicationController
     n = @@dates.length
     m = n * 0.35 #35%
 
->>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
     tweets_list.each do |key, tweet|
       clean_tweet tweet
-      sentimental_and_score_analysis tweet   
+      sentimental_and_score_analysis tweet
 
       # Pour date
       if i < (n-m) then
@@ -546,7 +541,7 @@ class PagesController < ApplicationController
   #--------2ème tour de boucle -----------------
   def main_2(tweets_list, matrice_score)
 
-    # Pour date    
+    # Pour date
     min = (2**(0.size * 8 -2) -1)
     n = @@dates.length
     i = n-1
