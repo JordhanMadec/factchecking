@@ -72,7 +72,7 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nb_tweets}"
 
     puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
-    set_dataset(@tweet_list)
+    # set_dataset(@tweet_list)
 
     #creation de la matrice de score
     puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
@@ -411,7 +411,7 @@ class PagesController < ApplicationController
 
     tweets_list.each do |key, tweet|
       clean_tweet tweet
-      sentimental_and_score_analysis tweet   
+      sentimental_and_score_analysis tweet
 
       # Pour date
       if i < (n-m) then
@@ -432,7 +432,7 @@ class PagesController < ApplicationController
   #--------2ème tour de boucle -----------------
   def main_2(tweets_list, matrice_score)
 
-    # Pour date    
+    # Pour date
     min = (2**(0.size * 8 -2) -1)
     n = @@dates.length
     i = n-1
