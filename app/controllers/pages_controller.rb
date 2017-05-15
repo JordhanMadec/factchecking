@@ -36,7 +36,12 @@ class PagesController < ApplicationController
              neutral_count: 0,
              positive_count: 0,
              true_count: 0,
-             false_count: 0 }
+             false_count: 0,
+             usa: 0,
+             europe: 0,
+             asia: 0,
+             africa: 0,
+             south_america: 0}
 
   def init
     client = Twitter::REST::Client.new do |config|
@@ -65,7 +70,7 @@ class PagesController < ApplicationController
     #@tweet_list = JSON.parse(get_dataset)
     puts Time.now.strftime("%H:%M:%S") + ' Tweets reached'
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
-    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nb_tweets}"
+    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
 
     puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
     #set_dataset(@tweet_list)
@@ -117,6 +122,25 @@ class PagesController < ApplicationController
         $stats[:retweets] += tweet.retweet_count
         $stats[:favs] += tweet.favorite_count
         $stats[:touched_people] += tweet.user.followers_count
+
+        #Geographic
+        if (tweet.place) then
+          long = tweet.place.bounding_box.coordinates.first.first[1]
+          lat = tweet.place.bounding_box.coordinates.first.first[0]
+
+          if (long < 50.6 && long > 23.5 && lat < -67.5 && lat > -127.5) then
+            $stats[:usa] += 1
+          elsif (long < 69.6 && long > 34.5 && lat < 36.7 && lat > -13.3) then
+            $stats[:europe] += 1
+          elsif (long < 36.5 && long > -32.9 && lat < 45 && lat > -20) then
+            $stats[:africa] += 1
+          elsif (long < 67.5 && long > 2.2 && lat < 143.6 && lat > 42.2) then
+            $stats[:asia] += 1
+          elsif (long < 28.3 && long > -57.2 && lat < -36.5 && lat > -115.4) then
+            $stats[:south_america] += 1
+          end
+        end
+
       end
       #On rend la liste des tweets au format json
       res.to_json
