@@ -5,6 +5,7 @@ require 'sentimental'
 require 'config_dev'
 require 'json'
 require 'uri'
+require 'date'
 
 if ConfigDev.PB_SSL
   require 'openssl'
@@ -19,16 +20,24 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+<<<<<<< HEAD
   NB_CLASSES = 10
   BONUS = 1.2
   MALUS = 0.8
 
+=======
+  # Pour la pondération
+>>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
   @@abo = Array.new
   @@rtf = Array.new
   @@avg_abo = 0
   @@avg_rft = 0
   @@median_abo = 0
   @@median_rft = 0
+  # Pour le temps de propagation
+  @@dates = Array.new
+  @@borne_gauche = -1
+  @@borne_droite = -1
 
   $classe_max_personne = 0
   $classe_min_personne = 0
@@ -94,6 +103,10 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
     @matrice_score = initialisation(@nbTweets)
 
+    #trie des dates
+    puts Time.now.strftime("%H:%M:%S") + ' Sort dates'
+    @@dates.sort!
+
     #cleaned_text, sentimental_and_score_analysis, make_class
     puts Time.now.strftime("%H:%M:%S") + ' First loop'
     main_1(@tweet_list, @matrice_score)
@@ -104,8 +117,25 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Second loop'
     main_2(@tweet_list, @matrice_score)
 
+<<<<<<< HEAD
     puts Time.now.strftime("%H:%M:%S") + ' Third loop'
     main_3(@tweet_list, @matrice_score)
+=======
+
+    puts Time.now.strftime("%H:%M:%S") + ' Propagation time'
+    date_diff = ( Time.at(@@dates[@@borne_droite]) - Time.at(@@dates[@@borne_gauche])).to_f
+    date_diff_unite = "sec"
+    if date_diff > 60 then
+      date_diff = date_diff / 60
+      date_diff_unite = "min"
+      if date_diff > 60 then
+        date_diff_unite = "h"
+        date_diff = date_diff / 60
+      end
+    end
+    $stats[:propagation_time] = (date_diff.round(2).to_s + date_diff_unite)
+    puts $stats[:propagation_time]
+>>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
 
     @false_class = { score: 0,
                      nb_tweets: 0,
@@ -140,6 +170,9 @@ class PagesController < ApplicationController
         res[tweet.id]["cleaned_text"] = ""
         res[tweet.id]["sentimental_class"] = "default"
         res[tweet.id]["sentimental_score"] = 0
+
+        # Pour le temps de propagation
+        @@dates.push(DateTime.parse(res[tweet.id]["attrs"][:created_at]).to_time.to_i)
 
         #Preparing stats
         $stats[:retweets] += tweet.retweet_count
@@ -379,7 +412,7 @@ class PagesController < ApplicationController
   def statutURLs(urls)
     urls.each do |url|
 
-      uri_host = URI.parse(url["expanded_url"]).host
+      uri_host = URI.parse(URI.encode(url["expanded_url"])).host
 
       # vérifie si fake news
       file = File.read("fake_news.txt")
@@ -475,11 +508,34 @@ class PagesController < ApplicationController
 
 
   #--------1er tour de boucle -----------------
+<<<<<<< HEAD
   def main_1(tweets_list, matrice_score)
     i = 0
+=======
+  def main_1(tweets_list)
+
+    # Pour date
+    i = 0
+    min = (2**(0.size * 8 -2) -1)
+    n = @@dates.length
+    m = n * 0.35 #35%
+
+>>>>>>> b41caafa3b8a33e766ff35eba9a5471c11405967
     tweets_list.each do |key, tweet|
       clean_tweet tweet
-      sentimental_and_score_analysis tweet
+      sentimental_and_score_analysis tweet   
+
+      # Pour date
+      if i < (n-m) then
+        tmp = @@dates[i+m] - @@dates[i]
+        if tmp <= min then
+          min = tmp
+          @@borne_gauche = i
+        end
+      end
+      i = i + 1
+
+      # Pour la pondération
       @@rtf.push(Integer(tweet["retweet_count"]) + Integer(tweet["favorite_count"]))
       @@abo.push(Integer(tweet["user"]["followers_count"]))
       @@key.push(i)
@@ -489,10 +545,28 @@ class PagesController < ApplicationController
 
   #--------2ème tour de boucle -----------------
   def main_2(tweets_list, matrice_score)
+
+    # Pour date    
+    min = (2**(0.size * 8 -2) -1)
+    n = @@dates.length
+    i = n-1
+    m = n * 0.35 #35%
+
     num_Tweet = 0
     tweets_list.each do |key, tweet|
       make_class(tweet, num_Tweet, matrice_score, tweets_list)
       weigh tweet
+
+      # Pour date
+      if i > m then
+        tmp = @@dates[i] - @@dates[i-m]
+        if tmp <= min then
+          min = tmp
+          @@borne_droite = i
+        end
+      end
+      i = i - 1
+
       num_Tweet +=1
     end
   end
