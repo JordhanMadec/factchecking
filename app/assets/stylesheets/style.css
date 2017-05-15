@@ -198,7 +198,7 @@ a:hover {
 }
 #abt_sec {
     padding : 70px 0;
-    background: #409BD6 ;
+    background: #40abd6;
 }
 .happy_use {
     float : right;
@@ -255,9 +255,6 @@ a:hover {
 .btn-warning {
     font-weight: bolder;
     font-size: 30px;
-}
-#proj_sec {
-    padding-top : 30px;
 }
 .skills-wrap .container {
     padding : 70px 0;
@@ -675,14 +672,14 @@ a:hover {
     margin-left : 15px;
 }
 .show_hide {
-    color : #3399FF;
+    color : #40abe6;
     margin-left : 15px;
 }
 #blg_sec {
     padding : 100px 0;
 }
 .main_menu_sec {
-    background : none 0 0 repeat scroll #ffffff;
+    background : none 0 0 repeat scroll #FDFEFE;
     border : none 0;
     margin : 0;
     box-shadow: 0 3px 20px #555;
@@ -765,11 +762,22 @@ a:hover {
 #sr_bx {
     border : #C4C4C4 solid 1px;
     padding : 12px;
-    width : 100%;
+    width : 82%;
+}
+#sr_bx_submit_btn {
+    height: 46px;
+    width: 16%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-width: 0;
+    background-color: #ff7365;
+    cursor: pointer;
 }
 .sidebar h2 {
     color : #333333;
-    font-size : 14px;
+    font-size : 15px;
     text-transform : uppercase;
     margin-top : 30px;
 }
@@ -809,13 +817,15 @@ a:hover {
     float : left;
 }
 .tag li a {
-    border : #666666 solid 0.5px;
+    border : #666666 solid 0.1px;
+    background-color: #f3f3f3;
     padding : 10px;
     margin-right : 5px;
+    border-radius: 20px;
 }
 .tag li a:hover {
     border: none;
-    box-shadow: 0 1px 6px #409BD6;
+    box-shadow: 1px 1px 6px #409bd6;
 }
 .author_dec h3 {
     margin : 0;

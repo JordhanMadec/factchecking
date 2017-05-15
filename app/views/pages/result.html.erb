@@ -18,7 +18,7 @@
             <div class="post_info">
               <div class="user_name">
                 <h2><%= tweet["user"]["name"] %></h2>
-                <i class="fa fa-user-circle-o"></i>
+                <i class="fa fa-twitter"></i>
               </div>
               <div class="user_id">
                 @<%= tweet["user"]["screen_name"] %>
@@ -49,6 +49,7 @@
 					<div class="search_widget">
             <form method="post" action="<%= get_path_for_search %>">
               <%= text_field_tag 'keywords', '', id: 'sr_bx', placeholder:'Check a new fact ...', required: 'true', autocomplete: 'off' %>
+              <button id='sr_bx_submit_btn' type='submit'>Go</button>
             </form>
 					</div>				
 					<div class="widget">
@@ -59,7 +60,9 @@
 							<li>Accuracy class : Accurate</li>
 							<li>Sentimental class : Positive</li>
 							<li>Votes : 10</li>
-							<li><a href="<%= pages_charts_path %>"><strong><i class="fa fa-long-arrow-right"></i> See Graphic Charts</strong></a></li>
+							<li><a href="<%= pages_charts_path %>">
+                <strong> SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
+              </a></li>
 						</ul>
 					</div>							
 					<div class="widget">

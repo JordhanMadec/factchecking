@@ -6,10 +6,10 @@
         $('[data-toggle="popover"]').popover({
             placement: 'bottom',
             html: true,
-            title: 'Popover title',
+            title: 'Calculation details',
             trigger: 'hover',
             container: 'body',
-            content: 'Put here some details'
+            content: 'Put here some calculation details of this tweet'
         });
     });
 </script>
@@ -31,8 +31,8 @@
 
         var options = {
             title: 'VERACITY CLASS',
-            pieHole: 0.35,
-            slices: [{color: '#4dd2ff'}, {color: '#ff3333'}],
+            pieHole: 0.28,
+            slices: [{color: '#67BCDB'}, {color: '#B71427'}],
             fontSize: 18
         };
 
@@ -52,8 +52,8 @@
 
         var options = {
             title: 'SENTIMENT CLASS',
-            pieHole: 0.35,
-            slices: [{color: '#20B2AA'}, {color: '#ff3333'}, {color: '#ffba66'}],
+            pieHole: 0.28,
+            slices: [{color: '#118C4E'}, {color: '#e41713'}, {color: '#ffb01f'}],
             fontSize: 18
         };
 
@@ -88,7 +88,7 @@
     $(document).ready(function(){
         $('.show_hide').showHide({
             speed: 1000,  // speed you want the toggle to happen
-            easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+            easing: 'swing',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
             changeText: 1, // if you dont want the button text to change, set this to 0
             showText: 'View',// the button text to show when a div is closed
             hideText: 'Close' // the button text to show when a div is open
