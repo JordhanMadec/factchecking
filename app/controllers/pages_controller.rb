@@ -68,7 +68,7 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nb_tweets}"
 
     puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
-    set_dataset(@tweet_list)
+    #set_dataset(@tweet_list)
 
     #creation de la matrice de score
     puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
