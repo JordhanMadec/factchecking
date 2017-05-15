@@ -19,12 +19,31 @@ class PagesController < ApplicationController
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
   NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  NB_CLASSES = 10
+  BONUS = 1.2
+  MALUS = 0.8
+
   @@abo = Array.new
   @@rtf = Array.new
   @@avg_abo = 0
   @@avg_rft = 0
   @@median_abo = 0
   @@median_rft = 0
+
+  $classe_max_personne = 0
+  $classe_min_personne = 0
+  $classe_rpz_mieux = 0
+  $classe_rpz_mal = 0
+
+  $keywords_sentimental = "neutral"
+  $keywords_negatif = "neutral"
+
+
+  #Tableau avec le numéro de tour de boucle
+  @@key = Array.new
+
+  #Tableau avec le nombre de classe de tweets que l'on veut pour la comparaison mot à mot (appeler la méthode init_nb_class)
+  $classe = Array.new
 
   $stats = { retweets: 0,
              favs: 0,
@@ -63,10 +82,13 @@ class PagesController < ApplicationController
     #@tweet_list = JSON.parse(get_dataset)
     puts Time.now.strftime("%H:%M:%S") + ' Tweets reached'
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
-    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nb_tweets}"
+    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
 
     puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
     set_dataset(@tweet_list)
+
+    puts Time.now.strftime("%H:%M:%S") + ' Creating nb classes tweets'
+    init_nb_class(NB_CLASSES)
 
     #creation de la matrice de score
     puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
@@ -74,13 +96,16 @@ class PagesController < ApplicationController
 
     #cleaned_text, sentimental_and_score_analysis, make_class
     puts Time.now.strftime("%H:%M:%S") + ' First loop'
-    main_1(@tweet_list)
+    main_1(@tweet_list, @matrice_score)
 
     puts Time.now.strftime("%H:%M:%S") + ' Init weight'
     init_weigh()
 
     puts Time.now.strftime("%H:%M:%S") + ' Second loop'
     main_2(@tweet_list, @matrice_score)
+
+    puts Time.now.strftime("%H:%M:%S") + ' Third loop'
+    main_3(@tweet_list, @matrice_score)
 
     @false_class = { score: 0,
                      nb_tweets: 0,
@@ -89,9 +114,14 @@ class PagesController < ApplicationController
                     nb_tweets: 0,
                     population: Array.new}
 
+    puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
+    analyse_function_classe(@nbTweets, @keywords, @tweet_list)
+
     puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
     score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+
     puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+
   end
 
   def prepare_tweets(tweets)
@@ -161,6 +191,12 @@ class PagesController < ApplicationController
 
   def initialisation(n)
     res = Array.new(n) {|i| Array.new(n) {|j| -1} } # Create an empty tab (2 lin * 1 col) initialize with 0 (another way)
+  end
+
+  def init_nb_class(n)
+    for i in (0..(n-1))
+      $classe.push(Array.new)
+    end
   end
 
   def sentimental_class(text)
@@ -256,10 +292,76 @@ class PagesController < ApplicationController
             tmp = word__comparaison_score(tweet1["cleaned_text"], tweet2["cleaned_text"])
             matrice[i][j]["score"] = tmp
             matrice[i][j]["value"] = result_score(tmp)
+            matrice[i][j]["id_tweet"] = key2
           end
           j+=1
         end
   end
+
+
+  def classes(matrice_score, tweet, id_tweet, num_tweet,nb_tweets, num_classe)
+    cmpt = num_classe
+    j = num_tweet + 1
+    if cmpt < ($classe.length)
+      if (num_tweet+1) < nb_tweets
+        $classe[cmpt].push(id_tweet)
+      for i in j..nb_tweets
+        if( !@@key.empty?) then
+          if @@key.include?(i)
+            if(matrice_score[num_tweet][i]["score"] > 0.3)
+              $classe[cmpt].push(matrice_score[num_tweet][i]["id_tweet"])
+              @@key.delete(i)
+
+            end
+          end
+        else
+          break
+        end
+      end
+    end
+  end
+  end
+
+  def analyse_function_classe(nb_tweets, keyword, tweet_list)
+    $keywords_sentimental = sentimental_class keyword
+    $keywords_negatif = negation keyword
+    max = 0
+    min = nb_tweets
+    best = -1
+    worst = 2
+    for i in 0..(NB_CLASSES-1)
+      if !$classe[i].empty?
+      #determine la calsse avec le plus grand nombre de tweet et le plus petit nombre
+      if $classe[i].count > max then
+        max = $classe[i].count
+        $classe_max_personne = i
+      else
+        if $classe[i].count < min
+          min = $classe[i].count
+          $classe_min_personne = i
+        end
+      end
+      #determine la classe la plus représentative et la moins représentative des mots de la recherche
+      puts $classe[i][0]
+      tweet = tweet_list[$classe[i][0]]
+      puts keyword
+      #puts tweet["cleaned_text"]
+      tmp = word__comparaison_score(keyword, tweet["cleaned_text"])
+      if  tmp > best then
+        best = tmp
+        $classe_rpz_mieux = i
+      else
+        if tmp < worst
+          worst = tmp
+          $classe_rpz_mal = i
+        end
+      end
+    end
+  end
+  end
+
+
+
 
   # return vrai si l'utilisateur est blackliste
   def isBlacklisted(id)
@@ -373,12 +475,15 @@ class PagesController < ApplicationController
 
 
   #--------1er tour de boucle -----------------
-  def main_1(tweets_list)
+  def main_1(tweets_list, matrice_score)
+    i = 0
     tweets_list.each do |key, tweet|
       clean_tweet tweet
       sentimental_and_score_analysis tweet
       @@rtf.push(Integer(tweet["retweet_count"]) + Integer(tweet["favorite_count"]))
       @@abo.push(Integer(tweet["user"]["followers_count"]))
+      @@key.push(i)
+      i += 1
     end
   end
 
@@ -392,21 +497,46 @@ class PagesController < ApplicationController
     end
   end
 
+  #---------3ème tour de boucle ---------------------
+
+  def main_3(tweets_list, matrice_score)
+    num_Tweet = 0
+    tweets_list.each do |key, tweet|
+    classes(matrice_score, tweet, key, num_Tweet, tweets_list.length, num_Tweet)
+      num_Tweet +=1
+    end
+  end
+
   #---------- Scoring classes ----------
   def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
+    puts $keywords_sentimental
     tweets.each do |key, tweet|
 
-        if (tweet["negatif"] == "positif") then
+        sen = tweet["sentimental_class"]
+        neg = tweet["negatif"]
+
+
+        if ((sen == "positive") && $keywords_sentimental = "positive") || (( sen == "negative") && $keywords_sentimental = "negative") || (( neg == "negatif") && $keywords_negatif = "negatif") then
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
-          true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+          if $classe[$classe_rpz_mieux].include?(key) || $classe[$classe_max_personne].include?(key) then
+            puts "positif"
+          true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*BONUS
+          else
+            true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+          end
 
           $stats[:true_count] += 1
         else
           false_class[:population].push(tweet)
           false_class[:nb_tweets]++
-          false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+          if $classe[$classe_rpz_mal].include?(key) || $classe[$classe_min_personne].include?(key) then
+            puts "Negatif"
+          false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*MALUS
+          else
+            false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
+          end
 
           $stats[:false_count] += 1
         end

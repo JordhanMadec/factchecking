@@ -42,6 +42,18 @@
         <%end%>
       </div>
 
+
+      <div class="row">
+        <p>Nombre de tweet par classe de ressemblance syntaxique</p>
+        <% $classe.each do |i| %>
+          <div class="col-lg-2">
+            <p>
+              <b><%= i.count %> </b>
+            </p>
+          </div>
+        <%end%>
+      </div>
+
       <%= i=0 %>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
