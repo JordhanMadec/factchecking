@@ -4,8 +4,8 @@ module ApplicationHelper
     link_to(image_tag(image_path, :border => "0"), target_link, options)
   end
 
-  def maketitle(pgtitle='')
-    pgtitle + ' | Twitter Fact Checker | INSA Rennes'
+  def make_title(title='')
+    title + ' | Twitter Fact Checker | INSA Rennes'
   end
 
   def get_path_for_search

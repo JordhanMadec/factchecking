@@ -446,7 +446,53 @@ class PagesController < ApplicationController
   end
 
   def result
-    search_tweets
+    # Same content as search_tweets, but needed for the new interface, after we may remove or rename 'search_tweets' to 'result' for simplification
+    client = init
+    puts 'Client init'
+
+    @keywords = params[:keywords] ||= "test"
+
+    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
+    if @keywords=="" then @keywords = "test" end
+    @keywords_tag_array = @keywords.split(' ');
+
+    puts 'Keywords: ' + @keywords
+
+    #Nettoyage des tweets
+    puts Time.now.strftime("%H:%M:%S") + ' Reaching tweets...'
+    @tweet_list = JSON.parse(prepare_tweets client.search(@keywords, lang: LANGUAGE))
+    #@tweet_list = JSON.parse(get_dataset)
+    puts Time.now.strftime("%H:%M:%S") + ' Tweets reached'
+    @nbTweets = @tweet_list.count #Nombre de tweets trouvés
+    puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
+
+    puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
+    #set_dataset(@tweet_list)
+
+    #creation de la matrice de score
+    puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
+    @matrice_score = initialisation(@nbTweets)
+
+    #cleaned_text, sentimental_and_score_analysis, make_class
+    puts Time.now.strftime("%H:%M:%S") + ' First loop'
+    main_1(@tweet_list)
+
+    puts Time.now.strftime("%H:%M:%S") + ' Init weight'
+    init_weigh()
+
+    puts Time.now.strftime("%H:%M:%S") + ' Second loop'
+    main_2(@tweet_list, @matrice_score)
+
+    @false_class = { score: 0,
+                     nb_tweets: 0,
+                     population: Array.new}
+    @true_class = { score: 0,
+                    nb_tweets: 0,
+                    population: Array.new}
+
+    puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
+    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
   end
 
   def charts

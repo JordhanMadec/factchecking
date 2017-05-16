@@ -171,3 +171,1555 @@ Completed 200 OK in 51724ms (Views: 289.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-15 20:14:20 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 23:57:28 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.6ms)
+  Rendered layouts/_header_index.html.erb (6037.7ms)
+  Rendered pages/index.html.erb within layouts/application (6134.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (305.4ms)
+  Rendered layouts/_preloader.html.erb (0.9ms)
+  Rendered layouts/_map.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_javascripts_tag.html.erb (510.2ms)
+Completed 200 OK in 7210ms (Views: 7184.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-d5ea698602f0ff8f924905fb7988daac5a4944531d1baf5319266ba612a16d6a.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/main.self-f5bd30feeb5623dbdacefcb53f6bb4423561fd8981ed03e4197ab7803b6f53f7.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/font-awesome.self-c2982885d6ffa1a4a9354c03017dca0c8040280d6ea5dbfcfb1a9340a556f8b5.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/application.self-6d8855d9643810c48e892906b156e4aed02184c789bff1bde3b70494c0560b14.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/bootstrap-theme.min.self-3a9e70d08573b263427c5a00c46e60fbff2b490a805d7eefbe6633086b13eae4.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/appear.self-a53a61884a3f70ba8e55b28170ce8662d5e5962c2c6747f762aedf4eb57a00d5.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/html5shiv.self-1f432d487ed3790f765994dd831280ac2373eb894c0c2cec7b1fc3372f1ac6db.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/isotope.pkgd.min.self-3bfd510f090c8b0c9b4140101efa8f8c2e9433ad68e537c264a1a717a90db3b2.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery.counterup.min.self-ad0489545320237ed26cd40dea4e6d303532637d379144b10c1e9f3f87fc20ce.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery.easing.min.self-17a01b6a2de1310e5b07a3fb735edcdccda497533463b31da3a352c81a6f3430.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery.nicescroll.min.self-b4ebdef92707e16acb4a9bfdf40345ec1db67e2161b1cd052349921753ce8122.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/jquery.mark.min.self-75b6dcd5f2a0bbe496cf8dd0825d9ac9813e53ab2f23531e9015bd9a443ac9b7.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/main.self-6e7c124cd7e36e560a21e68eec50fdf9f316002c3203a49ba200784c9303adc6.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/owl.carousel.min.self-3c9f9dac2a281d1090601a8896fe59fb9df20f261295bbe087f2a0f56ef7e8d9.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/plugins.self-c6129bd3aeb079f5c310d2a9618478ba0d621992c1a5e5ef320917937dc2dbb7.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:37 +0200
+
+
+Started GET "/assets/respond.min.self-e2a74ed217c3cdb5d09ec224a13a841aa67aaebad14edc8344ca81f7d882851c.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/scrolling-nav.self-3d5a6042f3bbecc36d4f8fbc63160a05d7335f7caeb208e6e07cfa0a707ab79f.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/showHide.self-6326de4a6f6f45e5d0a2440b1f556c9329d8c7bfbfc13bb1f8574e790a07d1c7.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/application.self-c6de339c563d91bc1901751a38f90fcf8ab097f376c5a74e938607cfc6da4f42.js?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_08-f02302d6bfa399a3fc195bf9ff5361ecc71dd34f9ec2d007a571c1838be6e7d0.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/twitter-5e8fa4835cbfc440f5a4e8dc5820f8c114ccacb7da87854db34e32eed6845b24.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/insa-8e83002e0b140bfd2320b642c74289177fb036af2e738ca2f8b22b8525508efd.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/rails-69af5711fa5740c4fe2fe839ddaa98b050aad67fb60f48992bd8651eb87295a3.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/bootstrap-d9049354134ff47fce45facf516263ef66fe3f422d3378df1ec9261da682d9e5.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/jquery-4e95faac0fdcb16fe4e75f34c02fbde052f14a0011be51cb25cf49d8f15642cb.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/github-0a17f99b4baf64103f719ef6727c887f55bfb059314ad386f425a0c8e752a0c8.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/alliance/slack-29385848969271559195524131fd231122ee8bc1ad65435191ccd7177652e0dd.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/responsive.self-1a2538d017434ea00d20ffa845bfcab218a82c9d5f6278f31d7e93cfa85685e3.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/logo-7fdd3ba8e2489a8d4acc77d3741f3a6473dcc59ac3449d6315bc16e333068b36.svg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/owl.carousel.self-ad1798474744695e81071dda3d906ddadd86486a0677de386d35880426c72774.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/style.self-6867668a5bae58ad57c1d3e511282f379b539ee28e03d4351599fd59d4812519.css?body=1" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/slider1-28195f72485108eac3ad20b11eec40d82b545bf471836eccae6f9ce66b35662d.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/slider2-e46d0b1fed3c03ef5d0af636ee88eadafa51d5b1dedc3dfd26a044dc90292160.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/slider3-0beb675d56836e5b0a5101be874ea85c4afc2dfb94099fe89c8491f7dc4f0917.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/team/mem1-2d6f5e1fb498201af97fc7d139da9744dac8a28955f43e537dde71db81bf7207.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/team/mem2-edb37a048c6ceb262eb2959a25e80d94ac19ba37c04717fd0c9434db71f69d23.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/team/mem3-52fca9116c47dabf7bfdbccb04c3b61f1b02bc583bc4666529f7c9d95c779530.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/team/mem4-e6366fef41046f8b83feef4c8dcd47a887452cfa44a94d38d84b994c79ece8d8.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/team/mem5-4144974995bae70bc1f1620dc18586557a3dfb0a685a42f37276fae51ff0c894.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_05-b884c8903333d1baca44983b509e936b7e2cb7d1e1ec0faabb622b490111f1b0.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_01-e59ad3aff865a6cb06832b468a52a00739a151ce3dca970d640c742ffd9603fd.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_04-bf11709cf828fe3bb9a25cfc7bf02f7f495ad43aec71541ea9db258d76b336e7.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_06-2ec6715e6ad451bd5729451b8c875429748066bb01ecc076bd1a5b0eeefad0b9.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_07-39035c5c9739ce2feb3d1297bf6cdba364063156b734d8b48e0ceaca9b888d15.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_03-50ab0fbe0a66909f5c947e5defafd411a4fc13aa52ca4c34382206c6ba186de7.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/portfolio/p_02-cdfef7b472f5a5af53ba6f836af185c2b7b05c5968de7089934fabca4ba5df94.jpg" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-15 23:57:39 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-15 23:57:42 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (60.0ms)
+  Rendered layouts/_stylesheets_tag.html.erb (48.4ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.7ms)
+Completed 200 OK in 200ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-d5ea698602f0ff8f924905fb7988daac5a4944531d1baf5319266ba612a16d6a.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/main.self-f5bd30feeb5623dbdacefcb53f6bb4423561fd8981ed03e4197ab7803b6f53f7.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/font-awesome.self-c2982885d6ffa1a4a9354c03017dca0c8040280d6ea5dbfcfb1a9340a556f8b5.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/application.self-6d8855d9643810c48e892906b156e4aed02184c789bff1bde3b70494c0560b14.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/bootstrap-theme.min.self-3a9e70d08573b263427c5a00c46e60fbff2b490a805d7eefbe6633086b13eae4.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/owl.carousel.self-ad1798474744695e81071dda3d906ddadd86486a0677de386d35880426c72774.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/responsive.self-1a2538d017434ea00d20ffa845bfcab218a82c9d5f6278f31d7e93cfa85685e3.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/style.self-6867668a5bae58ad57c1d3e511282f379b539ee28e03d4351599fd59d4812519.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/appear.self-a53a61884a3f70ba8e55b28170ce8662d5e5962c2c6747f762aedf4eb57a00d5.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/html5shiv.self-1f432d487ed3790f765994dd831280ac2373eb894c0c2cec7b1fc3372f1ac6db.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/isotope.pkgd.min.self-3bfd510f090c8b0c9b4140101efa8f8c2e9433ad68e537c264a1a717a90db3b2.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery.easing.min.self-17a01b6a2de1310e5b07a3fb735edcdccda497533463b31da3a352c81a6f3430.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery.mark.min.self-75b6dcd5f2a0bbe496cf8dd0825d9ac9813e53ab2f23531e9015bd9a443ac9b7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery.counterup.min.self-ad0489545320237ed26cd40dea4e6d303532637d379144b10c1e9f3f87fc20ce.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/jquery.nicescroll.min.self-b4ebdef92707e16acb4a9bfdf40345ec1db67e2161b1cd052349921753ce8122.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/slider2-e46d0b1fed3c03ef5d0af636ee88eadafa51d5b1dedc3dfd26a044dc90292160.jpg" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/logo-7fdd3ba8e2489a8d4acc77d3741f3a6473dcc59ac3449d6315bc16e333068b36.svg" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/slider1-28195f72485108eac3ad20b11eec40d82b545bf471836eccae6f9ce66b35662d.jpg" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/main.self-6e7c124cd7e36e560a21e68eec50fdf9f316002c3203a49ba200784c9303adc6.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/slider3-0beb675d56836e5b0a5101be874ea85c4afc2dfb94099fe89c8491f7dc4f0917.jpg" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/owl.carousel.min.self-3c9f9dac2a281d1090601a8896fe59fb9df20f261295bbe087f2a0f56ef7e8d9.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/plugins.self-c6129bd3aeb079f5c310d2a9618478ba0d621992c1a5e5ef320917937dc2dbb7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/respond.min.self-e2a74ed217c3cdb5d09ec224a13a841aa67aaebad14edc8344ca81f7d882851c.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/scrolling-nav.self-3d5a6042f3bbecc36d4f8fbc63160a05d7335f7caeb208e6e07cfa0a707ab79f.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:03 +0200
+
+
+Started GET "/assets/showHide.self-6326de4a6f6f45e5d0a2440b1f556c9329d8c7bfbfc13bb1f8574e790a07d1c7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/application.self-c6de339c563d91bc1901751a38f90fcf8ab097f376c5a74e938607cfc6da4f42.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/team/mem1-2d6f5e1fb498201af97fc7d139da9744dac8a28955f43e537dde71db81bf7207.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/team/mem2-edb37a048c6ceb262eb2959a25e80d94ac19ba37c04717fd0c9434db71f69d23.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/team/mem3-52fca9116c47dabf7bfdbccb04c3b61f1b02bc583bc4666529f7c9d95c779530.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/team/mem4-e6366fef41046f8b83feef4c8dcd47a887452cfa44a94d38d84b994c79ece8d8.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/team/mem5-4144974995bae70bc1f1620dc18586557a3dfb0a685a42f37276fae51ff0c894.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_05-b884c8903333d1baca44983b509e936b7e2cb7d1e1ec0faabb622b490111f1b0.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_01-e59ad3aff865a6cb06832b468a52a00739a151ce3dca970d640c742ffd9603fd.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_04-bf11709cf828fe3bb9a25cfc7bf02f7f495ad43aec71541ea9db258d76b336e7.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_06-2ec6715e6ad451bd5729451b8c875429748066bb01ecc076bd1a5b0eeefad0b9.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_07-39035c5c9739ce2feb3d1297bf6cdba364063156b734d8b48e0ceaca9b888d15.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_03-50ab0fbe0a66909f5c947e5defafd411a4fc13aa52ca4c34382206c6ba186de7.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_02-cdfef7b472f5a5af53ba6f836af185c2b7b05c5968de7089934fabca4ba5df94.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/portfolio/p_08-f02302d6bfa399a3fc195bf9ff5361ecc71dd34f9ec2d007a571c1838be6e7d0.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/twitter-5e8fa4835cbfc440f5a4e8dc5820f8c114ccacb7da87854db34e32eed6845b24.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/insa-8e83002e0b140bfd2320b642c74289177fb036af2e738ca2f8b22b8525508efd.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/rails-69af5711fa5740c4fe2fe839ddaa98b050aad67fb60f48992bd8651eb87295a3.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/bootstrap-d9049354134ff47fce45facf516263ef66fe3f422d3378df1ec9261da682d9e5.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/jquery-4e95faac0fdcb16fe4e75f34c02fbde052f14a0011be51cb25cf49d8f15642cb.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/github-0a17f99b4baf64103f719ef6727c887f55bfb059314ad386f425a0c8e752a0c8.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/alliance/slack-29385848969271559195524131fd231122ee8bc1ad65435191ccd7177652e0dd.png" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-15 23:58:04 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-15 23:58:06 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-15 23:58:06 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 23:58:28 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (82.8ms)
+  Rendered layouts/_stylesheets_tag.html.erb (61.6ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (57.3ms)
+Completed 200 OK in 258ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-15 23:58:29 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-15 23:58:29 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-15 23:58:30 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (7.0ms)
+  Rendered pages/index.html.erb within layouts/application (58.8ms)
+  Rendered layouts/_stylesheets_tag.html.erb (51.4ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.9ms)
+Completed 200 OK in 200ms (Views: 199.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-d5ea698602f0ff8f924905fb7988daac5a4944531d1baf5319266ba612a16d6a.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/main.self-f5bd30feeb5623dbdacefcb53f6bb4423561fd8981ed03e4197ab7803b6f53f7.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/font-awesome.self-c2982885d6ffa1a4a9354c03017dca0c8040280d6ea5dbfcfb1a9340a556f8b5.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/application.self-6d8855d9643810c48e892906b156e4aed02184c789bff1bde3b70494c0560b14.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/bootstrap-theme.min.self-3a9e70d08573b263427c5a00c46e60fbff2b490a805d7eefbe6633086b13eae4.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/owl.carousel.self-ad1798474744695e81071dda3d906ddadd86486a0677de386d35880426c72774.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/responsive.self-1a2538d017434ea00d20ffa845bfcab218a82c9d5f6278f31d7e93cfa85685e3.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/style.self-6867668a5bae58ad57c1d3e511282f379b539ee28e03d4351599fd59d4812519.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/logo-7fdd3ba8e2489a8d4acc77d3741f3a6473dcc59ac3449d6315bc16e333068b36.svg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/slider1-28195f72485108eac3ad20b11eec40d82b545bf471836eccae6f9ce66b35662d.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/slider2-e46d0b1fed3c03ef5d0af636ee88eadafa51d5b1dedc3dfd26a044dc90292160.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/team/mem1-2d6f5e1fb498201af97fc7d139da9744dac8a28955f43e537dde71db81bf7207.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/slider3-0beb675d56836e5b0a5101be874ea85c4afc2dfb94099fe89c8491f7dc4f0917.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/team/mem2-edb37a048c6ceb262eb2959a25e80d94ac19ba37c04717fd0c9434db71f69d23.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/team/mem3-52fca9116c47dabf7bfdbccb04c3b61f1b02bc583bc4666529f7c9d95c779530.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/team/mem4-e6366fef41046f8b83feef4c8dcd47a887452cfa44a94d38d84b994c79ece8d8.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/team/mem5-4144974995bae70bc1f1620dc18586557a3dfb0a685a42f37276fae51ff0c894.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_05-b884c8903333d1baca44983b509e936b7e2cb7d1e1ec0faabb622b490111f1b0.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_01-e59ad3aff865a6cb06832b468a52a00739a151ce3dca970d640c742ffd9603fd.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_04-bf11709cf828fe3bb9a25cfc7bf02f7f495ad43aec71541ea9db258d76b336e7.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_06-2ec6715e6ad451bd5729451b8c875429748066bb01ecc076bd1a5b0eeefad0b9.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_07-39035c5c9739ce2feb3d1297bf6cdba364063156b734d8b48e0ceaca9b888d15.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_03-50ab0fbe0a66909f5c947e5defafd411a4fc13aa52ca4c34382206c6ba186de7.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_02-cdfef7b472f5a5af53ba6f836af185c2b7b05c5968de7089934fabca4ba5df94.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/portfolio/p_08-f02302d6bfa399a3fc195bf9ff5361ecc71dd34f9ec2d007a571c1838be6e7d0.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/twitter-5e8fa4835cbfc440f5a4e8dc5820f8c114ccacb7da87854db34e32eed6845b24.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/insa-8e83002e0b140bfd2320b642c74289177fb036af2e738ca2f8b22b8525508efd.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/rails-69af5711fa5740c4fe2fe839ddaa98b050aad67fb60f48992bd8651eb87295a3.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/bootstrap-d9049354134ff47fce45facf516263ef66fe3f422d3378df1ec9261da682d9e5.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/jquery-4e95faac0fdcb16fe4e75f34c02fbde052f14a0011be51cb25cf49d8f15642cb.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/github-0a17f99b4baf64103f719ef6727c887f55bfb059314ad386f425a0c8e752a0c8.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/alliance/slack-29385848969271559195524131fd231122ee8bc1ad65435191ccd7177652e0dd.png" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-15 23:58:36 +0200
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/appear.self-a53a61884a3f70ba8e55b28170ce8662d5e5962c2c6747f762aedf4eb57a00d5.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/html5shiv.self-1f432d487ed3790f765994dd831280ac2373eb894c0c2cec7b1fc3372f1ac6db.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/isotope.pkgd.min.self-3bfd510f090c8b0c9b4140101efa8f8c2e9433ad68e537c264a1a717a90db3b2.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/jquery.counterup.min.self-ad0489545320237ed26cd40dea4e6d303532637d379144b10c1e9f3f87fc20ce.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/jquery.easing.min.self-17a01b6a2de1310e5b07a3fb735edcdccda497533463b31da3a352c81a6f3430.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/jquery.mark.min.self-75b6dcd5f2a0bbe496cf8dd0825d9ac9813e53ab2f23531e9015bd9a443ac9b7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/jquery.nicescroll.min.self-b4ebdef92707e16acb4a9bfdf40345ec1db67e2161b1cd052349921753ce8122.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/main.self-6e7c124cd7e36e560a21e68eec50fdf9f316002c3203a49ba200784c9303adc6.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/owl.carousel.min.self-3c9f9dac2a281d1090601a8896fe59fb9df20f261295bbe087f2a0f56ef7e8d9.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/plugins.self-c6129bd3aeb079f5c310d2a9618478ba0d621992c1a5e5ef320917937dc2dbb7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/respond.min.self-e2a74ed217c3cdb5d09ec224a13a841aa67aaebad14edc8344ca81f7d882851c.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/scrolling-nav.self-3d5a6042f3bbecc36d4f8fbc63160a05d7335f7caeb208e6e07cfa0a707ab79f.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/showHide.self-6326de4a6f6f45e5d0a2440b1f556c9329d8c7bfbfc13bb1f8574e790a07d1c7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/assets/application.self-c6de339c563d91bc1901751a38f90fcf8ab097f376c5a74e938607cfc6da4f42.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:37 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.6ms)
+  Rendered pages/index.html.erb within layouts/application (57.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (47.6ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.1ms)
+Completed 200 OK in 193ms (Views: 192.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-d5ea698602f0ff8f924905fb7988daac5a4944531d1baf5319266ba612a16d6a.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/main.self-f5bd30feeb5623dbdacefcb53f6bb4423561fd8981ed03e4197ab7803b6f53f7.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/font-awesome.self-c2982885d6ffa1a4a9354c03017dca0c8040280d6ea5dbfcfb1a9340a556f8b5.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/application.self-6d8855d9643810c48e892906b156e4aed02184c789bff1bde3b70494c0560b14.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/bootstrap-theme.min.self-3a9e70d08573b263427c5a00c46e60fbff2b490a805d7eefbe6633086b13eae4.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/owl.carousel.self-ad1798474744695e81071dda3d906ddadd86486a0677de386d35880426c72774.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/responsive.self-1a2538d017434ea00d20ffa845bfcab218a82c9d5f6278f31d7e93cfa85685e3.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/style.self-6867668a5bae58ad57c1d3e511282f379b539ee28e03d4351599fd59d4812519.css?body=1" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/logo-7fdd3ba8e2489a8d4acc77d3741f3a6473dcc59ac3449d6315bc16e333068b36.svg" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/slider2-e46d0b1fed3c03ef5d0af636ee88eadafa51d5b1dedc3dfd26a044dc90292160.jpg" for 127.0.0.1 at 2017-05-15 23:58:42 +0200
+
+
+Started GET "/assets/slider3-0beb675d56836e5b0a5101be874ea85c4afc2dfb94099fe89c8491f7dc4f0917.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/slider1-28195f72485108eac3ad20b11eec40d82b545bf471836eccae6f9ce66b35662d.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/team/mem1-2d6f5e1fb498201af97fc7d139da9744dac8a28955f43e537dde71db81bf7207.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/team/mem2-edb37a048c6ceb262eb2959a25e80d94ac19ba37c04717fd0c9434db71f69d23.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/team/mem3-52fca9116c47dabf7bfdbccb04c3b61f1b02bc583bc4666529f7c9d95c779530.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/team/mem4-e6366fef41046f8b83feef4c8dcd47a887452cfa44a94d38d84b994c79ece8d8.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/team/mem5-4144974995bae70bc1f1620dc18586557a3dfb0a685a42f37276fae51ff0c894.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_01-e59ad3aff865a6cb06832b468a52a00739a151ce3dca970d640c742ffd9603fd.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_05-b884c8903333d1baca44983b509e936b7e2cb7d1e1ec0faabb622b490111f1b0.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_04-bf11709cf828fe3bb9a25cfc7bf02f7f495ad43aec71541ea9db258d76b336e7.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_06-2ec6715e6ad451bd5729451b8c875429748066bb01ecc076bd1a5b0eeefad0b9.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_07-39035c5c9739ce2feb3d1297bf6cdba364063156b734d8b48e0ceaca9b888d15.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_03-50ab0fbe0a66909f5c947e5defafd411a4fc13aa52ca4c34382206c6ba186de7.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_02-cdfef7b472f5a5af53ba6f836af185c2b7b05c5968de7089934fabca4ba5df94.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/portfolio/p_08-f02302d6bfa399a3fc195bf9ff5361ecc71dd34f9ec2d007a571c1838be6e7d0.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/twitter-5e8fa4835cbfc440f5a4e8dc5820f8c114ccacb7da87854db34e32eed6845b24.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/insa-8e83002e0b140bfd2320b642c74289177fb036af2e738ca2f8b22b8525508efd.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/rails-69af5711fa5740c4fe2fe839ddaa98b050aad67fb60f48992bd8651eb87295a3.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/bootstrap-d9049354134ff47fce45facf516263ef66fe3f422d3378df1ec9261da682d9e5.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/jquery-4e95faac0fdcb16fe4e75f34c02fbde052f14a0011be51cb25cf49d8f15642cb.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/github-0a17f99b4baf64103f719ef6727c887f55bfb059314ad386f425a0c8e752a0c8.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/alliance/slack-29385848969271559195524131fd231122ee8bc1ad65435191ccd7177652e0dd.png" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/appear.self-a53a61884a3f70ba8e55b28170ce8662d5e5962c2c6747f762aedf4eb57a00d5.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/html5shiv.self-1f432d487ed3790f765994dd831280ac2373eb894c0c2cec7b1fc3372f1ac6db.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/isotope.pkgd.min.self-3bfd510f090c8b0c9b4140101efa8f8c2e9433ad68e537c264a1a717a90db3b2.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/jquery.counterup.min.self-ad0489545320237ed26cd40dea4e6d303532637d379144b10c1e9f3f87fc20ce.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:43 +0200
+
+
+Started GET "/assets/jquery.easing.min.self-17a01b6a2de1310e5b07a3fb735edcdccda497533463b31da3a352c81a6f3430.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/jquery.mark.min.self-75b6dcd5f2a0bbe496cf8dd0825d9ac9813e53ab2f23531e9015bd9a443ac9b7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/jquery.nicescroll.min.self-b4ebdef92707e16acb4a9bfdf40345ec1db67e2161b1cd052349921753ce8122.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/main.self-6e7c124cd7e36e560a21e68eec50fdf9f316002c3203a49ba200784c9303adc6.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/owl.carousel.min.self-3c9f9dac2a281d1090601a8896fe59fb9df20f261295bbe087f2a0f56ef7e8d9.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/plugins.self-c6129bd3aeb079f5c310d2a9618478ba0d621992c1a5e5ef320917937dc2dbb7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/respond.min.self-e2a74ed217c3cdb5d09ec224a13a841aa67aaebad14edc8344ca81f7d882851c.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/scrolling-nav.self-3d5a6042f3bbecc36d4f8fbc63160a05d7335f7caeb208e6e07cfa0a707ab79f.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/showHide.self-6326de4a6f6f45e5d0a2440b1f556c9329d8c7bfbfc13bb1f8574e790a07d1c7.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/assets/application.self-c6de339c563d91bc1901751a38f90fcf8ab097f376c5a74e938607cfc6da4f42.js?body=1" for 127.0.0.1 at 2017-05-15 23:58:44 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 00:09:20 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.3ms)
+  Rendered layouts/_header_index.html.erb (9.4ms)
+  Rendered pages/index.html.erb within layouts/application (68.9ms)
+  Rendered layouts/_stylesheets_tag.html.erb (154.6ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (62.7ms)
+Completed 200 OK in 350ms (Views: 349.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/responsive.self-7c809b81fb7ca99acc7cd4af2919bd383b783c9d4ba89c343546dbfb49678688.css?body=1" for 127.0.0.1 at 2017-05-16 00:09:21 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:09:21 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 00:09:22 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:09:22 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 00:19:33 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.4ms)
+  Rendered layouts/_header_index.html.erb (7.9ms)
+  Rendered pages/index.html.erb within layouts/application (57.3ms)
+  Rendered layouts/_stylesheets_tag.html.erb (95.9ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (49.2ms)
+Completed 200 OK in 253ms (Views: 252.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/responsive.self-79d31e296efdbdd89b4c97cc7c09929c68bc716beddd0abcd4c39566c217980f.css?body=1" for 127.0.0.1 at 2017-05-16 00:19:33 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:19:34 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 00:19:34 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:19:34 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 00:19:38 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (7.2ms)
+  Rendered pages/index.html.erb within layouts/application (56.7ms)
+  Rendered layouts/_stylesheets_tag.html.erb (46.4ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_javascripts_tag.html.erb (49.8ms)
+Completed 200 OK in 195ms (Views: 194.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:19:38 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 00:19:39 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:19:39 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 00:19:43 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (6.8ms)
+  Rendered pages/index.html.erb within layouts/application (53.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (42.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.2ms)
+Completed 200 OK in 183ms (Views: 182.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:19:43 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:19:44 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 00:23:53 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.7ms)
+  Rendered pages/index.html.erb within layouts/application (57.0ms)
+  Rendered layouts/_stylesheets_tag.html.erb (40.0ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (49.3ms)
+Completed 200 OK in 188ms (Views: 187.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:23:53 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 00:23:54 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:23:54 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 00:29:34 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"lorem ipsum consum"}
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/controllers/pages_controller.rb:333:in `median'
+  app/controllers/pages_controller.rb:338:in `init_weigh'
+  app/controllers/pages_controller.rb:87:in `search_tweets'
+  app/controllers/pages_controller.rb:449:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (221.2ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2017-05-16 00:30:28 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_stylesheets_tag.html.erb (40.9ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (46.9ms)
+Completed 200 OK in 133ms (Views: 132.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo_white-dd87628efe17561b4e572e1b00c1dcfa34bd8a48e1910a53c494ace6ed9e888c.svg" for 127.0.0.1 at 2017-05-16 00:30:28 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:30:29 +0200
+
+
+Started GET "/pages/search_tweets" for 127.0.0.1 at 2017-05-16 00:30:38 +0200
+Processing by PagesController#search_tweets as HTML
+  Rendered pages/search_tweets.html.erb within layouts/application (116.7ms)
+  Rendered layouts/_stylesheets_tag.html.erb (38.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (61.7ms)
+Completed 200 OK in 304725ms (Views: 281.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:35:50 +0200
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-05-16 00:42:36 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.2ms)
+  Rendered pages/index.html.erb within layouts/application (91.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (41.0ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (48.0ms)
+Completed 200 OK in 221ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 00:42:37 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 00:42:38 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 00:42:49 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"this is my new"}
+  Rendered layouts/_search_form.html.erb (161.4ms)
+  Rendered layouts/_header_others.html.erb (3688.5ms)
+  Rendered pages/result.html.erb within layouts/application (6529.7ms)
+  Rendered layouts/_stylesheets_tag.html.erb (14648.7ms)
+  Rendered layouts/_preloader.html.erb (38.1ms)
+  Rendered layouts/_map.html.erb (54.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (4684.9ms)
+Completed 200 OK in 1491590ms (Views: 53083.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:08:33 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 01:09:22 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (41.8ms)
+  Rendered layouts/_header_others.html.erb (51.1ms)
+  Rendered pages/charts.html.erb within layouts/application (477.8ms)
+  Rendered layouts/_stylesheets_tag.html.erb (285.4ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (137.8ms)
+Completed 200 OK in 1058ms (Views: 1047.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:09:27 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 01:09:36 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.4ms)
+  Rendered layouts/_header_index.html.erb (15.6ms)
+  Rendered pages/index.html.erb within layouts/application (1643.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (125.7ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (80.6ms)
+Completed 200 OK in 1932ms (Views: 1931.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 01:09:46 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:09:54 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:14:36 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:15:13 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 01:53:22 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (1.1ms)
+  Rendered layouts/_header_index.html.erb (5277.2ms)
+  Rendered pages/index.html.erb within layouts/application (5410.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (274.7ms)
+  Rendered layouts/_preloader.html.erb (0.4ms)
+  Rendered layouts/_map.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered layouts/_javascripts_tag.html.erb (627.7ms)
+Completed 200 OK in 6687ms (Views: 6660.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 01:53:31 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:53:33 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 01:54:10 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered pages/result.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2209ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/mnt/f/factchecking/app/views/pages/result.html.erb:63: syntax error, unexpected tIVAR, expecting keyword_when
+@output_buffer.safe_append='               ...
+              ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:63: syntax error, unexpected keyword_when, expecting keyword_end
+...'                '.freeze; when $stats[:neutral_count] then ...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:63: syntax error, unexpected keyword_then, expecting keyword_end
+...hen $stats[:neutral_count] then ;@output_buffer.safe_append=...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:64: syntax error, unexpected keyword_when, expecting keyword_end
+...'                '.freeze; when $stats[:positive_count] then...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:64: syntax error, unexpected keyword_then, expecting keyword_end
+...en $stats[:positive_count] then ;@output_buffer.safe_append=...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:65: syntax error, unexpected keyword_when, expecting keyword_end
+...'                '.freeze; when $stats[:negative_count] then...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:65: syntax error, unexpected keyword_then, expecting keyword_end
+...en $stats[:negative_count] then ;@output_buffer.safe_append=...
+...                               ^
+/mnt/f/factchecking/app/views/pages/result.html.erb:91: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/pages/result.html.erb:63: syntax error, unexpected tIVAR, expecting keyword_when
+  app/views/pages/result.html.erb:63: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/pages/result.html.erb:63: syntax error, unexpected keyword_then, expecting keyword_end
+  app/views/pages/result.html.erb:64: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/pages/result.html.erb:64: syntax error, unexpected keyword_then, expecting keyword_end
+  app/views/pages/result.html.erb:65: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/pages/result.html.erb:65: syntax error, unexpected keyword_then, expecting keyword_end
+  app/views/pages/result.html.erb:91: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (127.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (256.8ms)
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 01:57:44 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.8ms)
+  Rendered pages/result.html.erb within layouts/application (30.7ms)
+  Rendered layouts/_stylesheets_tag.html.erb (38.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.4ms)
+Completed 200 OK in 1737ms (Views: 158.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 01:57:46 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 01:57:46 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:14:19 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.2ms)
+  Rendered pages/result.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (41.5ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (242.1ms)
+Completed 500 Internal Server Error in 1865ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `tweet' for #<#<Class:0x0000000345d460>:0x007f82d83fccf0>
+Did you mean?  @nbTweets):
+     9:             title: 'Calculation details',
+    10:             trigger: 'hover',
+    11:             container: 'body',
+    12:             content: '<%= tweet["user"]["url"] %>'
+    13:         });
+    14:     });
+    15: </script>
+  app/views/layouts/_javascripts_tag.html.erb:12:in `_app_views_layouts__javascripts_tag_html_erb___2538619457562781130_70099984278660'
+  app/views/layouts/application.html.erb:26:in `_app_views_layouts_application_html_erb__3302241030848829850_26882840'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.1ms)
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:35:24 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (10.6ms)
+  Rendered pages/result.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (38.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.0ms)
+Completed 200 OK in 1680ms (Views: 136.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 02:35:26 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 02:35:26 +0200
+
+
+Started GET "/pages/result" for 127.0.0.1 at 2017-05-16 02:36:02 +0200
+Processing by PagesController#result as HTML
+  Rendered layouts/_search_form.html.erb (0.4ms)
+  Rendered layouts/_header_others.html.erb (22.3ms)
+  Rendered pages/result.html.erb within layouts/application (183.2ms)
+  Rendered layouts/_stylesheets_tag.html.erb (120.6ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (10.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (276.2ms)
+Completed 200 OK in 888002ms (Views: 1204.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:50:50 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.2ms)
+  Rendered pages/result.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_stylesheets_tag.html.erb (172.1ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.1ms)
+Completed 200 OK in 9200ms (Views: 269.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:51:00 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (6.9ms)
+  Rendered pages/result.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (37.6ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.5ms)
+Completed 200 OK in 1769ms (Views: 135.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 02:51:01 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (8.5ms)
+  Rendered pages/index.html.erb within layouts/application (388.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (77.7ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (51.6ms)
+Completed 200 OK in 9093ms (Views: 9093.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 02:51:10 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.7ms)
+  Rendered pages/index.html.erb within layouts/application (58.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (39.6ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (48.7ms)
+Completed 200 OK in 187ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 02:52:00 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (1.1ms)
+  Rendered layouts/_header_index.html.erb (3367.7ms)
+  Rendered pages/index.html.erb within layouts/application (3460.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (477.8ms)
+  Rendered layouts/_preloader.html.erb (0.7ms)
+  Rendered layouts/_map.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered layouts/_javascripts_tag.html.erb (692.8ms)
+Completed 200 OK in 5089ms (Views: 5063.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 02:52:06 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 02:52:07 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 02:52:07 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:52:31 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"insa of rennes is a good university ?"}
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/controllers/pages_controller.rb:333:in `median'
+  app/controllers/pages_controller.rb:338:in `init_weigh'
+  app/controllers/pages_controller.rb:481:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.5ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (111.5ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (209.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 02:55:34 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.5ms)
+  Rendered layouts/_header_index.html.erb (510.8ms)
+  Rendered pages/index.html.erb within layouts/application (577.2ms)
+  Rendered layouts/_stylesheets_tag.html.erb (70.3ms)
+  Rendered layouts/_preloader.html.erb (0.3ms)
+  Rendered layouts/_map.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_javascripts_tag.html.erb (96.0ms)
+Completed 200 OK in 819ms (Views: 806.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 02:55:35 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 02:55:36 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:55:42 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"insa rennes"}
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/controllers/pages_controller.rb:333:in `median'
+  app/controllers/pages_controller.rb:338:in `init_weigh'
+  app/controllers/pages_controller.rb:481:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.6ms)
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 02:58:58 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"insa rennes"}
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `+' for nil:NilClass):
+  app/controllers/pages_controller.rb:333:in `median'
+  app/controllers/pages_controller.rb:338:in `init_weigh'
+  app/controllers/pages_controller.rb:481:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 03:04:39 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.0ms)
+  Rendered pages/index.html.erb within layouts/application (66.4ms)
+  Rendered layouts/_stylesheets_tag.html.erb (39.8ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (50.8ms)
+Completed 200 OK in 198ms (Views: 198.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 03:04:39 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:04:40 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 03:04:55 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"macron is the new president"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.3ms)
+  Rendered pages/result.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_stylesheets_tag.html.erb (40.1ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (46.7ms)
+Completed 200 OK in 20137ms (Views: 151.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:05:17 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 03:07:39 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_others.html.erb (8.4ms)
+  Rendered pages/charts.html.erb within layouts/application (138.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (41.3ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.7ms)
+Completed 200 OK in 303ms (Views: 302.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:07:40 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 03:19:18 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (7.5ms)
+  Rendered pages/index.html.erb within layouts/application (59.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (40.9ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (45.3ms)
+Completed 200 OK in 198ms (Views: 196.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 03:19:18 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:19:19 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 03:19:41 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"manuelle macron the new french president"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.6ms)
+  Rendered pages/result.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (39.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.5ms)
+Completed 200 OK in 394ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:19:42 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 03:19:56 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"new french president"}
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_others.html.erb (7.3ms)
+  Rendered pages/result.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (44.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (46.0ms)
+Completed 200 OK in 6349ms (Views: 144.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:20:03 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 03:20:39 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_others.html.erb (7.6ms)
+  Rendered pages/charts.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_stylesheets_tag.html.erb (43.7ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (54.5ms)
+Completed 200 OK in 155ms (Views: 154.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:20:40 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 03:23:30 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (7.1ms)
+  Rendered pages/charts.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (42.5ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (49.1ms)
+Completed 200 OK in 157ms (Views: 156.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 03:23:30 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:23:31 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 03:24:47 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_others.html.erb (8.6ms)
+  Rendered pages/charts.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (45.4ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (48.5ms)
+Completed 200 OK in 153ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-16 03:24:47 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:24:48 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 03:25:22 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"marine le pen loose the camp"}
+  Rendered layouts/_search_form.html.erb (0.3ms)
+  Rendered layouts/_header_others.html.erb (15.0ms)
+  Rendered pages/result.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (39.8ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (50.1ms)
+Completed 200 OK in 394ms (Views: 171.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:25:23 +0200
+
+
+Started GET "/pages/charts" for 127.0.0.1 at 2017-05-16 03:25:59 +0200
+Processing by PagesController#charts as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (15.1ms)
+  Rendered pages/charts.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (45.1ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.0ms)
+Completed 200 OK in 160ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:26:00 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-16 03:26:51 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"marine le pen looase the president"}
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_others.html.erb (6.9ms)
+  Rendered pages/result.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_stylesheets_tag.html.erb (37.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (53.6ms)
+Completed 200 OK in 393ms (Views: 151.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:26:52 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 03:33:56 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (8.2ms)
+  Rendered pages/index.html.erb within layouts/application (63.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (45.1ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (46.5ms)
+Completed 200 OK in 203ms (Views: 202.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-16 03:33:57 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-16 03:33:59 +0200

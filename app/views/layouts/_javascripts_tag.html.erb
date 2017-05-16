@@ -6,10 +6,8 @@
         $('[data-toggle="popover"]').popover({
             placement: 'bottom',
             html: true,
-            title: 'Calculation details',
             trigger: 'hover',
-            container: 'body',
-            content: 'Put here some calculation details of this tweet'
+            container: 'body'
         });
     });
 </script>
@@ -25,8 +23,8 @@
         // Define the chart to be drawn.
         var data = google.visualization.arrayToDataTable([
             ['Veracity Class', 'Points'],
-            ['Accurate',     150],
-            ['Fake',      80]
+            ['Accurate',  <%= $stats[:true_count] %>],
+            ['Fake',  <%= $stats[:false_count] %>]
         ]);
 
         var options = {
@@ -45,9 +43,9 @@
         // Define the chart to be drawn.
         var data = google.visualization.arrayToDataTable([
             ['Sentiment Class', 'Points'],
-            ['Positive',     100],
-            ['Negative',      65],
-            ['Neutral',      200]
+            ['Positive',  <%= $stats[:positive_count] %>],
+            ['Negative',  <%= $stats[:negative_count] %>],
+            ['Neutral',   <%= $stats[:neutral_count] %>]
         ]);
 
         var options = {

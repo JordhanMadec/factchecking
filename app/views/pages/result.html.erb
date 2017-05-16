@@ -36,7 +36,11 @@
                     </span>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <a href="#" data-toggle="popover"><i class="fa fa-long-arrow-right"></i> See more</a>
+                    <a href='https://twitter.com/<%= tweet["user"]["screen_name"] %>' target='_blank' data-toggle="popover"
+                       title='<%= tweet["user"]["name"] %>'
+                       data-content='Go to https://twitter.com/<%= tweet["user"]["screen_name"] %>'>
+                      <i class="fa fa-long-arrow-right"></i> See more
+                    </a>
                   </div>
                 </div>
             </div>
@@ -56,12 +60,24 @@
 						<h2>fact information</h2>
 						<div class="title_br"></div>
 						<ul>
-							<li>Matching tweets : <%= @nb_tweets %></li>
-							<li>Accuracy class : Accurate</li>
-							<li>Sentimental class : Positive</li>
-							<li>Votes : 10</li>
+							<li>Matching tweets : <%= @nbTweets %></li>
+							<li>Accuracy class : <% if $stats[:true_count] >= $stats[:false_count] then %>Accurate<% else %>Fake<% end %></li>
+							<li>Sentimental class :
+                <% case [$stats[:positive_count], $stats[:neutral_count], $stats[:negative_count]].max() %>
+                <% when $stats[:neutral_count] %>
+                    Neutral
+                <% when $stats[:positive_count] %>
+                    Positive
+                <% when $stats[:negative_count] %>
+                    Negative
+                <% else %>
+                    Indeterminate
+                <%end%>
+              </li>
+              <li>Favorites count: <%= $stats[:favs] %></li>
+              <li>Retweets count: <%= $stats[:retweets] %></li>
 							<li><a href="<%= pages_charts_path %>">
-                <strong> SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
+                <strong>SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
               </a></li>
 						</ul>
 					</div>							

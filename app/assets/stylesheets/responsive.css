@@ -1,4 +1,4 @@
- @media (min-width:1200px) {
+@media (min-width:1200px) {
 .left_crousel_btn {
 left : 30px;
 }
@@ -112,4 +112,4 @@ width : 100%;
 margin-bottom : 20px;
 }
 }
-@media only screen and (min-width:320px) and (max-width:479px) 
+@media only screen and (min-width:320px) and (max-width:479px) {}
