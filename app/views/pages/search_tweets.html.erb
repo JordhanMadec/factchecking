@@ -29,6 +29,31 @@
       <h2>True: <%= @true_class[:score] %></h2>
       <h2>False: <%= @false_class[:score] %></h2>
 
+      <br>
+
+      <div class="row">
+        <% $stats.each do |label,value| %>
+          <div class="col-lg-2">
+            <p>
+              <b><%= label.to_s %>: </b>
+              <%= value %>
+            </p>
+          </div>
+        <%end%>
+      </div>
+
+
+      <div class="row">
+        <p>Nombre de tweet par classe de ressemblance syntaxique</p>
+        <% $classe.each do |i| %>
+          <div class="col-lg-2">
+            <p>
+              <b><%= i.count %> </b>
+            </p>
+          </div>
+        <%end%>
+      </div>
+
       <%= i=0 %>
       <% @tweet_list.each do |key,tweet| %>
         <div class="tweet">
