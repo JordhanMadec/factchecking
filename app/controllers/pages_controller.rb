@@ -60,7 +60,6 @@ class PagesController < ApplicationController
 
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
-    @keywords_tag_array = @keywords.split(' ');
 
     puts 'Keywords: ' + @keywords
 
@@ -454,7 +453,6 @@ class PagesController < ApplicationController
 
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
-    @keywords_tag_array = @keywords.split(' ');
 
     puts 'Keywords: ' + @keywords
 

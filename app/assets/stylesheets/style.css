@@ -692,7 +692,7 @@ a:hover {
 	background: white;
 }
 .post_info i {
-    background : none 0 0 repeat scroll #409BD6 ;
+    background : none 0 0 repeat scroll #409bd6;
     color : #fff;
     float : left;
     font-size : 30px;
@@ -772,7 +772,7 @@ a:hover {
     color: #fff;
     text-align: center;
     border-width: 0;
-    background-color: #ff7365;
+    background-color: #db5566;
     cursor: pointer;
 }
 .sidebar h2 {
@@ -797,7 +797,8 @@ a:hover {
 .sidebar ul li a {
     color : #666666;
     font-size : 14px;
-    text-transform : capitalize;transition: all 1s ease 0s;
+    text-transform : capitalize;
+    transition: all 1s ease 0s;
     -moz-transition: all 1s ease 0s;
     -webkit-transition: all 1s ease 0s
 }
@@ -822,10 +823,16 @@ a:hover {
     padding : 10px;
     margin-right : 5px;
     border-radius: 20px;
+    pointer-events: none;
+    cursor: default;
 }
-.tag li a:hover {
-    border: none;
-    box-shadow: 1px 1px 6px #409bd6;
+.widget > .btn-lg {
+    margin: 30px 0 20px 0;
+}
+.widget > .btn-lg > a {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
 }
 .author_dec h3 {
     margin : 0;
@@ -902,11 +909,11 @@ table.rows td {
 /* Style for keywords */
 span.keyword {
     font-weight: bold;
-    color: #0099cc;
+    color: #409bd5;
     margin: 0;
 }
 span.keyword:first-child:hover, span.keyword:last-child:hover {
-    color: #0099cc;
+    color: #409bd5;
     border: none;
 }
 
@@ -1033,4 +1040,8 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
     -moz-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
+}
+#conclusion {
+    font-weight: bolder;
+    font-size: xx-large;
 }

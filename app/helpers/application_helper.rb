@@ -16,4 +16,22 @@ module ApplicationHelper
     end
   end
 
+  def render_fact_result(true_count, false_count)
+    if true_count > false_count
+      return '<button id="conclusion" type="button" class="btn btn-fresh text-uppercase btn-lg">True</button>
+              <button type="button" class="btn btn-hot text-uppercase btn-lg disabled">False</button>
+              <button type="button" class="btn btn-sunny text-uppercase btn-lg disabled">None</button>'
+    else
+      if true_count < false_count
+        return '<button type="button" class="btn btn-fresh text-uppercase btn-lg disabled">True</button>
+               <button id="conclusion" type="button" class="btn btn-hot text-uppercase btn-lg">False</button>
+               <button type="button" class="btn btn-sunny text-uppercase btn-lg disabled">None</button>'
+      else
+        return '<button type="button" class="btn btn-fresh text-uppercase btn-lg disabled">True</button>
+               <button type="button" class="btn btn-hot text-uppercase btn-lg disabled">False</button>
+               <button id="conclusion" type="button" class="btn btn-sunny text-uppercase btn-lg">None</button>'
+      end
+    end
+  end
+
 end

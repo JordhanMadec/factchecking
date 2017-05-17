@@ -13,7 +13,7 @@
 		</div>	
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="counting_sl">
-			<i class="fa fa-desktop"></i>
+			<i class="fa fa-clock-o"></i>
 			<h2 class="counter"><%= number_with_precision($stats[:propagation_time], precision: 2, separator: '.', delimiter: ',')%></h2>
 			<h4>Propagation Hours</h4>	
 			</div>
@@ -27,16 +27,16 @@
 		</div>			
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="counting_sl">
-			<i class="fa fa-ticket"></i>
-			<h2 class="counter"><%= number_with_precision(0000, precision: 0, separator: '.', delimiter: ',')%></h2>
-			<h4>User Votes</h4>	
+			<i class="fa fa-thumbs-o-up"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:favs], precision: 0, separator: '.', delimiter: ',')%></h2>
+			<h4>User Likes</h4>
 			</div>
 		</div>			
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="counting_sl">
-			<i class="fa fa-clock-o"></i>
-			<h2 class="counter"><%= number_with_precision(0000, precision: 2, separator: '.', delimiter: ',')%></h2>
-			<h4>Hours To Become Viral</h4>	
+			<i class="fa fa-retweet"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:retweets], precision: 0, separator: '.', delimiter: ',')%></h2>
+			<h4>User Retweets</h4>
 			</div>
 		</div>	
 		<div class="chart_sec">

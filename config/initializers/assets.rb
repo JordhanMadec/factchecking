@@ -17,6 +17,7 @@ Rails.application.config.assets.precompile += %w( main.css )
 Rails.application.config.assets.precompile += %w( bootstrap-theme.min.css )
 Rails.application.config.assets.precompile += %w( owl.carousel.css )
 Rails.application.config.assets.precompile += %w( responsive.css )
+Rails.application.config.assets.precompile += %w( button.css )
 Rails.application.config.assets.precompile += %w( style.css )
 
 Rails.application.config.assets.precompile += %w( isotope.pkgd.min.js )

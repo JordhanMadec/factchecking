@@ -12,6 +12,11 @@
 				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
 			</div>
 
+      <div class="well text-center">
+        <h2>"<%= @keywords %>" is </h2>
+        <%= render_fact_result($stats[:true_count], $stats[:false_count]).html_safe %>
+      </div>
+
 			<div class="col-lg-8 col-md-8 col-sm-8" style="z-index: 2;">
         <% @tweet_list.each do |key, tweet| %>
           <div class="sngl_blg">
@@ -76,21 +81,25 @@
               </li>
               <li>Favorites count: <%= $stats[:favs] %></li>
               <li>Retweets count: <%= $stats[:retweets] %></li>
-							<li><a href="<%= pages_charts_path %>">
-                <strong>SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
-              </a></li>
 						</ul>
 					</div>							
 					<div class="widget">
 						<h2>keywords</h2>
 						<div class="title_br"></div>
 						<ul class="tag">
-              <% @keywords_tag_array.each do |tag| %>
-							  <li><a href="#"><%= tag %></a></li>
-              <% end %>
+              <% @keywords.scan(/[\w\-']+/) {|tag| %>
+                  <li><a href="#"><%= tag %></a></li>
+              <% } %>
 						</ul>
-					</div>						
-				</div>
+					</div>
+          <div class="widget">
+            <button type="button" class="btn btn-sky text-uppercase btn-lg">
+              <a href="<%= pages_charts_path %>">
+                <strong>SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
+              </a>
+            </button>
+          </div>
+        </div>
 			</div>
 		</div>
 	</div>
