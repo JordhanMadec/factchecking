@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require toastr
 //= require jquery_ujs
 //= require bootstrap
-//= require toastr
 //= require_tree .
 
 $(document).ready(function() {
@@ -21,7 +21,7 @@ $(document).ready(function() {
     toastr.options = {
         "closeButton": false,
         "debug": false,
-        "positionClass": "toast-bottom-right",
+        "positionClass": "toast-top-right",
         "onclick": null,
         "showDuration": "300",
         "hideDuration": "1000",

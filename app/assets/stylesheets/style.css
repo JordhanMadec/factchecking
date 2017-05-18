@@ -971,35 +971,12 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
     height : 7px;
     background-color : #409BD6 ;
 }
-@media screen and (max-width: 900px) {
-    .carousel-caption h1 {
-        font-size : 48px;
-    }
-    .carousel-caption p {
-        font-size: 8px;
-    }
-}
 #search-box {
     top: 56%;
     left: 25%;
     position: absolute;
     width: 50%;
     z-index: 30;
-}
-@media screen and (max-width: 768px) {
-    #search-box {
-        width: 90%;
-        left: 5%;
-        top: 70%;
-    }
-    #tstm_sec {
-        display: none;
-    }
-}
-@media screen and (max-width: 350px) {
-    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-        max-width:inherit;
-    }
 }
 #search-form2 {
     height: 90px;
@@ -1044,4 +1021,96 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
 #conclusion {
     font-weight: bolder;
     font-size: xx-large;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+    .carousel-caption h1 {
+        font-size : 48px;
+    }
+    .carousel-caption p {
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #search-box {
+        width: 90%;
+        left: 5%;
+        top: 70%;
+    }
+    #tstm_sec {
+        display: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    .navbar {
+        padding : 3px 0 !important;
+    }
+    #loader {
+        left : 52%;
+        width : 120px;
+        height : 120px;
+    }
+    #nav_menu ul a {
+        font-size : 12px !important;
+        line-height : 22px !important;
+        padding : 16px 16px;
+    }
+    #nav_menu ul ul {
+        padding : 5px !important;
+    }
+    #nav_menu ul ul li {
+        width : 130px !important;
+    }
+    #nav_menu ul ul a {
+        line-height : 100%;
+        padding : 5px 12px;
+    }
+    .carousel .item {
+        height: 670px;
+    }
+    .carousel img {
+        height: 670px;
+    }
+    #search-form2 {
+        max-height: 60px;
+    }
+    #search-box {
+        top: 65%;
+    }
+    #search-box input[type="text"] {
+        font-size: 15px;
+        padding: 4px 3px 4px 8px !important;
+    }
+    #search-button {
+        height: 60px !important;
+        width: 50px !important;
+        font-size: 12px !important;
+    }
+    .carousel-caption h1 {
+        font-size : 35px;
+    }
+    .carousel-caption p {
+        font-size : 9px;
+        line-height : 30px;
+        padding : 4px;
+    }
+    .carousel-control {
+        top: 90%;
+    }
+}
+@media screen and (max-width: 376px) {
+    .carousel-caption h1 {
+        font-size : 33px !important;
+    }
+    .carousel-caption p {
+        font-size : 8px !important;
+        line-height : 24px !important;
+        padding : 2px !important;
+    }
+}
+@media screen and (max-width: 350px) {
+    .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        max-width:inherit;
+    }
 }
