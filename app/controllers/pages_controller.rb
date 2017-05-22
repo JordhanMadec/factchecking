@@ -14,12 +14,12 @@ end
 
 class PagesController < ApplicationController
 
-  THRESHOLD = 0.5
+  THRESHOLD = 0.3
   LANGUAGE = "en"
   USELESS_WORD = /\s(a|an|the|this|that)\s/
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
-  NEGATION_WORD = ["no","don't","didn't","won't","not","couldn't","can't","hate","dislike"]
+  NEGATION_WORD = /(not|don't|didn't|won't|no|couldn't|can't)/
 
   NB_CLASSES = 10
   BONUS = 1.2
@@ -78,12 +78,24 @@ class PagesController < ApplicationController
     client = init
     puts 'Client init'
 
+    puts '----------------------------'
+
     @keywords = params[:keywords] ||= "test"
 
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
 
-    puts 'Keywords: ' + @keywords
+    puts 'initial keywords : ' + @keywords
+
+    puts 'négatif/positif : ' + negation(@keywords).to_s
+
+    puts 'sentimental_class : ' + sentimental_class(@keywords).to_s
+
+    @keywords = delete_negation(@keywords)
+
+    puts 'Keywords without negation: ' + @keywords
+
+    puts '----------------------------'
 
     #Nettoyage des tweets
     puts Time.now.strftime("%H:%M:%S") + ' Reaching tweets...'
@@ -93,6 +105,7 @@ class PagesController < ApplicationController
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
 
+    if @nbTweets != 0 then
     puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
     set_dataset(@tweet_list)
 
@@ -109,7 +122,7 @@ class PagesController < ApplicationController
 
     #cleaned_text, sentimental_and_score_analysis, make_class
     puts Time.now.strftime("%H:%M:%S") + ' First loop'
-    main_1(@tweet_list, @matrice_score)
+    main_1(@tweet_list)
 
     puts Time.now.strftime("%H:%M:%S") + ' Init weight'
     init_weigh()
@@ -151,6 +164,9 @@ class PagesController < ApplicationController
     score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
 
     puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+  else
+    puts "O tweets"
+  end
 
   end
 
@@ -304,13 +320,15 @@ class PagesController < ApplicationController
   end
 
   def negation(tweet_string)
-    array = tweet_string.split(/\s/)
-    for i in (0..(array.length-1))
-      if NEGATION_WORD.include?(array[i])
+      if tweet_string.match(NEGATION_WORD) then
         return "negatif"
+      else
+        return "positif"
       end
-    end
-    return "positif"
+  end
+
+  def delete_negation(string)
+    return string.gsub(NEGATION_WORD,"")
   end
 
   def make_class(tweet,num_Tweet,matrice, tweets_list)
@@ -335,24 +353,25 @@ class PagesController < ApplicationController
   def classes(matrice_score, tweet, id_tweet, num_tweet,nb_tweets, num_classe)
     cmpt = num_classe
     j = num_tweet + 1
-    if cmpt < ($classe.length)
-      if (num_tweet+1) < nb_tweets
-        $classe[cmpt].push(id_tweet)
-      for i in j..nb_tweets
-        if( !@@key.empty?) then
-          if @@key.include?(i)
-            if(matrice_score[num_tweet][i]["score"] > 0.3)
-              $classe[cmpt].push(matrice_score[num_tweet][i]["id_tweet"])
-              @@key.delete(i)
-
+    if num_tweet < nb_tweets
+      if cmpt < ($classe.length)
+        if (num_tweet+1) < nb_tweets
+          $classe[cmpt].push(id_tweet)
+          for i in j..(nb_tweets-1)
+            if( !@@key.empty?) then
+              if @@key.include?(i)
+                if(matrice_score[num_tweet][i]["score"] > 0.3 )
+                  $classe[cmpt].push(matrice_score[num_tweet][i]["id_tweet"])
+                  @@key.delete(i)
+                end
+              end
+            else
+              break
             end
           end
-        else
-          break
         end
       end
     end
-  end
   end
 
   def analyse_function_classe(nb_tweets, keyword, tweet_list)
@@ -365,32 +384,31 @@ class PagesController < ApplicationController
     for i in 0..(NB_CLASSES-1)
       if !$classe[i].empty?
       #determine la calsse avec le plus grand nombre de tweet et le plus petit nombre
-      if $classe[i].count > max then
-        max = $classe[i].count
-        $classe_max_personne = i
-      else
-        if $classe[i].count < min
-          min = $classe[i].count
-          $classe_min_personne = i
+        if $classe[i].count > max then
+          max = $classe[i].count
+          $classe_max_personne = i
+        else
+          if $classe[i].count < min
+            min = $classe[i].count
+            $classe_min_personne = i
+          end
         end
-      end
       #determine la classe la plus représentative et la moins représentative des mots de la recherche
-      puts $classe[i][0]
-      tweet = tweet_list[$classe[i][0]]
-      puts keyword
-      #puts tweet["cleaned_text"]
-      tmp = word__comparaison_score(keyword, tweet["cleaned_text"])
-      if  tmp > best then
-        best = tmp
-        $classe_rpz_mieux = i
-      else
-        if tmp < worst
-          worst = tmp
-          $classe_rpz_mal = i
+      if $classe[i][0] != nil
+          tweet = tweet_list[$classe[i][0]]
+          tmp = word__comparaison_score(keyword, tweet["cleaned_text"])
+          if  tmp > best then
+            best = tmp
+            $classe_rpz_mieux = i
+          else
+            if tmp < worst
+              worst = tmp
+              $classe_rpz_mal = i
+            end
+          end
         end
       end
     end
-  end
   end
 
 
@@ -579,18 +597,20 @@ class PagesController < ApplicationController
   #---------- Scoring classes ----------
   def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
-    puts $keywords_sentimental
     tweets.each do |key, tweet|
 
         sen = tweet["sentimental_class"]
         neg = tweet["negatif"]
 
 
-        if ((sen == "positive") && $keywords_sentimental = "positive") || (( sen == "negative") && $keywords_sentimental = "negative") || (( neg == "negatif") && $keywords_negatif = "negatif") then
+        if $keywords_negatif == "negatif"
+          $keywords_sentimental = "negative"
+        end
+
+        if ( (sen != "negative" && $keywords_sentimental != "negative")  || (( neg == "negatif") && $keywords_negatif == "negatif")) then
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
           if $classe[$classe_rpz_mieux].include?(key) || $classe[$classe_max_personne].include?(key) then
-            puts "positif"
           true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*BONUS
           else
             true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
@@ -601,7 +621,6 @@ class PagesController < ApplicationController
           false_class[:population].push(tweet)
           false_class[:nb_tweets]++
           if $classe[$classe_rpz_mal].include?(key) || $classe[$classe_min_personne].include?(key) then
-            puts "Negatif"
           false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*MALUS
           else
             false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)
