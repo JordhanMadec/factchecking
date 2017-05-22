@@ -281,9 +281,25 @@ Started GET "/assets/alliance/bootstrap-d9049354134ff47fce45facf516263ef66fe3f42
 
 Started GET "/assets/alliance/jquery-4e95faac0fdcb16fe4e75f34c02fbde052f14a0011be51cb25cf49d8f15642cb.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
 
+<<<<<<< HEAD
+=======
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.7ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/Jordhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.2ms)
+>>>>>>> refs/remotes/origin/algo
 
 Started GET "/assets/alliance/github-0a17f99b4baf64103f719ef6727c887f55bfb059314ad386f425a0c8e752a0c8.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
 
+<<<<<<< HEAD
 
 Started GET "/assets/alliance/slack-29385848969271559195524131fd231122ee8bc1ad65435191ccd7177652e0dd.png" for 127.0.0.1 at 2017-05-15 23:57:38 +0200
 
@@ -17805,3 +17821,22 @@ Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8
 
 
 Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-18 03:55:34 +0200
+=======
+Started GET "/" for 127.0.0.1 at 2017-04-26 01:31:14 +0200
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1798.8ms)
+Completed 200 OK in 2445ms (Views: 2434.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-504d59678f10d79a661b6cecdce5b8c1d5bfd98e860614584c0a40399552d61f.js?body=1" for 127.0.0.1 at 2017-04-26 01:31:17 +0200
+
+
+Started GET "/assets/background_twitter_blur.jpg" for 127.0.0.1 at 2017-04-26 01:31:17 +0200
+
+
+Started POST "/pages/search_tweets" for 127.0.0.1 at 2017-04-26 01:31:38 +0200
+Processing by PagesController#search_tweets as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5nSdWykkxBdkd69kKfpL3ojbLoOVgPD5LziPfMXFgY69paxZSN4w5QXGZwvX6V6cbEuirmYCwKTijjCYoKlIg==", "keywords"=>"Hello test", "commit"=>""}
+  Rendered pages/search_tweets.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 201900ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+>>>>>>> refs/remotes/origin/algo
