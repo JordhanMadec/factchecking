@@ -16,6 +16,7 @@
 !/log/.keep
 /tmp
 /.idea
+/tmp/cache
 
 # Ignore twitter tokens
 /app/controllers/config_dev.rb
