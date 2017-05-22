@@ -1,0 +1,157 @@
+<%= javascript_include_tag 'application' %>
+
+<!-- Use of Bootstrap popover -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({
+            placement: 'bottom',
+            html: true,
+            trigger: 'hover',
+            container: 'body'
+        });
+    });
+</script>
+
+<!-- Google charts API scripts -->
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js", type: "text/javascript" %>
+<script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawVeracityChart);
+    google.charts.setOnLoadCallback(drawSentimentChart);
+
+    function drawVeracityChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+            ['Veracity Class', 'Points'],
+            ['Accurate',  <%= $stats[:true_count] %>],
+            ['Fake',  <%= $stats[:false_count] %>]
+        ]);
+
+        var options = {
+            title: 'VERACITY CLASS',
+            pieHole: 0.28,
+            slices: [{color: '#67BCDB'}, {color: '#B71427'}],
+            fontSize: 18
+        };
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.PieChart(document.getElementById('veracityChart'));
+        chart.draw(data, options);
+    }
+
+    function drawSentimentChart() {
+        // Define the chart to be drawn.
+        var data = google.visualization.arrayToDataTable([
+            ['Sentiment Class', 'Points'],
+            ['Positive',  <%= $stats[:positive_count] %>],
+            ['Negative',  <%= $stats[:negative_count] %>],
+            ['Neutral',   <%= $stats[:neutral_count] %>]
+        ]);
+
+        var options = {
+            title: 'SENTIMENT CLASS',
+            pieHole: 0.28,
+            slices: [{color: '#118C4E'}, {color: '#e41713'}, {color: '#ffb01f'}],
+            fontSize: 18
+        };
+
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.PieChart(document.getElementById('sentimentChart'));
+        chart.draw(data, options);
+    }
+</script>
+
+<!-- Google Map js -->
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQYoUZvqPTL8LFTFonv8WqZOZ2mGSf8o" %>
+<script>
+    function initialize() {
+        var mapOptions = {
+            zoom: 14,
+            scrollwheel: false,
+            center: new google.maps.LatLng(48.120306, -1.634211)
+        };
+        var map = new google.maps.Map(document.getElementById('googleMap'),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            animation:google.maps.Animation.BOUNCE,
+            icon: '/assets/map-marker.png',
+            map: map
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.show_hide').showHide({
+            speed: 1000,  // speed you want the toggle to happen
+            easing: 'swing',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+            changeText: 1, // if you dont want the button text to change, set this to 0
+            showText: 'View',// the button text to show when a div is closed
+            hideText: 'Close' // the button text to show when a div is open
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1300
+        });
+    });
+</script>
+
+<script>
+    //Hide Overflow of Body on DOM Ready //
+    $(document).ready(function(){
+        $("body").css("overflow", "hidden");
+    });
+
+    // Show Overflow of Body when Everything has Loaded
+    $(window).load(function(){
+        $("body").css("overflow", "visible");
+        var nice=$('html').niceScroll({
+            cursorborder:"5",
+            cursorcolor:"#00AFF0",
+            cursorwidth:"3px",
+            boxzoom:true,
+            autohidemode:true
+        });
+    });
+</script>
+
+<script type="text/javascript">
+  // Highlight keywords in tweet contents
+    $(document).ready(function() {
+       var keywords_list = $(".tag > li > a").map(function() { return $(this).text(); }).get();
+       var options = {
+           element: "span",
+           className: "keyword",
+           accuracy: "exactly",
+           synonyms: {
+               "dont": "do not",
+               "don't": "do not",
+               "wont": "will not",
+               "won't": "will not",
+               "isn't": "is not",
+               "aren't": "are not",
+               "doesn't": "does not",
+               "wouldn't": "would not",
+               "'ve": "have",
+               "haven't": "have not",
+               "hasn't": "has not",
+               "didn't": "did not",
+               "i'll": "i will",
+               "you'll": "you will",
+               "he'll": "he will",
+               "she'll": "she will",
+               "it'll": "it will",
+               "we'll": "we will",
+               "they'll": "they will"
+           }
+       };
+       $(".tweet_text").mark(keywords_list, options);
+    });
+</script>

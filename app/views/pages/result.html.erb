@@ -1,0 +1,107 @@
+<%= provide(:title, "Search Results") %>
+
+<%= render "layouts/header_others" %>
+
+<!-- start blog Section -->
+<section id="blg_sec">
+	<div class="container">
+		<div class="row">
+      <br/>
+			<div class="title_sec">
+				<h1>SEARCH RESULTS</h1>
+				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+			</div>
+
+      <div class="well text-center">
+        <h2>"<%= @keywords %>" is </h2>
+        <%= render_fact_result($stats[:true_count], $stats[:false_count]).html_safe %>
+      </div>
+
+			<div class="col-lg-8 col-md-8 col-sm-8" style="z-index: 2;">
+        <% @tweet_list.each do |key, tweet| %>
+          <div class="sngl_blg">
+            <div class="post_info">
+              <div class="user_name">
+                <h2><%= tweet["user"]["name"] %></h2>
+                <i class="fa fa-twitter"></i>
+              </div>
+              <div class="user_id">
+                @<%= tweet["user"]["screen_name"] %>
+              </div>
+            </div>
+            <div class="post_content">
+              <p class='tweet_text'><%= tweet["text"] %></p>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <span class="pull-left">
+                      <i class="fa fa-heart"></i>&nbsp;Favorites : <%= tweet["favorite_count"] %>
+                    </span>
+                    <span class="pull-left">
+                      <i class="fa fa-retweet"></i>&nbsp;Retweets : <%= tweet["retweet_count"] %>
+                    </span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <a href='https://twitter.com/<%= tweet["user"]["screen_name"] %>' target='_blank' data-toggle="popover"
+                       title='<%= tweet["user"]["name"] %>'
+                       data-content='Go to https://twitter.com/<%= tweet["user"]["screen_name"] %>'>
+                      <i class="fa fa-long-arrow-right"></i> See more
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        <% end %>
+			</div>				
+			
+			<div class="col-lg-4 col-md-4 col-sm-4" style="z-index: 1;">
+				<div class="sidebar">						
+					<div class="search_widget">
+            <form method="post" action="<%= get_path_for_search %>">
+              <%= text_field_tag 'keywords', '', id: 'sr_bx', placeholder:'Check a new fact ...', required: 'true', autocomplete: 'off' %>
+              <button id='sr_bx_submit_btn' type='submit'>Go</button>
+            </form>
+					</div>				
+					<div class="widget">
+						<h2>fact information</h2>
+						<div class="title_br"></div>
+						<ul>
+							<li>Matching tweets : <%= @nbTweets %></li>
+							<li>Accuracy class : <% if $stats[:true_count] >= $stats[:false_count] then %>Accurate<% else %>Fake<% end %></li>
+							<li>Sentimental class :
+                <% case [$stats[:positive_count], $stats[:neutral_count], $stats[:negative_count]].max() %>
+                <% when $stats[:neutral_count] %>
+                    Neutral
+                <% when $stats[:positive_count] %>
+                    Positive
+                <% when $stats[:negative_count] %>
+                    Negative
+                <% else %>
+                    Indeterminate
+                <%end%>
+              </li>
+              <li>Favorites count: <%= $stats[:favs] %></li>
+              <li>Retweets count: <%= $stats[:retweets] %></li>
+						</ul>
+					</div>							
+					<div class="widget">
+						<h2>keywords</h2>
+						<div class="title_br"></div>
+						<ul class="tag">
+              <% @keywords.scan(/[\w\-']+/) {|tag| %>
+                  <li><a href="#"><%= tag %></a></li>
+              <% } %>
+						</ul>
+					</div>
+          <div class="widget">
+            <button type="button" class="btn btn-sky text-uppercase btn-lg">
+              <a href="<%= pages_charts_path %>">
+                <strong>SEE GRAPHIC CHARTS&emsp;<i class="fa fa-pie-chart" aria-hidden="true"></i></strong>
+              </a>
+            </button>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end Blog Section -->

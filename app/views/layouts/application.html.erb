@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Twitter Fact Checker</title>
-  <link rel="icon" type="image/png" href="/assets/logo.png"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Montserrat|Abel" rel="stylesheet">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="<%= content_for :body_class %>">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title><%= make_title(yield(:title)) %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_link_tag 'icon.png', rel: 'icon', type: 'image/png' %>
 
-<%= yield %>
+    <!--[if lt IE 9]><%= javascript_include_tag 'html5shiv' %>
+    <%= javascript_include_tag 'respond.min' %><![endif]-->
+    <!-- Place favicon.ico in the root directory -->
 
-</body>
+    <%= render "layouts/stylesheets_tag" %>
+    <!--<script type="text/javascript">-->
+//        $(document).on("page:fetch", function(){
+//            $("#loader-wrapper").show();
+//        });
+//
+//        $(document).on("page:receive", function(){
+//            $("#loader-wrapper").hide();
+//        });
+    <!--</script>-->
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= render "layouts/preloader" %>
+
+    <%= yield %>
+
+    <%= render "layouts/map" %>
+    <%= render "layouts/footer" %>
+    <%= render "layouts/javascripts_tag" %>
+  </body>
 </html>

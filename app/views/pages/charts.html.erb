@@ -1,0 +1,54 @@
+<%= provide(:title, "Data Statistics") %>
+
+<%= render "layouts/header_others" %>
+
+<!-- start Stat Section -->
+<section id="stat_sec">
+<div class="container">
+	<div class="row">
+    <br/><br/>
+		<div class="title_sec">
+				<h1>DATA STATISTICS</h1>
+				<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+		</div>	
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-clock-o"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:propagation_time], precision: 2, separator: '.', delimiter: ',')%></h2>
+			<h4>Propagation Hours</h4>	
+			</div>
+		</div>			
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-group"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:touched_people], precision: 0, separator: '.', delimiter: ',')%></h2>
+			<h4>Impacted Persons</h4>	
+			</div>
+		</div>			
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-thumbs-o-up"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:favs], precision: 0, separator: '.', delimiter: ',')%></h2>
+			<h4>User Likes</h4>
+			</div>
+		</div>			
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-retweet"></i>
+			<h2 class="counter"><%= number_with_precision($stats[:retweets], precision: 0, separator: '.', delimiter: ',')%></h2>
+			<h4>User Retweets</h4>
+			</div>
+		</div>	
+		<div class="chart_sec">
+			<!--Table and divs that hold the pie charts-->
+    		<table class="rows">
+      		<tr>
+        		<td><div id="veracityChart"></div></td>
+        		<td><div id="sentimentChart"></div></td>
+      		</tr>
+    		</table>		
+		</div>							
+	</div>	
+</div>
+</section>
+<!-- End Stat Section -->

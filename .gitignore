@@ -19,3 +19,6 @@
 
 # Ignore twitter tokens
 /app/controllers/config_dev.rb
+*.caches
+
+

@@ -1,0 +1,336 @@
+<%= provide(:title, "Homepage") %>
+
+<%= render "layouts/header_index" %>
+
+<!-- start slider Section -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag('slider1.jpg') %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>We are twitter fact checker</h1>
+          <p>tool for fact-checking with twitter's data</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag('slider2.jpg') %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>We are Creative</h1>
+          <p>elegant web interface with responsive design</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag('slider3.jpg') %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>We Have Great Team</h1>
+          <p>team of designer and developer students</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id='search-box'>
+    <form method='post' action='<%= get_path_for_search %>' id='search-form2' target='_top'>
+      <%= text_field_tag 'keywords', '', id: 'search-text', placeholder:'Wanna check a fact ?', autocomplete: 'off', required: 'true' %>
+      <button id='search-button' type='submit'>
+        <span>Check</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <i class="glyphicon glyphicon-chevron-left"></i>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+  </a>
+</div>
+<!-- End slider Section -->
+
+<!-- start about Section -->
+<section id="abt_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1 style="color: #fff">ABOUT</h1>
+					<h2 style="color: #fff">WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="abt">
+					<p>We are 5 students from the Computer Science faculty of INSA Rennes, France. This is our production website for the Practical Study subject. The idea is to build a web application that processes and verifies the veracity of an information stream via Twitter. The project is under the direction of Mr. Alexandru Costan, researcher at INSA Rennes. We divided the team into two subgroups, one for data processing (back-end) and the other for interface design (front-end). Our application is developed with Ruby on Rails platform, Twitter API and responsive design rules.</p>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="text-center">
+					<a href="#myCarousel" class="btn btn-warning page-scroll" role="button">Try now</a>
+					<a href="https://www.youtube.com/watch?v=-7N6TmfLEvg" target="_blank" class="btn btn-success" role="button">Watch video</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+
+<!-- start our team Section -->
+<section id="tm_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Our Team</h1>
+					<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="all_team">
+					<div class="sngl_team">
+            <%= image_tag("team/mem1.jpg") %>
+						<h3> Ngoc Minh Quan Pham <span>Designer</span></h3>
+						<p>3rd year Big Data student</p>
+					</div>
+					<div class="sngl_team">
+            <%= image_tag("team/mem2.jpg") %>
+						<h3>Jordhan Madec <span> Developer </span></h3>
+						<p>3rd year Big Data student</p>
+					</div>
+					<div class="sngl_team">
+            <%= image_tag("team/mem3.jpg") %>
+						<h3> Hugo Vincent <span>  Developer  </span></h3>
+						<p>3rd year Security student</p>
+					</div>
+					<div class="sngl_team">
+            <%= image_tag("team/mem4.jpg") %>
+						<h3>Haris Pasic<span> Developer </span></h3>
+						<p>3rd year Security student</p>
+					</div>
+					<div class="sngl_team">
+            <%= image_tag("team/mem5.jpg") %>
+						<h3>Jordan Le Bongoat<span> Designer </span></h3>
+						<p>3rd year Security student</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End our team Section -->
+
+<!-- start portfolio Section -->
+<section id="photo_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Our Photos</h1>
+					<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="portfolio-filter text-uppercase text-center">
+          <ul class="filter">
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".screenshot">Screenshot</li>
+          <li data-filter=".teamwork">Teamwork</li>
+          <li data-filter=".prototype">Prototype</li>
+          </ul>
+				</div>
+
+				<div class="all-portfolios">
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio teamwork">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_05.jpg') %>" alt="">
+					</div>
+					</div>
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio teamwork">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_01.jpg') %>" alt="">
+					</div>
+					</div>
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio teamwork">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_04.jpg') %>" alt="">
+					</div>
+					</div>
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio screenshot">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_06.jpg') %>" alt="">
+					</div>
+					</div>
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio prototype">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_07.jpg') %>" alt="">
+					</div>
+					</div>
+					<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio screenshot">
+            <img class="img-responsive" src="<%= image_path('portfolio/p_03.jpg') %>" alt="">
+					</div>
+					</div>
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+            <div class="single-portfolio screenshot">
+              <img class="img-responsive" src="<%= image_path('portfolio/p_02.jpg') %>" alt="">
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+            <div class="single-portfolio screenshot">
+              <img class="img-responsive" src="<%= image_path('portfolio/p_08.jpg') %>" alt="">
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 ">
+					<div class="single-portfolio prototype">
+					<iframe height="277px" width="277px" src="https://www.youtube.com/embed/-7N6TmfLEvg" frameborder="0" allowfullscreen></iframe>
+					</div>
+					</div>
+				</div>
+			</div>
+				<div class="post_btn">
+					<div class="hover_effect_btn" id="hover_effect_btn">
+						<a href="#hover_effect_btn" data-hover="view more post"><span>view more post</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<!-- End Portfolio Section -->
+
+<!-- start our teastimonial Section -->
+<section id="tstm_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="all_tstm">
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Be sure we're right</h3>
+						<p>Never state in a fact check anything of which we’re not certain.</p>
+						<h6>- John Daniszewski</h6>
+					</div>
+				</div>
+
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Prioritize items with relevance and importance</h3>
+						<p>We can’t check every falsehood. Focus on things that matter.</p>
+						<h6>- John Daniszewski</h6>
+					</div>
+				</div>
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Keep items short</h3>
+						<p>The lead should present the assertion that’s being checked, and quickly state what’s wrong with it.</p>
+						<h6>- John Daniszewski</h6>
+					</div>
+				</div>
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Stick to checking facts, rather than opinion</h3>
+						<p>A person’s personal tastes and preferences might lie outside the mainstream, but as opinions they are not a topic for a fact check.</p>
+						<h6>- John Daniszewski</h6>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End our teastimonial Section -->
+
+<!-- start contact us Section -->
+<section id="ctn_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Contact Info</h1>
+					<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="cnt_form">
+					<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+						<div class="form-group">
+						<input type="text" name="name" class="form-control name-field" required="required" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Your Email">
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="cnt_info">
+					<ul>
+						<li><i class="fa fa-map-marker"></i><p>20 Avenue des Buttes de Coesmes, 35043 Rennes Cedex</p></li>
+						<li><i class="fa fa-envelope"></i><p>deptinfo@insa-rennes.fr</p></li>
+						<li><i class="fa fa-phone"></i><p>+33 2 23 23 82 51</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End contact us Section -->
+
+<!-- start Alliance Section -->
+<section id="alnc_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Our alliances</h1>
+					<h2>WE’RE TWITTER FACTCHECKER GROUP FROM INSA RENNES</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="al_clt">
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/twitter.png", "https://twitter.com/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/insa.png", "https://www.insa-rennes.fr/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/rails.png", "http://rubyonrails.org/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/bootstrap.png", "http://getbootstrap.com/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/jquery.png", "https://jquery.com/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/github.png", "https://github.com/", target: "_blank" %>
+					</div>
+					<div class="sngl_alnc">
+            <%= link_to_image "alliance/slack.png", "https://slack.com/", target: "_blank" %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Alliance Section -->

@@ -11,35 +11,28 @@
 // about supported directives.
 //
 //= require jquery
+//= require toastr
 //= require jquery_ujs
-//= require bootstrap.min
-//= require turbolinks
+//= require bootstrap
 //= require_tree .
 
+$(document).ready(function() {
 
-function home_size(){
-  var h = $(window).height();
-  $('.home').height(h);
-  $('.home').css('line-height',h+'px');
-}
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "positionClass": "toast-top-right",
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 
-function highlight_keywords(){
-  compt=0;
-  keywords_list = $('#keywords_list b')[0].innerHTML.split(" ");
-  $('.tweet_content').each(function(){
-    keywords_list.forEach(function(keyword){
-      var regEx = new RegExp(keyword, "ig");
-      $('.tweet_content')[compt].innerHTML = $('.tweet_content')[compt].innerHTML.replace(regEx,"<span class=\"keyword\">$&</span>");
-    });
-    compt++;
-  });
-}
-
-$('document').ready(function(){
-  home_size();
-  highlight_keywords();
 });
 
-$(window).resize(function(){
-  home_size();
-});
+
