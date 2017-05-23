@@ -11,14 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+// require jquery.turbolinks
 //= require toastr
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.lazyload
+// require turbolinks
 //= require_tree .
 
 $(document).ready(function() {
 
-    toastr.options = {
+/*    toastr.options = {
         "closeButton": false,
         "debug": false,
         "positionClass": "toast-top-right",
@@ -31,8 +34,19 @@ $(document).ready(function() {
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
-    }
+    };*/
+});
 
+$(document).on("turbolinks:click", function(){
+    $(".loader-wrapper").show();
+});
+
+$(document).on("turbolinks:load", function(){
+    $(".loader-wrapper").hide();
+});
+
+$("img").lazyload({
+    effect : "fadeIn"
 });
 
 

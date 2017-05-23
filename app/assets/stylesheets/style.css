@@ -25,19 +25,6 @@ a:hover {
 .top-nav-collapse {
     padding : 0;
 }
-#loader-wrapper .logo {
-    left : 48.7%;
-    position : absolute;
-    top : 48%;
-}
-#loader-wrapper .logo a {
-    font-weight : 700;
-    color : #3498DB;
-    font-size : 12px;
-}
-.logo span {
-    color : #f85654;
-}
 #loader-wrapper {
     position : fixed;
     top : 0;
@@ -50,15 +37,17 @@ a:hover {
 #loader {
     display : block;
     position : relative;
-    left : 50%;
-    top : 50%;
-    width : 150px;
-    height : 150px;
+    left : 47.2%;
+    top : 48%;
+    width : 180px;
+    height : 180px;
     margin : -75px 0 0 -75px;
     border-radius : 50%;
     border : transparent solid 3px;
     border-top-color : #3498db;
+    -webkit-animation: spin 2s linear infinite;
     animation : spin 2s linear infinite;
+    z-index : 1000000;
 }
 #loader:before {
     content : "";
@@ -70,6 +59,7 @@ a:hover {
     border-radius : 50%;
     border : transparent solid 3px;
     border-top-color : #444;
+    -webkit-animation: spin 3s linear infinite;
     animation : spin 3s linear infinite;
 }
 #loader:after {
@@ -82,13 +72,30 @@ a:hover {
     border-radius : 50%;
     border : transparent solid 3px;
     border-top-color : #1487b2;
+    -webkit-animation: spin 1.5s linear infinite;
     animation : spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
 }
 @keyframes spin {
     0% {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
         transform : rotate(0deg);
     }
     100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
         transform : rotate(360deg);
     }
 }
@@ -826,8 +833,12 @@ a:hover {
     pointer-events: none;
     cursor: default;
 }
+.widget {
+    display: block;
+    overflow: auto;
+}
 .widget > .btn-lg {
-    margin: 30px 0 20px 0;
+    margin: 25px 0 20px 0;
 }
 .widget > .btn-lg > a {
     color: #fff;
@@ -1045,11 +1056,6 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
 @media screen and (max-width: 450px) {
     .navbar {
         padding : 3px 0 !important;
-    }
-    #loader {
-        left : 52%;
-        width : 120px;
-        height : 120px;
     }
     #nav_menu ul a {
         font-size : 12px !important;

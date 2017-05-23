@@ -13,20 +13,15 @@
     <!-- Place favicon.ico in the root directory -->
 
     <%= render "layouts/stylesheets_tag" %>
-    <!--<script type="text/javascript">-->
-//        $(document).on("page:fetch", function(){
-//            $("#loader-wrapper").show();
-//        });
-//
-//        $(document).on("page:receive", function(){
-//            $("#loader-wrapper").hide();
-//        });
-    <!--</script>-->
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js", type: "text/javascript" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQYoUZvqPTL8LFTFonv8WqZOZ2mGSf8o" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <%= render "layouts/preloader" %>
+
+    <%= flash_messages %>
 
     <%= yield %>
 

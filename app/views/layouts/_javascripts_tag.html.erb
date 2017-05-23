@@ -13,7 +13,6 @@
 </script>
 
 <!-- Google charts API scripts -->
-<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js", type: "text/javascript" %>
 <script type="text/javascript">
     google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawVeracityChart);
@@ -62,7 +61,6 @@
 </script>
 
 <!-- Google Map js -->
-<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQYoUZvqPTL8LFTFonv8WqZOZ2mGSf8o" %>
 <script>
     function initialize() {
         var mapOptions = {
