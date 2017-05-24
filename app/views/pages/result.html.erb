@@ -13,7 +13,7 @@
 			</div>
 
       <div class="well text-center">
-        <h2>"<%= @keywords %>" is </h2>
+        <h2>"<%= @raw_request %>" is </h2>
         <%= render_fact_result($stats[:true_count], $stats[:false_count]).html_safe %>
       </div>
 
@@ -87,7 +87,7 @@
 						<h2>keywords</h2>
 						<div class="title_br"></div>
 						<ul class="tag">
-              <% @keywords.scan(/[\w\-']+/) {|tag| %>
+              <% @raw_request.scan(/[\w\-']+/) {|tag| %>
                   <li><a href="#"><%= tag %></a></li>
               <% } %>
 						</ul>

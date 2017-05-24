@@ -26,8 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'twitter', '5.16.0'
 
-# gem 'bootstrap-sass', '~> 3.3.7'
-
 gem 'json'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
@@ -39,7 +37,7 @@ gem 'sentimental'
 
 gem 'font-awesome-rails'
 
-gem 'toastr-rails'
+# gem 'toastr-rails'
 
 # gem 'frontend-generators'
 # Use ActiveModel has_secure_password

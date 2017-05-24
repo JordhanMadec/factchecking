@@ -2,7 +2,7 @@
 $(".all-portfolios").isotope({
 itemSelector : '.single-portfolio',
 
-layoutMode: 'fitRows',
+layoutMode: 'fitRows'
 });
 $('ul.filter li').click(function(){
 $("ul.filter li").removeClass("active");
@@ -15,7 +15,7 @@ filter: selector,
 animationOptions: {
 duration: 750,
 easing: 'linear',
-queue: false,
+queue: false
 }
 });
 return false;
@@ -23,11 +23,8 @@ return false;
 });
 
 
-
-
 jQuery(document).ready(function () {
 
-	
 /*----------------------------------------------------*/
 /*  Animated Progress Bars
 /*----------------------------------------------------*/
@@ -43,7 +40,7 @@ jQuery(document).ready(function () {
     });   
 
 /*----------------------------------------------------*/
-/* Crousel Team 
+/* Carousel Team
 /*----------------------------------------------------*/
 	$('.all_team').owlCarousel({
 		items:4,
@@ -64,7 +61,7 @@ jQuery(document).ready(function () {
 				items:4
 			}
 		}
-	})
+	});
 	
 /*----------------------------------------------------*/
 /* Testimonial crousel 
@@ -88,7 +85,7 @@ jQuery(document).ready(function () {
 				items:1
 			}
 		}
-	})
+	});
 	
 /*----------------------------------------------------*/
 /* Happy Client crousel 
@@ -112,16 +109,15 @@ jQuery(document).ready(function () {
 				items:6
 			}
 		}
-	})
+	});
 
 	
 	
 /*preloader*/
 $(window).load(function() { // makes sure the whole site is loaded
 	$('#status').fadeOut(); // will first fade out the loading animation
-	$('#loader-wrapper').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	$('body').delay(200).css({'overflow-x':'hidden'});
+	$('#loader-wrapper').delay(250).fadeOut('slow'); // will fade out the white DIV that covers the website.
+	$('body').delay(250).css({'overflow-x':'hidden'});
 })	
 
 });
-

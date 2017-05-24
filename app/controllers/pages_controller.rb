@@ -20,7 +20,8 @@ class PagesController < ApplicationController
   USELESS_WORD = /\s(a|an|the|this|that)\s/
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
-  NEGATION_WORD = /(not|don't|didn't|won't|no|couldn't|can't)/
+  # NEGATION_WORD = /(not|don't|didn't|won't|no|couldn't|can't)/
+  NEGATION_WORD = /(not|don't|didn't|won't|no|couldn't|can't|neither|nor|never|none|isn't|doesn't|hasn't|hadn't|haven't)/
 
   NB_CLASSES = 10
   BONUS = 1.2
@@ -59,7 +60,8 @@ class PagesController < ApplicationController
              favs: 0,
              first_tweet_date: nil,
              touched_people: 0,
-             propagation_time: 0,
+             propagation_time_value: 0,
+             propagation_time_unit: nil,
              negative_count: 0,
              neutral_count: 0,
              positive_count: 0,
@@ -80,9 +82,17 @@ class PagesController < ApplicationController
     end
   end
 
+  def reset_stats
+    $stats.each_value {|value|
+      value = 0
+    }
+  end
+
   def search_tweets
     client = init
     puts 'Client init'
+    reset_stats
+    puts 'Stats hash is resetted'
 
     puts '----------------------------'
 
@@ -152,8 +162,9 @@ class PagesController < ApplicationController
         date_diff = date_diff / 60
       end
     end
-    $stats[:propagation_time] = (date_diff.round(2).to_s + date_diff_unite)
-    puts $stats[:propagation_time]
+    $stats[:propagation_time_value] = date_diff.round(2)
+    $stats[:propagation_time_unit] = date_diff_unite
+    puts "#{$stats[:propagation_time_value]}#{$stats[:propagation_time_unit]}"
 
 
     @false_class = { score: 0,
@@ -175,6 +186,7 @@ class PagesController < ApplicationController
   end
 
   end
+
 
   def prepare_tweets(tweets)
       res = Hash.new
@@ -246,6 +258,7 @@ class PagesController < ApplicationController
     tweet["cleaned_text"] = stemmify tweet["cleaned_text"]
   end
 
+
   def stemmify(tweet) #Garde la racine des mots
     sample = tweet.split(/\s/)
     sample.map! do |term|
@@ -253,6 +266,7 @@ class PagesController < ApplicationController
     end
     sample.join(" ")
   end
+
 
   def delete_useless_terms(tweet) #Supprime les termes superflus
     tweet.gsub!(USELESS_WORD, " ") #Suppression des déterminants
@@ -262,16 +276,17 @@ class PagesController < ApplicationController
 
 
   #----- Classification tweets -----
-
   def initialisation(n)
     res = Array.new(n) {|i| Array.new(n) {|j| -1} } # Create an empty tab (2 lin * 1 col) initialize with 0 (another way)
   end
+
 
   def init_nb_class(n)
     for i in (0..(n-1))
       $classe.push(Array.new)
     end
   end
+
 
   def sentimental_class(text)
     analyzer = Sentimental.new
@@ -280,12 +295,14 @@ class PagesController < ApplicationController
     analyzer.sentiment text
   end
 
+
   def sentimental_score(text)
     analyzer = Sentimental.new
     analyzer.load_defaults
     analyzer.threshold = THRESHOLD
     analyzer.score text
   end
+
 
   def sentimental_and_score_analysis(tweet)
     tweet["sentimental_class"] = sentimental_class tweet["text"]
@@ -302,6 +319,7 @@ class PagesController < ApplicationController
 
     tweet
   end
+
 
   def word__comparaison_score(tweet1_string, tweet2_string)
 
@@ -330,6 +348,7 @@ class PagesController < ApplicationController
     score = (((cmpt.to_f/min)+(cmpt.to_f/max))/2.to_f)
   end
 
+
   def result_score(score)
     score = case
 
@@ -344,6 +363,7 @@ class PagesController < ApplicationController
     score
   end
 
+
   def negation(tweet_string)
       if tweet_string.match(NEGATION_WORD) then
         return "negatif"
@@ -352,9 +372,11 @@ class PagesController < ApplicationController
       end
   end
 
+
   def delete_negation(string)
     return string.gsub(NEGATION_WORD,"")
   end
+
 
   def make_class(tweet,num_Tweet,matrice, tweets_list)
     tweet1 = tweet
@@ -399,6 +421,7 @@ class PagesController < ApplicationController
     end
   end
 
+
   def analyse_function_classe(nb_tweets, keyword, tweet_list)
     $keywords_sentimental = sentimental_class keyword
     $keywords_negatif = negation keyword
@@ -435,8 +458,6 @@ class PagesController < ApplicationController
       end
     end
   end
-
-
 
 
   # return vrai si l'utilisateur est blackliste
@@ -479,11 +500,13 @@ class PagesController < ApplicationController
     return 0
   end
 
+
   def median(array)
     sorted = array.sort
     len = sorted.length
     (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
   end
+
 
   def init_weigh()
     # Medianes...
@@ -501,6 +524,7 @@ class PagesController < ApplicationController
     puts "MEDIANE RFT: #{@@median_rft}"
     puts "AVG RFT: #{@@avg_rft}"
   end
+
 
   def weigh(t)
     # Pondération des tweets
@@ -610,7 +634,6 @@ class PagesController < ApplicationController
   end
 
   #---------3ème tour de boucle ---------------------
-
   def main_3(tweets_list, matrice_score)
     num_Tweet = 0
     tweets_list.each do |key, tweet|
@@ -658,21 +681,42 @@ class PagesController < ApplicationController
   end #end func
 
 
-  # Actions of PagesController (important for router)
+  # ====================================================================================================== #
+  # ACTIONS PRINCIPALES DE L'APPLICATIONS QUI OBTIENNENT CHACUNE UNE PROPRE VUE AU NIVEAU DE CLIENT
+  # LES VUES HTML SE TROUVENT DANS views/pages/NOM_DE_ACTION.html.erb
+  # ====================================================================================================== #
+
+  # Controleur de homepage qui présent les différents éléments du projet ainsi que de l'équipe
   def index
   end
 
+  # Controleur de la page des résulats et d'analyse des tweets
   def result
-    # Same content as search_tweets, but needed for the new interface, after we may remove or rename 'search_tweets' to 'result' for simplification
     client = init
     puts 'Client init'
+    reset_stats
+    puts 'Stats hash is resetted'
+
+    puts '----------------------------'
 
     @keywords = params[:keywords] ||= "test"
 
-    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
-    if @keywords=="" then @keywords = "test" end
+    @raw_request = @keywords # on a besoin de garder la requête initiale pour affichage au client
 
-    puts 'Keywords: ' + @keywords
+    #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
+    if @keywords=="" then @keywords = "this is a test" end
+
+    puts 'initial keywords : ' + @keywords
+
+    puts 'négatif/positif : ' + negation(@keywords).to_s
+
+    puts 'sentimental_class : ' + sentimental_class(@keywords).to_s
+
+    @keywords = delete_negation(@keywords)
+
+    puts 'Keywords without negation: ' + @keywords
+
+    puts '----------------------------'
 
     #Nettoyage des tweets
     puts Time.now.strftime("%H:%M:%S") + ' Reaching tweets...'
@@ -682,39 +726,73 @@ class PagesController < ApplicationController
     @nbTweets = @tweet_list.count #Nombre de tweets trouvés
     puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
 
-    puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
-    #set_dataset(@tweet_list)
+    if @nbTweets != 0 then
+      puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
+      #set_dataset(@tweet_list)
 
-    #creation de la matrice de score
-    puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
-    @matrice_score = initialisation(@nbTweets)
+      puts Time.now.strftime("%H:%M:%S") + ' Creating nb classes tweets'
+      init_nb_class(NB_CLASSES)
 
-    #cleaned_text, sentimental_and_score_analysis, make_class
-    puts Time.now.strftime("%H:%M:%S") + ' First loop'
-    main_1(@tweet_list)
+      #creation de la matrice de score
+      puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
+      @matrice_score = initialisation(@nbTweets)
 
-    puts Time.now.strftime("%H:%M:%S") + ' Init weight'
-    init_weigh()
+      #trie des dates
+      puts Time.now.strftime("%H:%M:%S") + ' Sort dates'
+      @@dates.sort!
 
-    puts Time.now.strftime("%H:%M:%S") + ' Second loop'
-    main_2(@tweet_list, @matrice_score)
+      #cleaned_text, sentimental_and_score_analysis, make_class
+      puts Time.now.strftime("%H:%M:%S") + ' First loop'
+      main_1(@tweet_list)
 
-    @false_class = { score: 0,
-                     nb_tweets: 0,
-                     population: Array.new}
-    @true_class = { score: 0,
-                    nb_tweets: 0,
-                    population: Array.new}
+      puts Time.now.strftime("%H:%M:%S") + ' Init weight'
+      init_weigh()
 
-    puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
-    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
-    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+      puts Time.now.strftime("%H:%M:%S") + ' Second loop'
+      main_2(@tweet_list, @matrice_score)
 
-    # flash[:success] = "Welcome to the Sample App!"
-    # render "pages/result"
-    # render action: "result", notice: 'Successfully checked in'
+
+      puts Time.now.strftime("%H:%M:%S") + ' Third loop'
+      main_3(@tweet_list, @matrice_score)
+
+
+      puts Time.now.strftime("%H:%M:%S") + ' Propagation time'
+      date_diff = ( Time.at(@@dates[@@borne_droite]) - Time.at(@@dates[@@borne_gauche])).to_f
+      date_diff_unite = "sec"
+      if date_diff > 60 then
+        date_diff = date_diff / 60
+        date_diff_unite = "min"
+        if date_diff > 60 then
+          date_diff_unite = "h"
+          date_diff = date_diff / 60
+        end
+      end
+      $stats[:propagation_time_value] = date_diff.round(2)
+      $stats[:propagation_time_unit] = date_diff_unite
+      puts "#{$stats[:propagation_time_value]}#{$stats[:propagation_time_unit]}"
+
+
+      @false_class = { score: 0,
+                       nb_tweets: 0,
+                       population: Array.new}
+      @true_class = { score: 0,
+                      nb_tweets: 0,
+                      population: Array.new}
+
+      puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
+      analyse_function_classe(@nbTweets, @keywords, @tweet_list)
+
+      puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
+      score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+
+      puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+    else
+      puts "O tweets"
+    end
   end
 
+  # Controleur de la page des statistiques
   def charts
   end
+
 end

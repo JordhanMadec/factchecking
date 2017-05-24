@@ -14,8 +14,8 @@
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<div class="counting_sl">
 			<i class="fa fa-clock-o"></i>
-			<h2 class="counter"><%= number_with_precision($stats[:propagation_time], precision: 2, separator: '.', delimiter: ',')%></h2>
-			<h4>Propagation Hours</h4>	
+			<h2 class="counter"><%= number_with_precision($stats[:propagation_time_value], precision: 2, separator: '.', delimiter: ',')%></h2>
+			<h4>Propagation <%= write_time_unit($stats[:propagation_time_unit]) %></h4>
 			</div>
 		</div>			
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
