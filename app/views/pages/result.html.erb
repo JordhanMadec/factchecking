@@ -66,7 +66,17 @@
 						<div class="title_br"></div>
 						<ul>
 							<li>Matching tweets : <%= @nbTweets %></li>
-							<li>Accuracy class : <% if $stats[:true_count] >= $stats[:false_count] then %>Accurate<% else %>Fake<% end %></li>
+							<li>Accuracy class :
+                <% if $stats[:true_count] > $stats[:false_count] %>
+                    Accurate
+                <% else %>
+                    <% if $stats[:true_count] < $stats[:false_count] %>
+                      Fake
+                    <% else %>
+                      Unknown
+                    <% end %>
+                <%end%>
+              </li>
 							<li>Sentimental class :
                 <% case [$stats[:positive_count], $stats[:neutral_count], $stats[:negative_count]].max() %>
                 <% when $stats[:neutral_count] %>

@@ -81,7 +81,6 @@
 .owl-carousel .owl-controls .owl-nav .owl-next,
 .owl-carousel .owl-controls .owl-dot {
   cursor: pointer;
-  cursor: hand;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;

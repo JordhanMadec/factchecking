@@ -60,6 +60,32 @@
     }
 </script>
 
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['geochart']});
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['Region Code', 'Continent', 'Tweets'],
+            ['142', 'Asia', <%= $stats[:asia] %>],
+            ['150', 'Europe', <%= $stats[:europe] %>],
+            ['019', 'Americas', <%= $stats[:usa] + $stats[:south_america] %>],
+            ['002', 'Africa', <%= $stats[:africa] %>]
+        ]);
+
+        var options = {
+            resolution: "continents",
+            colorAxis: {colors: ['#00a742', '#c71a20']},
+            backgroundColor: '#81d4fa',
+            datalessRegionColor: '#f8bbd0',
+            defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('geochart-colors'));
+        chart.draw(data, options);
+    };
+</script>
+
 <!-- Google Map js -->
 <script>
     function initialize() {
@@ -113,7 +139,7 @@
         var nice=$('html').niceScroll({
             cursorborder:"5",
             cursorcolor:"#00AFF0",
-            cursorwidth:"3px",
+            cursorwidth:"4px",
             boxzoom:true,
             autohidemode:true
         });
@@ -127,7 +153,6 @@
        var options = {
            element: "span",
            className: "keyword",
-           accuracy: "exactly",
            synonyms: {
                "dont": "do not",
                "don't": "do not",

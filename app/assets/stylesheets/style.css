@@ -196,8 +196,8 @@ a:hover {
 	background: none;
 	border: 0;
 	box-shadow: none;	 
-	transition: all 0.3s ease-in-out; 
-	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
 }
 #search-form input:focus {
 	width:300px;
@@ -394,7 +394,7 @@ a:hover {
 #stat_sec {
     background : none 0 0 repeat scroll #f0f0f0;
     padding : 90px 0;
-    height: 1500px;
+    height: 2100px;
 }
 .counting_sl h2 {
     color : #515050;
@@ -892,7 +892,6 @@ a:hover {
 /* Style for chart section */
 .chart_sec {
     margin : auto;
-    margin-top: 180px;
     padding : 0 0 50px 0;
     text-align : center;
     height: 600px;
@@ -917,6 +916,10 @@ table.rows td {
 	height: 100%;
 	width: 100% !important;
 }
+#geochart-colors {
+    box-shadow: 5px 5px 20px #555;
+}
+
 /* Style for keywords */
 span.keyword {
     font-weight: bold;
@@ -988,26 +991,29 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
     position: absolute;
     width: 50%;
     z-index: 30;
+    height: 100px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
 #search-form2 {
-    height: 90px;
-    border: 1px solid #999;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    height: 100%;
+    border: 1.6px solid #999;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
     background-color: #fff;
     overflow: hidden;
 }
 #search-text {
     height: 100%;
-    font-size: 25px;
+    font-size: 28px;
     font-style: italic;
     border-width: 0;
     background: transparent;
 }
 #search-box input[type="text"] {
     width: 85%;
-    padding: 10px 0 10px 22px;
+    padding: 10px 0 10px 20px;
     color: #6a6a6a;
     outline: none;
 }
@@ -1015,18 +1021,18 @@ span.keyword:first-child:hover, span.keyword:last-child:hover {
     position: absolute;
     top: 0;
     right: 0;
-    height: 90px;
+    height: 100%;
     width: 120px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
-    color: #fff;
+    color: #fff0f5;
     text-align: center;
     line-height: 45px;
     border-width: 0;
-    background-color: #ff7365;
-    -webkit-border-radius: 0 3px 3px 0;
-    -moz-border-radius: 0 3px 3px 0;
-    border-radius: 0 3px 3px 0;
+    background-color: #ff6a6a;
+    -webkit-border-radius: 0 7px 7px 0;
+    -moz-border-radius: 0 7px 7px 0;
+    border-radius: 0 7px 7px 0;
     cursor: pointer;
 }
 #conclusion {

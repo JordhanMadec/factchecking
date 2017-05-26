@@ -83,8 +83,8 @@ class PagesController < ApplicationController
   end
 
   def reset_stats
-    $stats.each_value {|value|
-      value = 0
+    $stats.update($stats){|key,value|
+      $stats[key] = 0
     }
   end
 
@@ -93,6 +93,7 @@ class PagesController < ApplicationController
     puts 'Client init'
     reset_stats
     puts 'Stats hash is resetted'
+    verify_stats($stats)
 
     puts '----------------------------'
 
@@ -183,7 +184,9 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Finished !'
   else
     puts "O tweets"
-  end
+    end
+
+    verify_stats($stats)
 
   end
 
@@ -655,7 +658,7 @@ class PagesController < ApplicationController
           $keywords_sentimental = "negative"
         end
 
-        if ( (sen != "negative" && $keywords_sentimental != "negative")  || (( neg == "negatif") && $keywords_negatif == "negatif")) then
+        if (sen != "negative" && $keywords_sentimental != "negative")  || ( neg == "negatif" && $keywords_negatif == "negatif") then
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
           if $classe[$classe_rpz_mieux].include?(key) || $classe[$classe_max_personne].include?(key) then
@@ -680,6 +683,12 @@ class PagesController < ApplicationController
     end #end each
   end #end func
 
+  def verify_stats(hash)
+    puts "Current state of stats hash --------------------------"
+    hash.each {|key, value|
+      puts "#{key}: #{value}"
+    }
+  end
 
   # ====================================================================================================== #
   # ACTIONS PRINCIPALES DE L'APPLICATIONS QUI OBTIENNENT CHACUNE UNE PROPRE VUE AU NIVEAU DE CLIENT
@@ -696,6 +705,7 @@ class PagesController < ApplicationController
     puts 'Client init'
     reset_stats
     puts 'Stats hash is resetted'
+    verify_stats($stats)
 
     puts '----------------------------'
 
@@ -789,6 +799,8 @@ class PagesController < ApplicationController
     else
       puts "O tweets"
     end
+
+    verify_stats($stats)
   end
 
   # Controleur de la page des statistiques
