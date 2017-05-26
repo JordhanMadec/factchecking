@@ -42590,3 +42590,560 @@ Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8
 
 
 Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:08:28 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-26 02:38:41 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"hello there"}
+Completed 500 Internal Server Error in 261782ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:450:in `block in analyse_function_classe'
+  app/controllers/pages_controller.rb:435:in `analyse_function_classe'
+  app/controllers/pages_controller.rb:793:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (244.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (168.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 02:45:40 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.3ms)
+  Rendered layouts/_header_index.html.erb (8.2ms)
+  Rendered pages/index.html.erb within layouts/application (63.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (48.0ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (47.9ms)
+Completed 200 OK in 208ms (Views: 206.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 02:45:40 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:45:41 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-26 02:45:55 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"vietnam is in asia?"}
+Completed 500 Internal Server Error in 950ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:450:in `block in analyse_function_classe'
+  app/controllers/pages_controller.rb:435:in `analyse_function_classe'
+  app/controllers/pages_controller.rb:793:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.1ms)
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:46:01 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-26 02:46:12 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"where is vietnam ?"}
+Completed 500 Internal Server Error in 6733ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:450:in `block in analyse_function_classe'
+  app/controllers/pages_controller.rb:435:in `analyse_function_classe'
+  app/controllers/pages_controller.rb:793:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 02:46:29 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.3ms)
+  Rendered layouts/_header_index.html.erb (7.7ms)
+  Rendered pages/index.html.erb within layouts/application (66.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (54.1ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (56.8ms)
+Completed 200 OK in 221ms (Views: 220.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 02:46:29 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (6.8ms)
+  Rendered pages/index.html.erb within layouts/application (63.0ms)
+  Rendered layouts/_stylesheets_tag.html.erb (50.3ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (51.1ms)
+Completed 200 OK in 213ms (Views: 212.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 02:46:30 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:46:30 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 02:46:32 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (6.6ms)
+  Rendered pages/index.html.erb within layouts/application (62.2ms)
+  Rendered layouts/_stylesheets_tag.html.erb (50.0ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (52.5ms)
+Completed 200 OK in 215ms (Views: 214.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 02:46:32 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:46:33 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-26 02:47:04 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"donald j. trump"}
+Completed 500 Internal Server Error in 245065ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:450:in `block in analyse_function_classe'
+  app/controllers/pages_controller.rb:435:in `analyse_function_classe'
+  app/controllers/pages_controller.rb:793:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (77.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 02:59:32 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (7.1ms)
+  Rendered pages/index.html.erb within layouts/application (61.4ms)
+  Rendered layouts/_stylesheets_tag.html.erb (46.1ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (45.7ms)
+Completed 200 OK in 211ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 02:59:32 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 02:59:33 +0200
+
+
+Started POST "/pages/result" for 127.0.0.1 at 2017-05-26 02:59:43 +0200
+Processing by PagesController#result as HTML
+  Parameters: {"keywords"=>"lorem ipsum sit "}
+Completed 500 Internal Server Error in 29254ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/pages_controller.rb:450:in `block in analyse_function_classe'
+  app/controllers/pages_controller.rb:435:in `analyse_function_classe'
+  app/controllers/pages_controller.rb:793:in `result'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.3ms)
+
+
+Started POST "/__web_console/repl_sessions/657726c1e82abc0f251a4e5269649707/trace" for 127.0.0.1 at 2017-05-26 03:01:41 +0200
+
+
+Started POST "/__web_console/repl_sessions/657726c1e82abc0f251a4e5269649707/trace" for 127.0.0.1 at 2017-05-26 03:03:16 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 03:08:12 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.2ms)
+  Rendered pages/index.html.erb within layouts/application (61.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (45.9ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (45.5ms)
+Completed 200 OK in 210ms (Views: 208.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 03:08:13 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 03:08:13 +0200
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2017-05-26 03:08:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2017-05-26 03:09:03 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/raphael/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.0ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/raphael/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (72.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 03:13:36 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.5ms)
+  Rendered layouts/_header_index.html.erb (32.3ms)
+  Rendered pages/index.html.erb within layouts/application (349.7ms)
+  Rendered layouts/_stylesheets_tag.html.erb (624.0ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (596.9ms)
+Completed 200 OK in 2035ms (Views: 2034.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 03:14:27 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (15.2ms)
+  Rendered pages/index.html.erb within layouts/application (188.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (158.4ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (230.1ms)
+Completed 200 OK in 766ms (Views: 765.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 03:14:28 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 03:14:29 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 03:14:29 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 03:14:31 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 04:32:24 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.4ms)
+  Rendered layouts/_header_index.html.erb (338.6ms)
+  Rendered pages/index.html.erb within layouts/application (5388.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (7560.7ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (8.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (3696.8ms)
+Completed 200 OK in 19987ms (Views: 19986.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 04:33:35 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 04:33:36 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 04:33:39 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 04:44:44 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (31.0ms)
+  Rendered layouts/_header_index.html.erb (128.6ms)
+  Rendered pages/index.html.erb within layouts/application (2699.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (3195.8ms)
+  Rendered layouts/_preloader.html.erb (0.1ms)
+  Rendered layouts/_map.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (4.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (2568.3ms)
+Completed 200 OK in 8991ms (Views: 8941.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider1-a47b5f30141f0fd193c408b6806a9144d056e31eb6ae69f75d230d5c6b568b66.jpg" for 127.0.0.1 at 2017-05-26 04:44:53 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 04:48:10 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (1.1ms)
+  Rendered layouts/_header_index.html.erb (14601.6ms)
+  Rendered pages/index.html.erb within layouts/application (14693.9ms)
+  Rendered layouts/_stylesheets_tag.html.erb (382.0ms)
+  Rendered layouts/_preloader.html.erb (0.5ms)
+  Rendered layouts/_map.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_javascripts_tag.html.erb (123.5ms)
+Completed 200 OK in 15450ms (Views: 15410.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider1-a47b5f30141f0fd193c408b6806a9144d056e31eb6ae69f75d230d5c6b568b66.jpg" for 127.0.0.1 at 2017-05-26 04:48:28 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 04:48:28 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 04:48:29 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 04:48:29 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 04:55:50 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (8.4ms)
+  Rendered pages/index.html.erb within layouts/application (138.1ms)
+  Rendered layouts/_stylesheets_tag.html.erb (52.5ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (48.4ms)
+Completed 200 OK in 289ms (Views: 288.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider2-4f6116d875cb1dd2f28c69ece3e1ce169a3cdafb18fb455d7840c78b8b2b6125.jpg" for 127.0.0.1 at 2017-05-26 04:55:51 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 04:55:51 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 04:55:51 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 04:55:51 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 05:01:00 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (8.6ms)
+  Rendered pages/index.html.erb within layouts/application (176.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (54.0ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (54.3ms)
+Completed 200 OK in 350ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider1-56967621ca3d0ead0fcc1d6a0006a98b01d4bf01491f65bb9bdf0099bf82f0b3.jpg" for 127.0.0.1 at 2017-05-26 05:01:00 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 05:01:00 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 05:01:01 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 05:01:01 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 05:05:45 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.4ms)
+  Rendered pages/index.html.erb within layouts/application (95.6ms)
+  Rendered layouts/_stylesheets_tag.html.erb (67.8ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.1ms)
+Completed 200 OK in 295ms (Views: 294.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider3-74b5766541b824354a21325d30af461a11100c373c20aea65739aaf5898d7647.jpg" for 127.0.0.1 at 2017-05-26 05:05:45 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 05:05:45 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 05:05:46 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 05:05:46 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 05:07:25 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.1ms)
+  Rendered layouts/_header_index.html.erb (7.1ms)
+  Rendered pages/index.html.erb within layouts/application (122.5ms)
+  Rendered layouts/_stylesheets_tag.html.erb (49.7ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_javascripts_tag.html.erb (51.2ms)
+Completed 200 OK in 270ms (Views: 269.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/slider3-7f657d3c13648d48e8dded528dc5a92de43e3372c8847868199812300233fb93.jpg" for 127.0.0.1 at 2017-05-26 05:07:26 +0200
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 05:07:26 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 05:07:26 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 05:07:26 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 05:09:39 +0200
+Processing by PagesController#index as HTML
+  Rendered layouts/_search_form.html.erb (0.2ms)
+  Rendered layouts/_header_index.html.erb (7.8ms)
+  Rendered pages/index.html.erb within layouts/application (67.4ms)
+  Rendered layouts/_stylesheets_tag.html.erb (46.8ms)
+  Rendered layouts/_preloader.html.erb (0.0ms)
+  Rendered layouts/_map.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_javascripts_tag.html.erb (44.7ms)
+Completed 200 OK in 205ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/testimonial_bg.jpg" for 127.0.0.1 at 2017-05-26 05:09:39 +0200
+
+
+Started GET "/assets/icon-afeff565ffb130f8519a6046991ca9875f7c60d89dcdf180ca94c8e5313bcbdb.png" for 127.0.0.1 at 2017-05-26 05:09:39 +0200
+
+
+Started GET "/assets/map-marker.png" for 127.0.0.1 at 2017-05-26 05:09:39 +0200
