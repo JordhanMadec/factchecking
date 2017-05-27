@@ -42,6 +42,8 @@ class PagesController < ApplicationController
   @@borne_gauche = -1
   @@borne_droite = -1
 
+
+  @@num_classe = 0
   $classe_max_personne = 0
   $classe_min_personne = 0
   $classe_rpz_mieux = 0
@@ -406,24 +408,28 @@ class PagesController < ApplicationController
   end
 
 
-  def classes(matrice_score, tweet, id_tweet, num_tweet,nb_tweets, num_classe)
-    cmpt = num_classe
+  def classes(matrice_score, tweet, id_tweet, num_tweet,nb_tweets)
     j = num_tweet + 1
-    if num_tweet < nb_tweets
-      if cmpt < ($classe.length)
+    if @@num_classe < nb_tweets
+      if @@num_classe < ($classe.length)
         if (num_tweet+1) < nb_tweets
-          $classe[cmpt].push(id_tweet)
+          $classe[@@num_classe].push(id_tweet)
           for i in j..(nb_tweets-1)
             if( !@@key.empty?) then
               if @@key.include?(i)
                 if(matrice_score[num_tweet][i]["score"] > 0.3 )
-                  $classe[cmpt].push(matrice_score[num_tweet][i]["id_tweet"])
+                  $classe[@@num_classe].push(matrice_score[num_tweet][i]["id_tweet"])
                   @@key.delete(i)
                 end
               end
             else
               break
             end
+          end
+          if($classe[@@num_classe].count == 1) then
+            $classe[@@num_classe].pop
+          else
+            @@num_classe +=1
           end
         end
       end
@@ -645,8 +651,12 @@ class PagesController < ApplicationController
   #---------3ème tour de boucle ---------------------
   def main_3(tweets_list, matrice_score)
     num_Tweet = 0
+    tmp = tweets_list.length
     tweets_list.each do |key, tweet|
-    classes(matrice_score, tweet, key, num_Tweet, tweets_list.length, num_Tweet)
+    classes(matrice_score, tweet, key, num_Tweet, tweets_list.length)
+    if(@@num_classe > tmp)
+      break
+    end
       num_Tweet +=1
     end
   end
@@ -670,7 +680,6 @@ class PagesController < ApplicationController
         if (neg.to_s == "positif" and sen.to_s == "negative")
           sen = "neutral"
         end
-
 
         if (((sen.to_s != "negative") and ($keywords_sentimental.to_s != "negative")) or (( neg.to_s == "negatif") and ($keywords_negatif.to_s == "negatif"))) then
 
