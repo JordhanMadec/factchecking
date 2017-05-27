@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   USELESS_WORD = /\s(a|an|the|this|that)\s/
   USELESS_PONCTUATION = /[,;:."-]/
   STEMMER = Lingua::Stemmer.new(:language => LANGUAGE)
-  NEGATION_WORD = /(not|don't|didn't|won't|no|couldn't|can't)/
+  NEGATION_WORD = /\s(not|don't|didn't|won't|no|couldn't|can't)\s/
 
   NB_CLASSES = 10
   BONUS = 1.2
@@ -44,8 +44,6 @@ class PagesController < ApplicationController
   $classe_rpz_mieux = 0
   $classe_rpz_mal = 0
 
-  $keywords_sentimental = "neutral"
-  $keywords_negatif = "neutral"
 
 
   #Tableau avec le numéro de tour de boucle
@@ -85,7 +83,9 @@ class PagesController < ApplicationController
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
 
-    puts 'initial keywords : ' + @keywords
+    @keywords_origin = @keywords
+
+    puts 'initial keywords : ' + @keywords_origin
 
     puts 'négatif/positif : ' + negation(@keywords).to_s
 
@@ -121,16 +121,18 @@ class PagesController < ApplicationController
     @@dates.sort!
 
     #cleaned_text, sentimental_and_score_analysis, make_class
+    puts '----------------------------'
     puts Time.now.strftime("%H:%M:%S") + ' First loop'
     main_1(@tweet_list)
 
     puts Time.now.strftime("%H:%M:%S") + ' Init weight'
     init_weigh()
 
+    puts '----------------------------'
     puts Time.now.strftime("%H:%M:%S") + ' Second loop'
     main_2(@tweet_list, @matrice_score)
 
-
+    puts '----------------------------'
     puts Time.now.strftime("%H:%M:%S") + ' Third loop'
     main_3(@tweet_list, @matrice_score)
 
@@ -158,10 +160,13 @@ class PagesController < ApplicationController
                     population: Array.new}
 
     puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
-    analyse_function_classe(@nbTweets, @keywords, @tweet_list)
+    analyse_function_classe(@nbTweets, @keywords_origin, @tweet_list)
 
     puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
     score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+
+    puts $keywords_negatif
+    puts $keywords_sentimental
 
     puts Time.now.strftime("%H:%M:%S") + ' Finished !'
   else
@@ -328,7 +333,7 @@ class PagesController < ApplicationController
   end
 
   def delete_negation(string)
-    return string.gsub(NEGATION_WORD,"")
+    return string.gsub(NEGATION_WORD," ")
   end
 
   def make_class(tweet,num_Tweet,matrice, tweets_list)
@@ -597,17 +602,25 @@ class PagesController < ApplicationController
   #---------- Scoring classes ----------
   def score_classes(true_class, false_class, tweets, matrice)
     #Score les différentes classes
+    if $keywords_negatif.to_s == "negatif"
+      $keywords_sentimental = "negative"
+    end
+
+    if ($keywords_negatif.to_s == "positif" and $keywords_sentimental.to_s =="negative")
+      $keywords_sentimental = "neutral"
+    end
+
     tweets.each do |key, tweet|
 
         sen = tweet["sentimental_class"]
         neg = tweet["negatif"]
 
-
-        if $keywords_negatif == "negatif"
-          $keywords_sentimental = "negative"
+        if (neg.to_s == "positif" and sen.to_s == "negative")
+          sen = "neutral"
         end
 
-        if ( (sen != "negative" && $keywords_sentimental != "negative")  || (( neg == "negatif") && $keywords_negatif == "negatif")) then
+        if (((sen.to_s != "negative") and ($keywords_sentimental.to_s != "negative")) or (( neg.to_s == "negatif") and ($keywords_negatif.to_s == "negatif"))) then
+
           true_class[:population].push(tweet)
           true_class[:nb_tweets]++
           if $classe[$classe_rpz_mieux].include?(key) || $classe[$classe_max_personne].include?(key) then
