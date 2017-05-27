@@ -181,7 +181,7 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
     score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
 
-    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+    pugitts Time.now.strftime("%H:%M:%S") + ' Finished !'
   else
     puts "O tweets"
     end
