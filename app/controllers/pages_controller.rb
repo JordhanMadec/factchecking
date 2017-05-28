@@ -84,9 +84,9 @@ class PagesController < ApplicationController
   end
 
   def reset_stats
-    $stats.update($stats){|key,value|
+    $stats.update($stats) do |key,value|
       $stats[key] = 0
-    }
+    end
   end
 
   def search_tweets
@@ -126,72 +126,72 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + " Tweets found: #{@nbTweets}"
 
     if @nbTweets != 0 then
-    puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
-    #set_dataset(@tweet_list)
+      puts Time.now.strftime("%H:%M:%S") + ' Saving dataset'
+      #set_dataset(@tweet_list)
 
-    puts Time.now.strftime("%H:%M:%S") + ' Creating nb classes tweets'
-    init_nb_class(NB_CLASSES)
+      puts Time.now.strftime("%H:%M:%S") + ' Creating nb classes tweets'
+      init_nb_class(NB_CLASSES)
 
-    #creation de la matrice de score
-    puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
-    @matrice_score = initialisation(@nbTweets)
+      #creation de la matrice de score
+      puts Time.now.strftime("%H:%M:%S") + ' Creating scores matrice'
+      @matrice_score = initialisation(@nbTweets)
 
-    #trie des dates
-    puts Time.now.strftime("%H:%M:%S") + ' Sort dates'
-    @@dates.sort!
+      #trie des dates
+      puts Time.now.strftime("%H:%M:%S") + ' Sort dates'
+      @@dates.sort!
 
-    #cleaned_text, sentimental_and_score_analysis, make_class
-    puts '----------------------------'
-    puts Time.now.strftime("%H:%M:%S") + ' First loop'
-    main_1(@tweet_list)
+      #cleaned_text, sentimental_and_score_analysis, make_class
+      puts '----------------------------'
+      puts Time.now.strftime("%H:%M:%S") + ' First loop'
+      main_1(@tweet_list)
 
-    puts Time.now.strftime("%H:%M:%S") + ' Init weight'
-    init_weigh()
+      puts Time.now.strftime("%H:%M:%S") + ' Init weight'
+      init_weigh()
 
-    puts '----------------------------'
-    puts Time.now.strftime("%H:%M:%S") + ' Second loop'
-    main_2(@tweet_list, @matrice_score)
+      puts '----------------------------'
+      puts Time.now.strftime("%H:%M:%S") + ' Second loop'
+      main_2(@tweet_list, @matrice_score)
 
-    puts '----------------------------'
-    puts Time.now.strftime("%H:%M:%S") + ' Third loop'
-    main_3(@tweet_list, @matrice_score)
+      puts '----------------------------'
+      puts Time.now.strftime("%H:%M:%S") + ' Third loop'
+      main_3(@tweet_list, @matrice_score)
 
 
-    puts Time.now.strftime("%H:%M:%S") + ' Propagation time'
-    date_diff = ( Time.at(@@dates[@@borne_droite]) - Time.at(@@dates[@@borne_gauche])).to_f
-    date_diff_unite = "sec"
-    if date_diff > 60 then
-      date_diff = date_diff / 60
-      date_diff_unite = "min"
+      puts Time.now.strftime("%H:%M:%S") + ' Propagation time'
+      date_diff = ( Time.at(@@dates[@@borne_droite]) - Time.at(@@dates[@@borne_gauche])).to_f
+      date_diff_unite = "sec"
       if date_diff > 60 then
-        date_diff_unite = "h"
         date_diff = date_diff / 60
+        date_diff_unite = "min"
+        if date_diff > 60 then
+          date_diff_unite = "h"
+          date_diff = date_diff / 60
+        end
       end
-    end
-    $stats[:propagation_time_value] = date_diff.round(2)
-    $stats[:propagation_time_unit] = date_diff_unite
-    puts "#{$stats[:propagation_time_value]}#{$stats[:propagation_time_unit]}"
+      $stats[:propagation_time_value] = date_diff.round(2)
+      $stats[:propagation_time_unit] = date_diff_unite
+      puts "#{$stats[:propagation_time_value]}#{$stats[:propagation_time_unit]}"
 
 
-    @false_class = { score: 0,
-                     nb_tweets: 0,
-                     population: Array.new}
-    @true_class = { score: 0,
-                    nb_tweets: 0,
-                    population: Array.new}
+      @false_class = { score: 0,
+                       nb_tweets: 0,
+                       population: Array.new}
+      @true_class = { score: 0,
+                      nb_tweets: 0,
+                      population: Array.new}
 
-    puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
-    analyse_function_classe(@nbTweets, @keywords_origin, @tweet_list)
+      puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
+      analyse_function_classe(@nbTweets, @keywords_origin, @tweet_list)
 
-    puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
-    score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
+      puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
+      score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
 
-    puts $keywords_negatif
-    puts $keywords_sentimental
+      puts $keywords_negatif
+      puts $keywords_sentimental
 
-    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
-  else
-    puts "O tweets"
+      puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+    else
+      puts "O tweets"
     end
 
     verify_stats($stats)
@@ -446,7 +446,7 @@ class PagesController < ApplicationController
     worst = 2
     for i in 0..(NB_CLASSES-1)
       if !$classe[i].empty?
-      #determine la calsse avec le plus grand nombre de tweet et le plus petit nombre
+        #determine la calsse avec le plus grand nombre de tweet et le plus petit nombre
         if $classe[i].count > max then
           max = $classe[i].count
           $classe_max_personne = i
@@ -456,15 +456,15 @@ class PagesController < ApplicationController
             $classe_min_personne = i
           end
         end
-      #determine la classe la plus représentative et la moins représentative des mots de la recherche
-      if $classe[i][0] != nil
+        #determine la classe la plus représentative et la moins représentative des mots de la recherche
+        if $classe[i][0] != nil then
           tweet = tweet_list[$classe[i][0]]
           tmp = word__comparaison_score(keyword, tweet["cleaned_text"])
           if  tmp > best then
             best = tmp
             $classe_rpz_mieux = i
           else
-            if tmp < worst
+            if tmp < worst then
               worst = tmp
               $classe_rpz_mal = i
             end
