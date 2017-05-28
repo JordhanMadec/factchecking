@@ -174,11 +174,9 @@ class PagesController < ApplicationController
 
 
       @false_class = { score: 0,
-                       nb_tweets: 0,
-                       population: Array.new}
+                       nb_tweets: 0}
       @true_class = { score: 0,
-                      nb_tweets: 0,
-                      population: Array.new}
+                      nb_tweets: 0}
 
       puts Time.now.strftime("%H:%M:%S") + ' Analyse main_3...'
       analyse_function_classe(@nbTweets, @keywords_origin, @tweet_list)
@@ -188,6 +186,10 @@ class PagesController < ApplicationController
 
       puts $keywords_negatif
       puts $keywords_sentimental
+
+      puts 'Saving datasets...'
+      save('trump', @tweet_list, $stats, @keywords, @true_class, @false_clas, @matrice_score)
+
 
       puts Time.now.strftime("%H:%M:%S") + ' Finished !'
     else
@@ -257,6 +259,28 @@ class PagesController < ApplicationController
   #Fonction récupérant un dataset au format json
   def get_dataset()
       file = File.read("dataset.json")
+  end
+
+  #Fonction sauvegardant les résultats dans des json
+  def save(path, tweets, stats, keywords, true_class, false_class, matrice)
+    File.open(path+"/tweets.json", "w") do |f|
+        f.write(tweets.to_json)
+    end
+    File.open(path+"/stats.json", "w") do |f|
+        f.write(stats.to_json)
+    end
+    File.open(path+"/keywords.txt", "w") do |f|
+        f.write(keywords)
+    end
+    File.open(path+"/true_class.json", "w") do |f|
+        f.write(true_class.to_json)
+    end
+    File.open(path+"/false_class.json", "w") do |f|
+        f.write(false_class.to_json)
+    end
+    File.open(path+"/matrice.json", "w") do |f|
+        f.write(matrice.to_json)
+    end
   end
 
   #----- Nettoyage des tweets -----
@@ -683,7 +707,7 @@ class PagesController < ApplicationController
 
         if (((sen.to_s != "negative") and ($keywords_sentimental.to_s != "negative")) or (( neg.to_s == "negatif") and ($keywords_negatif.to_s == "negatif"))) then
 
-          true_class[:population].push(tweet)
+          # true_class[:population].push(tweet)
           true_class[:nb_tweets]++
           if $classe[$classe_rpz_mieux].include?(key) || $classe[$classe_max_personne].include?(key) then
           true_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*BONUS
@@ -693,7 +717,7 @@ class PagesController < ApplicationController
 
           $stats[:true_count] += 1
         else
-          false_class[:population].push(tweet)
+          # false_class[:population].push(tweet)
           false_class[:nb_tweets]++
           if $classe[$classe_rpz_mal].include?(key) || $classe[$classe_min_personne].include?(key) then
           false_class[:score] += tweet['sentimental_score'].abs * (tweet['weight']+1)*MALUS
