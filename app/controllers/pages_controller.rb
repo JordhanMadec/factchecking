@@ -101,6 +101,7 @@ class PagesController < ApplicationController
 
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
     if @keywords=="" then @keywords = "test" end
+    @raw_request = @keywords
 
     puts 'initial keywords : ' + @keywords
 
@@ -181,8 +182,8 @@ class PagesController < ApplicationController
     puts Time.now.strftime("%H:%M:%S") + ' Scoring class...'
     score_classes(@true_class, @false_class, @tweet_list, @matrice_score)
 
-    pugitts Time.now.strftime("%H:%M:%S") + ' Finished !'
-  else
+    puts Time.now.strftime("%H:%M:%S") + ' Finished !'
+    else
     puts "O tweets"
     end
 
@@ -711,10 +712,9 @@ class PagesController < ApplicationController
 
     @keywords = params[:keywords] ||= "test"
 
-    @raw_request = @keywords # on a besoin de garder la requête initiale pour affichage au client
-
     #Si la liste de mots-clés est vide, Twitter API renvoie une erreur
-    if @keywords=="" then @keywords = "this is a test" end
+    if @keywords=="" then @keywords = "test" end
+    @raw_request = @keywords
 
     puts 'initial keywords : ' + @keywords
 
