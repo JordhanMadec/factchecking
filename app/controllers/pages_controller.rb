@@ -187,9 +187,8 @@ class PagesController < ApplicationController
       puts $keywords_negatif
       puts $keywords_sentimental
 
-      puts 'Saving datasets...'
-      save('trump', @tweet_list, $stats, @keywords, @true_class, @false_clas, @matrice_score)
-
+      # puts 'Saving datasets...'
+      # save('trump', @tweet_list, $stats, @keywords, @true_class, @false_clas, @matrice_score)
 
       puts Time.now.strftime("%H:%M:%S") + ' Finished !'
     else
